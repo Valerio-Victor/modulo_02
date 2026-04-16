@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>CAPÍTULO 5 PROJETOS DEMONSTRATIVOS | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂</title>
+  <meta name="description" content="CAPÍTULO 5 PROJETOS DEMONSTRATIVOS | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="CAPÍTULO 5 PROJETOS DEMONSTRATIVOS | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CAPÍTULO 5 PROJETOS DEMONSTRATIVOS | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  
+  
+  
+
+<meta name="author" content="Autores:  Prof. Robson Bauwelz Gonzatti  Prof. Rondineli Rodrigues Pereira" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="células-a-combustível-de-hidrogênio.html"/>
+<link rel="next" href="exemplo-cálculo-de-produção-de-h₂-em-um-eletrolisador-pem.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLIDE E CÉLULAS A COMBUSTÍVEL DE H₂</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> INTRODUÇÃO</a></li>
+<li class="chapter" data-level="2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html"><i class="fa fa-check"></i><b>2</b> PRODUÇÃO DE HIDROGÊNIO</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#produ%C3%A7%C3%A3o-a-partir-de-combust%C3%ADveis-f%C3%B3sseis-rotas-dominantes"><i class="fa fa-check"></i><b>2.1</b> Produção a partir de combustíveis fósseis (rotas dominantes)</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#reforma-a-vapor-de-metano-smr-do-ingl%C3%AAs-steam-methane-reforming"><i class="fa fa-check"></i><b>2.1.1</b> Reforma a Vapor de Metano (SMR, do inglês Steam Methane Reforming)</a></li>
+<li class="chapter" data-level="2.1.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#gaseifica%C3%A7%C3%A3o-do-carv%C3%A3o-gc"><i class="fa fa-check"></i><b>2.1.2</b> Gaseificação do Carvão (GC)</a></li>
+<li class="chapter" data-level="2.1.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#oxida%C3%A7%C3%A3o-parcial"><i class="fa fa-check"></i><b>2.1.3</b> Oxidação Parcial</a></li>
+<li class="chapter" data-level="2.1.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#reforma-autot%C3%A9rmica"><i class="fa fa-check"></i><b>2.1.4</b> Reforma Autotérmica</a></li>
+<li class="chapter" data-level="2.1.5" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#decomposi%C3%A7%C3%A3o-termocatal%C3%ADtica"><i class="fa fa-check"></i><b>2.1.5</b> Decomposição Termocatalítica</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-da-%C3%A1gua"><i class="fa fa-check"></i><b>2.2</b> Eletrólise da água</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-alcalina"><i class="fa fa-check"></i><b>2.2.1</b> Eletrólise alcalina</a></li>
+<li class="chapter" data-level="2.2.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-pem"><i class="fa fa-check"></i><b>2.2.2</b> Eletrólise PEM</a></li>
+<li class="chapter" data-level="2.2.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-membrana-de-troca-ani%C3%B4nica-aem"><i class="fa fa-check"></i><b>2.2.3</b> Eletrólise com membrana de troca aniônica (AEM)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-%C3%B3xido-s%C3%B3lido-soec"><i class="fa fa-check"></i><b>2.2.4</b> Eletrólise com óxido sólido (SOEC)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#comparativos-entre-as-tecnologias-de-eletr%C3%B3lise"><i class="fa fa-check"></i><b>2.3</b> Comparativos entre as tecnologias de eletrólise</a></li>
+<li class="chapter" data-level="2.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#secao24"><i class="fa fa-check"></i><b>2.4</b> Modelagem matemática de uma célula PEM</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#an%C3%A1lise-da-efici%C3%AAncia-da-eletr%C3%B3lise-e-consumo-de-energia-espec%C3%ADfico"><i class="fa fa-check"></i><b>2.4.1</b> Análise da eficiência da eletrólise e consumo de energia específico</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html"><i class="fa fa-check"></i><b>3</b> INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#benef%C3%ADcios-e-desafios-da-integra%C3%A7%C3%A3o-de-renov%C3%A1veis"><i class="fa fa-check"></i><b>3.1</b> Benefícios e desafios da integração de renováveis</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#vantagens-estrat%C3%A9gicas-de-integra%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>3.1.1</b> Vantagens estratégicas de integração</a></li>
+<li class="chapter" data-level="3.1.2" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#desafios-t%C3%A9cnicos-e-econ%C3%B4micos"><i class="fa fa-check"></i><b>3.1.2</b> Desafios Técnicos e Econômicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html"><i class="fa fa-check"></i><b>4</b> CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#secao41"><i class="fa fa-check"></i><b>4.1</b> Tipos de células a combustível</a></li>
+<li class="chapter" data-level="4.2" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#a-estrutura-da-c%C3%A9lula-a-combust%C3%ADvel-e-seus-componentes"><i class="fa fa-check"></i><b>4.2</b> A estrutura da célula a combustível e seus componentes</a></li>
+<li class="chapter" data-level="4.3" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-baixa-temperatura"><i class="fa fa-check"></i><b>4.3</b> Células a combustível de baixa temperatura</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-eletr%C3%B3lito-de-membrana-polim%C3%A9rica-de-troca-de-pr%C3%B3tons-pemfc"><i class="fa fa-check"></i><b>4.3.1</b> Células a combustível de eletrólito de membrana polimérica de troca de prótons (PEMFC)</a></li>
+<li class="chapter" data-level="4.3.2" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-alcalinas-afc"><i class="fa fa-check"></i><b>4.3.2</b> Células a combustível alcalinas (AFC)</a></li>
+<li class="chapter" data-level="4.3.3" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lula-a-combust%C3%ADvel-de-membrana-de-troca-ani%C3%B4nica-aemfc"><i class="fa fa-check"></i><b>4.3.3</b> Célula a combustível de membrana de troca aniônica (AEMFC)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-alta-temperatura"><i class="fa fa-check"></i><b>4.4</b> Células a combustível de alta temperatura</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-%C3%B3xido-s%C3%B3lido-sofc"><i class="fa fa-check"></i><b>4.4.1</b> Células a combustível de óxido sólido (SOFC)</a></li>
+<li class="chapter" data-level="4.4.2" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-carbonato-fundido-mcfc"><i class="fa fa-check"></i><b>4.4.2</b> Células a combustível de carbonato fundido (MCFC)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#modelo-equivalente-de-uma-c%C3%A9lula-a-combust%C3%ADvel"><i class="fa fa-check"></i><b>4.5</b> Modelo equivalente de uma célula a combustível</a></li>
+<li class="chapter" data-level="4.6" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#balan%C3%A7o-da-planta-de-uma-c%C3%A9lula-a-combust%C3%ADvel"><i class="fa fa-check"></i><b>4.6</b> Balanço da planta de uma célula a combustível</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="projetos-demonstrativos.html"><a href="projetos-demonstrativos.html"><i class="fa fa-check"></i><b>5</b> PROJETOS DEMONSTRATIVOS</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="projetos-demonstrativos.html"><a href="projetos-demonstrativos.html#projetos-demonstrativos-com-eletrolisadores"><i class="fa fa-check"></i><b>5.1</b> Projetos Demonstrativos com Eletrolisadores</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="projetos-demonstrativos.html"><a href="projetos-demonstrativos.html#projeto-neom-de-hidrog%C3%AAnio-verde"><i class="fa fa-check"></i><b>5.1.1</b> Projeto NEOM de Hidrogênio Verde</a></li>
+<li class="chapter" data-level="5.1.2" data-path="projetos-demonstrativos.html"><a href="projetos-demonstrativos.html#projeto-piloto-de-hidrog%C3%AAnio-verde-sinopec-xinjiang-kuqa"><i class="fa fa-check"></i><b>5.1.2</b> Projeto Piloto de Hidrogênio Verde Sinopec Xinjiang Kuqa</a></li>
+<li class="chapter" data-level="5.1.3" data-path="projetos-demonstrativos.html"><a href="projetos-demonstrativos.html#projeto-iberdrola-puertollano"><i class="fa fa-check"></i><b>5.1.3</b> Projeto Iberdrola Puertollano</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="projetos-demonstrativos.html"><a href="projetos-demonstrativos.html#projetos-demonstrativos-com-c%C3%A9lulas-a-combust%C3%ADvel"><i class="fa fa-check"></i><b>5.2</b> Projetos Demonstrativos com Células a Combustível</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="projetos-demonstrativos.html"><a href="projetos-demonstrativos.html#mf-hydra-noruega---transporte-mar%C3%ADtimo"><i class="fa fa-check"></i><b>5.2.1</b> MF Hydra (Noruega) - Transporte Marítimo</a></li>
+<li class="chapter" data-level="5.2.2" data-path="projetos-demonstrativos.html"><a href="projetos-demonstrativos.html#projeto-de-transporte-urbano-jive"><i class="fa fa-check"></i><b>5.2.2</b> Projeto de Transporte Urbano JIVE</a></li>
+<li class="chapter" data-level="5.2.3" data-path="projetos-demonstrativos.html"><a href="projetos-demonstrativos.html#projeto-caradia-ilint"><i class="fa fa-check"></i><b>5.2.3</b> Projeto Caradia iLint</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="exemplo-cálculo-de-produção-de-h₂-em-um-eletrolisador-pem.html"><a href="exemplo-cálculo-de-produção-de-h₂-em-um-eletrolisador-pem.html"><i class="fa fa-check"></i><b>6</b> EXEMPLO: CÁLCULO DE PRODUÇÃO DE H₂ EM UM ELETROLISADOR PEM</a></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>REFERÊNCIAS</a></li>
+<li class="divider"></li>
+<li><a href="https://ch2v.unifei.edu.br/" target="blank">CH2V</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="projetos-demonstrativos" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">CAPÍTULO 5</span> PROJETOS DEMONSTRATIVOS<a href="projetos-demonstrativos.html#projetos-demonstrativos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>O hidrogênio verde, produzido a partir de fontes renováveis, é uma peça-chave para a descarbonização, e as células a combustível são a tecnologia central para converter esse hidrogênio de volta em eletricidade e calor de forma eficiente e limpa. A seguir serão apresentados alguns projetos atuais e significativos para produção de hidrogênio com eletrolisadores e que aplicam hidrogênio verde utilizando células a combustível em diferentes setores.</p>
+<div id="projetos-demonstrativos-com-eletrolisadores" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Projetos Demonstrativos com Eletrolisadores<a href="projetos-demonstrativos.html#projetos-demonstrativos-com-eletrolisadores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="projeto-neom-de-hidrogênio-verde" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Projeto NEOM de Hidrogênio Verde<a href="projetos-demonstrativos.html#projeto-neom-de-hidrog%C3%AAnio-verde" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Este é considerado o maior projeto de hidrogênio verde em construção no mundo. Localizado na futurística cidade de NEOM, o projeto visa instalar mais de 2 GW de capacidade de eletrolisadores. A produção será destinada principalmente à exportação na forma de amônia verde. O projeto integra 4 GW de energia solar e eólica para alimentar os eletrolisadores. Com a missão de construir e operar a maior planta de hidrogênio verde do mundo, o projeto visa uma produção de até 600 toneladas diárias, destinada a descarbonizar setores como o transporte marítimo e a indústria pesada [33].</p>
+<p>A NEOM Green Hydrogen Company (NGHC) emerge como uma iniciativa na transição energética global, concebida a partir de uma joint venture que capitaliza as competências de três líderes de mercado. Esta aliança une a expertise em energia renovável da ACWA Power, a liderança global em gases industriais e hidrogênio da Air Products, e a visão futurista da NEOM, criando uma sinergia projetada para dominar o nascente mercado de hidrogênio verde [33].</p>
+<p>A viabilidade do projeto é ancorada por uma infraestrutura de energia renovável, que alimentará a planta inteiramente com aproximadamente 4 GW de eletricidade gerada em um local com mais de 300 km². Essa capacidade provém de instalações dedicadas, compreendendo um parque solar de 2,2 GW e um parque eólico com mais de 1,6 GW [34]. A produção de hidrogênio a partir da água será realizada por um pacote de eletrólise com capacidade superior a 2,2 GW, utilizando eletrolisadores alcalinos (fornecidos pela Thyssenkrupp Nucera). Para superar os desafios de armazenamento e transporte do hidrogênio, a estratégia logística adota a sua conversão em amônia verde (NH₃), um vetor energético de alta densidade e com uma cadeia logística global já estabelecida. A meta é exportar até 1,2 milhão de toneladas anuais por meio de um cais dedicado [34].</p>
+<p>O cronograma do projeto é agressivo, com a conclusão da infraestrutura de geração de energia prevista para meados de 2026, permitindo o início das exportações de amônia verde. A plena disponibilidade comercial do produto em escala global é então esperada para 2027 [35]. O avanço é tangível, com a NGHC reportando a conclusão de 80% do projeto no início de 2025, o que mantém o empreendimento no caminho certo para cumprir seus prazos ambiciosos [33]. A Figura <a href="projetos-demonstrativos.html#fig:figura26">5.1</a> apresenta uma foto com as obras do projeto.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura26"></span>
+<img src="figura26.png" alt="Foto aérea das obras do projeto NEOM de hidrogênio verde. Fonte: [34]." width="70%" />
+<p class="caption">
+Figura 5.1: Foto aérea das obras do projeto NEOM de hidrogênio verde. Fonte: [34].
+</p>
+</div>
+</div>
+<div id="projeto-piloto-de-hidrogênio-verde-sinopec-xinjiang-kuqa" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Projeto Piloto de Hidrogênio Verde Sinopec Xinjiang Kuqa<a href="projetos-demonstrativos.html#projeto-piloto-de-hidrog%C3%AAnio-verde-sinopec-xinjiang-kuqa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Liderado pela China Petroleum &amp; Chemical Corporation (Sinopec), este é o maior projeto da China para a produção de hidrogênio verde a partir de energia fotovoltaica e um dos maiores projetos do gênero no mundo. Sua operação teve início em julho de 2023, marcando o comissionamento bem-sucedido de todo o processo, desde a produção e transporte de hidrogênio verde até sua aplicação direta na refinação de petróleo [36] [37]. A missão central do projeto é aproveitar os abundantes recursos de energia solar da região de Kuqa para produzir hidrogênio verde em larga escala. Esse hidrogênio é então fornecido à refinaria Tahe, também da Sinopec, para substituir o hidrogênio cinza, produzido a partir de combustíveis fósseis, que era tradicionalmente utilizado nos seus processos de refino [36].</p>
+<p>O projeto foi desenvolvido com um investimento de aproximadamente US$ 417 milhões. A energia para o processo de eletrólise é fornecida por uma fazenda fotovoltaica dedicada com capacidade de 300 MW. A planta foi projetada para produzir 20.000 toneladas de hidrogênio verde por ano. Estima-se que o custo de produção do hidrogênio será de aproximadamente 2,55 dólares por quilograma [36] [37].</p>
+<p>A planta possui um total de 52 conjuntos de eletrolisadores com tecnologia alcalina, cada um tem uma capacidade nominal de produção de 1.000 metros cúbicos normais (Nm³/h) de hidrogênio. Os equipamentos foram fabricados por três empresas especializadas: Cockerill-Jingli Hydrogen, LONGi Hydrogen e PERIC Hydrogen [37]. O projeto inclui dez tanques esféricos de grande porte mostrados na Figura <a href="projetos-demonstrativos.html#fig:figura27">5.2</a>, que oferecem uma capacidade total de armazenamento de 210.000 metros cúbicos de hidrogênio. Uma rede de dutos dedicada conecta a planta de produção à refinaria, com capacidade para transportar 28.000 metros cúbicos de hidrogênio por hora [36] [37].</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura27"></span>
+<img src="figura27.png" alt="Tanques para o armazenamento do hidrogênio verde do projeto Sinopec Xinjiang Kuqa. Fonte: [36]." width="70%" />
+<p class="caption">
+Figura 5.2: Tanques para o armazenamento do hidrogênio verde do projeto Sinopec Xinjiang Kuqa. Fonte: [36].
+</p>
+</div>
+</div>
+<div id="projeto-iberdrola-puertollano" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Projeto Iberdrola Puertollano<a href="projetos-demonstrativos.html#projeto-iberdrola-puertollano" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A usina de Puertollano (Ciudad Real), mostrada na Figura <a href="projetos-demonstrativos.html#fig:figura28">5.3</a>, é composta por um parque solar fotovoltaico de 100 MW, um sistema de baterias de íon-lítio com uma capacidade de armazenamento de 20 MWh e um sistema de produção de hidrogênio através de eletrólise com tecnologia PEM de 20 MW. A capacidade de geração de 360 kg/hora de hidrogênio. Tudo a partir de fontes 100% renováveis. Com um investimento de 150 milhões de euros, a iniciativa evitará a emissão de 39.000 tCO2/ano. O hidrogênio verde produzido será usado na fábrica de amoníaco que a Fertiberia possui no município [38].</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura28"></span>
+<img src="figura28.png" alt="Tanques para o armazenamento do hidrogênio verde do projeto Sinopec Xinjiang Kuqa. Fonte: [36]." width="70%" />
+<p class="caption">
+Figura 5.3: Tanques para o armazenamento do hidrogênio verde do projeto Sinopec Xinjiang Kuqa. Fonte: [36].
+</p>
+</div>
+<p>O hidrogênio produzido é armazenado em um sistema composto por 11 tanques, cada um com capacidade para 7 toneladas, mantendo o gás a uma pressão de 60 bar, ideal para a entrega via dutos à planta adjacente da Fertiberia, o que evidencia a eficiência da localização [39].</p>
+<p>A iniciativa contribui diretamente para as metas do “Plano Nacional Integrado de Energia e Clima 2021-2030 (PNIEC)” da Espanha, que determina uma participação de 74% de fontes renováveis na matriz elétrica e uma meta nacional de 4 GW de capacidade instalada de eletrolisadores até 2030.</p>
+</div>
+</div>
+<div id="projetos-demonstrativos-com-células-a-combustível" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Projetos Demonstrativos com Células a Combustível<a href="projetos-demonstrativos.html#projetos-demonstrativos-com-c%C3%A9lulas-a-combust%C3%ADvel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="mf-hydra-noruega---transporte-marítimo" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> MF Hydra (Noruega) - Transporte Marítimo<a href="projetos-demonstrativos.html#mf-hydra-noruega---transporte-mar%C3%ADtimo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O MF Hydra é a primeira balsa do mundo a operar comercialmente utilizando hidrogênio verde líquido e células a combustível. O projeto, liderado pela operadora de balsas e barcos expressos Norled, é um marco na descarbonização do setor marítimo. A embarcação opera em uma rota na Noruega entre Hjelmeland-Skipavik-Nesvik. Equipado com um tanque de hidrogênio líquido de 80 m3, o navio é capaz de navegar na área do fiorde entre Hjelmeland, Nesvik e Skipavik por até três semanas sem reabastecimento. Seu sofisticado sistema de propulsão permite que as baterias operem em conjunto com as células de combustível de hidrogênio líquido e inclui um recurso de redundância que permite que a balsa navegue com biodiesel. A Figura <a href="projetos-demonstrativos.html#fig:figura29">5.4</a> mostra a imagem da balsa MF Hydra em operação.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura29"></span>
+<img src="figura29.png" alt="Imagem do MF Hydra. Fonte [40]." width="70%" />
+<p class="caption">
+Figura 5.4: Imagem do MF Hydra. Fonte [40].
+</p>
+</div>
+<p>O MF Hydra pode transportar até 295 passageiros e 80 veículos e é movido por duas células de combustível Ballard FCwave™, totalizando 400 kW de potência (duas células a combustível de 200 kW cada) [41]. O hidrogênio verde é armazenado em tanques criogênicos a -253 °C e, quando necessário, é aquecido e direcionado para as células a combustível, que geram eletricidade para alimentar os motores elétricos da balsa. O único subproduto é a água.</p>
+</div>
+<div id="projeto-de-transporte-urbano-jive" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Projeto de Transporte Urbano JIVE<a href="projetos-demonstrativos.html#projeto-de-transporte-urbano-jive" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O projeto JIVE (Joint Initiative for Hydrogen Vehicles Across Europe) existe para auxiliar na comercialização de ônibus movidos a células de combustível (FCBs) como uma opção de transporte público com emissão zero em toda a Europa. O projeto visa abordar o atual alto custo de propriedade dos FCBs em comparação com os ônibus convencionais e a falta de infraestrutura de reabastecimento de hidrogênio em toda a Europa, apoiando a implementação de 131 FCBs em sete locais distribuídos entre Reino Unido, Alemanha, Holanda e Itália. Combinado com seu projeto irmão, o JIVE 2, quase 300 ônibus movidos a células de combustível foram implementados em dezesseis locais até 2025 – a maior implementação na Europa até o momento [42]. A Figura <a href="projetos-demonstrativos.html#fig:figura30">5.5</a> mostra um modelo de ônibus movido por célula a combustível do projeto JIVE.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura30"></span>
+<img src="figura30.png" alt="Imagem de um ônibus movido por célula a combustível do projeto JIVE." width="70%" />
+<p class="caption">
+Figura 5.5: Imagem de um ônibus movido por célula a combustível do projeto JIVE.
+</p>
+</div>
+<p>Dentre os objetivos qualitativos do projeto podem ser citados:</p>
+<ul>
+<li><p>demonstrar através da experiência da implementação em larga escala do uso de ônibus movidos a células a combustível;</p></li>
+<li><p>aumentar a conscientização sobre o uso da tecnologia de células de combustível para uma implementação mais ampla, com foco nos compradores de ônibus e nos órgãos reguladores;</p></li>
+<li><p>gerar impactos ambientais positivos operando células de combustível por longos períodos.</p></li>
+</ul>
+</div>
+<div id="projeto-caradia-ilint" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Projeto Caradia iLint<a href="projetos-demonstrativos.html#projeto-caradia-ilint" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O projeto Coradia iLint representa um marco na transição energética do transporte ferroviário, sendo reconhecido como o primeiro trem de passageiros do mundo movido a hidrogênio [43], [44]. O projeto foi liderado por uma colaboração estratégica entre a Landesnahverkehrsgesellschaft Niedersachsen (LNVG), o estado da Baixa Saxônia, a fabricante Alstom, a operadora Eisenbahnen und Verkehrsbetriebe Elbe-Weser (EVB) e a empresa Linde. O Coradia iLint foi concebido com uma missão de não apenas provar que a propulsão a hidrogênio é uma alternativa viável e livre de emissões para linhas não eletrificadas em substituição às frotas a diesel [43], mas também servir como um laboratório real para estabelecer processos e padrões operacionais e acumular conhecimento para o desenvolvimento de futuras gerações de trens a hidrogênio. Embora seu sucesso pioneiro tenha sido amplamente celebrado, a implementação enfrentou desafios operacionais significativos, inerentes à introdução de uma tecnologia disruptiva [44].</p>
+<p>O sistema de propulsão do trem de passageiros é composto por duas células de combustível, cada uma com 210 kW de potência, que convertem hidrogênio em energia elétrica para a tração. A gestão energética é otimizada por um sistema de baterias de íon-lítio, que desempenha um papel crítico ao permitir o armazenamento flexível de energia, a recuperação da energia de frenagem regenerativa e o fornecimento de um impulso de aceleração (boost) essencial para o cumprimento dos horários, além de alimentar os sistemas de bordo [44]. Para o armazenamento do combustível, o trem é equipado com dois tanques que comportam 130 kg de hidrogênio cada, operando a uma pressão de aproximadamente 350 bar. Em termos de desempenho, cada unidade tem capacidade para até 157 assentos e pode atingir uma velocidade máxima de 140 km/h [2]. A autonomia do veículo foi demonstrada ao estabelecer um recorde mundial de 1.174 km (730 milhas) com um único abastecimento de tanque. O escopo completo do projeto prevê a conversão total da frota para 14 trens de hidrogênio (Hydrogen Electric Multiple Units, ou HEMUs) [44], como o apresentado na Figura <a href="projetos-demonstrativos.html#fig:figura31">5.6</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura31"></span>
+<img src="figura31.png" alt="Trem de passageiros movido a hidrogênio, operado pela EVB. Fonte: [44]." width="70%" />
+<p class="caption">
+Figura 5.6: Trem de passageiros movido a hidrogênio, operado pela EVB. Fonte: [44].
+</p>
+</div>
+<p>A adoção da tecnologia de hidrogênio pelo projeto Coradia iLint oferece vantagens estratégicas substanciais, como a operação limpa e silenciosa, emitindo apenas vapor de água e condensação [43]. Esta abordagem contorna os elevados custos associados à eletrificação de linhas ferroviárias e elimina a dependência do diesel, cujo preço e aceitação pública se tornaram problemáticos. Adicionalmente, o projeto fomenta a economia regional ao possibilitar a produção local de hidrogênio verde. Contudo, a implementação prática revelou desafios operacionais consideráveis. Os obstáculos tecnológicos incluíram a baixa disponibilidade dos trens e componentes nos primeiros meses. Foi necessário o desenvolvimento de processos operacionais e padrões de segurança totalmente novos. Por fim, as realidades econômicas se manifestaram em custos adicionais inesperados [44].</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="células-a-combustível-de-hidrogênio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exemplo-cálculo-de-produção-de-h₂-em-um-eletrolisador-pem.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

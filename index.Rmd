@@ -190,7 +190,7 @@ Os principais componentes da célula de eletrólise da água PEM são o conjunto
 
 A eletrólise da água com AEM (do inglês, Anion Exchange Membrane ou Membrana de Troca Aniônica) é uma tecnologia em desenvolvimento para a produção de hidrogênio verde. Nos últimos anos, muitas organizações e instituições de pesquisa têm trabalhado ativamente no desenvolvimento da eletrólise com AEM devido ao seu baixo custo e alto desempenho em comparação com outras tecnologias convencionais de eletrólise. Os primeiros estudos sobre eletrólise AEM datam de 2011 e posteriormente, muitos pesquisadores vêm contribuindo para o desenvolvimento da AEM [6]. A tecnologia de eletrólise da água com AEM é semelhante à eletrólise alcalina da água convencional, a principal diferença é a substituição dos diafragmas convencionais (amianto) por uma membrana de troca aniônica (membranas de troca iônica de amônio quaternário). A eletrólise da água com AEM oferece diversas vantagens, tais como: uso de catalisadores de metais de transição de baixo custo, em vez de catalisadores de metais nobres; uso de água destilada ou solução alcalina ($KOH$) de baixa concentração como eletrólito, em vez de alta concentração. Apesar das vantagens significativas, a AEM ainda requer mais investigações e melhorias em relação à estabilidade da MEA (Membrane Electrode Assembly - Conjunto Membrana-Eletrodo) e à eficiência da célula, que são essenciais para aplicações comerciais ou em larga escala. Atualmente, a estabilidade relatada é de 2000h com Sustanion e 1000h para Fumatech (A 201 e FAA3-50), e \>35.000 h para o eletrolisador AEM multicore da Enapter [6].
 
-A reação eletroquímica consiste em duas reações de meia-célula: a reação de evolução de hidrogênio (HER) e a reação de evolução de oxigênio (OER). Inicialmente, no lado do cátodo, a molécula de água é reduzida para gerar hidrogênio (H2) e íons hidroxila (OH-) pela adição de dois elétrons. O hidrogênio é liberado da superfície do cátodo e os íons hidroxila (OH-) difundem-se através da membrana de troca iônica para o lado do ânodo pela atração positiva do mesmo, enquanto os elétrons são transportados através do circuito externo para o ânodo. No lado do ânodo, os íons hidroxila recombinam-se como moléculas de água e oxigênio ao perder elétrons. O oxigênio produzido é liberado do ânodo. O princípio básico de funcionamento de um eletrolisador AEM está apresentado na Figura \@ref(fig:figura6) e reações de meia-célula da eletrólise da água com AEM são descritas em \@ref(eq:anodo3) e \@ref(eq:catodo3).
+A reação eletroquímica consiste em duas reações de meia-célula: a reação de evolução de hidrogênio (HER) e a reação de evolução de oxigênio (OER). Inicialmente, no lado do cátodo, a molécula de água é reduzida para gerar hidrogênio ($H_2$) e íons hidroxila (OH-) pela adição de dois elétrons. O hidrogênio é liberado da superfície do cátodo e os íons hidroxila ($OH^-$) difundem-se através da membrana de troca iônica para o lado do ânodo pela atração positiva do mesmo, enquanto os elétrons são transportados através do circuito externo para o ânodo. No lado do ânodo, os íons hidroxila recombinam-se como moléculas de água e oxigênio ao perder elétrons. O oxigênio produzido é liberado do ânodo. O princípio básico de funcionamento de um eletrolisador AEM está apresentado na Figura \@ref(fig:figura6) e reações de meia-célula da eletrólise da água com AEM são descritas em \@ref(eq:anodo3) e \@ref(eq:catodo3).
 
 \begin{equation}
 OH^- \rightarrow \frac{1}{2} O_2 + H_2O + 2e^-
@@ -763,12 +763,377 @@ knitr::include_graphics(path = 'figura16.png')
 
 ### Células a combustível alcalinas (AFC)
 
+As células a combustível alcalinas utilizam um eletrólito alcalino como o hidróxido de potássio ($KOH$) ou uma membrana alcalina. A célula a combustível alcalina funciona a temperaturas elevadas, de 65°C a 220°C; portanto, tem partida mais lenta em relação à célula PEM. Os principais componentes da célula a combustível alcalina são mostrados na Figura \@ref(fig:figura17). 
+
+```{r figura17, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Diagrama de blocos de uma célula a combustível alcalina. Fonte: Adaptado de [19]."}
+
+knitr::include_graphics(path = 'figura17.png')
+
+```
+
+O hidrogênio reage no anodo com os íons de hidroxila $OH^-$ do KOH para produzir água e quatro elétrons livres ($4e^-$). A reação no anodo pode ser representada pela equação química \@ref(eq:anodoafc).
+
+\begin{equation}
+2H_2 + 4OH^- \rightarrow 4H_2O + 4e^-
+(\#eq:anodoafc)
+\end{equation}
+
+A água produzida no anodo retorna para o catodo. Os íons hidroxila são gerados no catodo pela combinação de oxigênio, água e elétrons livres. A reação do anodo pode ser representada pela equação química \@ref(eq:catodoafc).
+
+\begin{equation}
+O_2 + 2H_2O + 4e^- \rightarrow 4OH^-
+(\#eq:catodoafc)
+\end{equation}
+
+A reação geral de anodo e catodo pode ser representada pela equação química \@ref(eq:globalafc).
+
+\begin{equation}
+2H_2 + O_2 \rightarrow 2H_2O + \text{energia (calor)}
+(\#eq:globalafc)
+\end{equation}
+
+A célula a combustível alcalina é muito suscetível à contaminação, em especial pelo dióxido de carbono ($CO_2$), que reage com o eletrólito e rapidamente degrada o desempenho da célula a combustível. A água e o metano também podem contaminar a célula a combustível. Portanto, a célula a combustível alcalina deve funcionar com hidrogênio e oxigênio puros, o que aumenta o custo de sua operação. Assim, a aplicação da célula a combustível alcalina fica limitada a ambientes controlados, como naves espaciais. A NASA utilizou células a combustível alcalinas em missões espaciais e agora está encontrando novas aplicações para ela, como em energia portátil.
+
+### Célula a combustível de membrana de troca aniônica (AEMFC)
+
+Outras tecnologias vêm se desenvolvendo como alternativa ao elevado custo da célula a combustível PEM e uma delas é a célula a combustível de membrana de troca aniônica (AEMFC) [26]. A membrana de troca aniônica é um tipo de membrana polimérica que permite a passagem de ânions (íons negativos, como a hidroxila, $OH^-$) em vez de prótons ($H^+$, como na membrana utilizada na PEM). Essa célula é uma variação da célula a combustível alcalina que utiliza um eletrólito sólido (a membrana de troca aniônica) no lugar de um eletrólito líquido, como mostrado na Figura \@ref(fig:figura18). As características da célula a combustível de membrana de troca aniônica possibilitam o uso de catalisadores sem metais nobre, utilizando níquel, ou compostos de prata e cobalto. 
+
+```{r figura18, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Célula a combustível de membrana de troca aniônica (AEMFC). Fonte: Adaptado de [19]."}
+
+knitr::include_graphics(path = 'figura18.png')
+
+```
+
+## Células a combustível de alta temperatura
+
+### Células a combustível de óxido sólido (SOFC)
+
+As SOFCs se destacam entre as células que operam em temperaturas elevadas, o que lhes confere alta eficiência (até 60%) e flexibilidade de combustível (podem reformar o combustível internamente). O calor residual dessas células de alta temperatura é valioso para sistemas de Cogeração de Calor e Energia (CHP, do inglês Combined Heat and Power), alcançando eficiências globais de 75-80%.
+
+O eletrólito da célula a combustível de óxido sólido é uma fina camada de material cerâmico duro, como o óxido de zircônio. Os principais componentes da célula a combustível de óxido sólido são mostrados na Figura \@ref(fig:figura19).
+
+```{r figura19, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Diagrama de blocos de uma célula a combustível de óxido sólido. Fonte: Adaptado de [19]."}
+
+knitr::include_graphics(path = 'figura19.png')
+
+```
+
+As moléculas de oxigênio do ar se combinam com quatro elétrons no catodo para produzir íons de oxigênio negativamente carregados, $O^{2-}$. Esses íons de oxigênio migram para o anodo através do material cerâmico sólido e se combinam com o hidrogênio para produzir água e quatro elétrons ($4e^-$). Os elétrons livres nos íons de oxigênio são liberados e passam através da carga elétrica para o catodo. A reação química no anodo é dada por \@ref(eq:anodoaemfc).
+
+\begin{equation}
+2H_2 + O^{2-} \rightarrow 2H_2O + 4e^-
+(\#eq:anodoaemfc)
+\end{equation}
+
+A reação química no catodo é dada por \@ref(eq:catodoaemfc).
+
+\begin{equation}
+O_2 + 4e^- \rightarrow 2O^{2-}
+(\#eq:catodoaemfc)
+\end{equation}
+
+Então, a reação geral é dada por \@ref(eq:globalaemfc).
+
+\begin{equation}
+2H_2 + O_2 \rightarrow 2H_2O + \text{energia (calor)}
+(\#eq:globalaemfc)
+\end{equation}
+
+As células a combustível de óxido sólido funcionam a temperaturas muito altas, entre 600°C a 1000°C. Elas necessitam de um tempo significativo para atingir o estado estacionário, portanto, são lentas na partida e para responder às mudanças na demanda de energia elétrica. No entanto, a alta temperatura torna a célula a combustível de óxido sólido menos sensível a impurezas no combustível, como enxofre e $CO_2$. Essas células a combustível conseguem reformar internamente o gás natural e o biogás, e podem ser combinadas com uma turbina a gás para produzir eletricidade com uma eficiência que chega a 75%. Portanto, a célula a combustível de óxido sólido é adequada para a geração estacionária de grande escala na faixa de megawatts.
+
+### Células a combustível de carbonato fundido (MCFC)
+
+As células a combustível de carbonato fundido utilizam um sal de carbonato imobilizado em uma matriz porosa como seu eletrólito. O eletrólito é uma mistura de carbonado de lítio e carbonato de potássio, ou de lítio e de sódio. Os principais componentes da célula a combustível de carbonato fundido são mostrados na Figura \@ref(fig:figura20). 
+
+```{r figura20, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Diagrama de blocos de uma célula a combustível de carbonato fundido. Fonte: Adaptado de [19]."}
+
+knitr::include_graphics(path = 'figura20.png')
+
+```
+
+As células a combustível de carbonato fundido já são utilizadas em várias aplicações estacionárias de médio a grande porte, em virtude da sua eficiência. Seu funcionamento a temperaturas elevadas, de aproximadamente 600°C, lhe permite reformar internamente combustíveis como gás natural e biogás.
+
+Quando o eletrólito da célula a combustível de carbonato fundido é aquecido a uma temperatura em torno de 600 °C, a mistura de sal se funde e torna-se condutora para íons de carbonato $CO_3^{2-}$. Esses íons carregados negativamente fluem através do catodo para o anodo, onde se combinam com o hidrogênio para produzir água, dióxido de carbono e elétrons livres. A reação química no ânodo é dada pela equação \@ref(eq:reacaocarbonato).
+
+
+\begin{equation}
+2CO_3^{2-} + 2H_2 \rightarrow 2H_2O + 2CO_2 + 4e^-
+(\#eq:reacaocarbonato)
+\end{equation}
+
+O dióxido de carbono é realimentado para o cátodo, onde reage com o oxigênio e os elétrons livres ($4e^-$). A reação química no catodo é dada pela equação \@ref(eq:catodocarbonato).
+
+\begin{equation}
+2CO_2 + O_2 + 4e^- \rightarrow 2CO_3^{2-}
+(\#eq:catodocarbonato)
+\end{equation}
+
+A reação geral da célula de carbonato fundido é dada por \@ref(eq:globalcarbonato).
+
+\begin{equation}
+2H_2 + O_2 \rightarrow 2H_2O + \text{energia (calor)}
+(\#eq:globalcarbonato)
+\end{equation}
+
+Podemos observar a partir das equações \@ref(eq:reacaocarbonato) e \@ref(eq:catodocarbonato) que o $CO_2$ produzido no ânodo também é consumido no cátodo, em condições ideais. Com um projeto cuidadoso, o dióxido de carbono pode ser totalmente utilizado e a célula não emite $CO_2$. Uma das desvantagens características dessa célula é a corrosão interna por conta do eletrólito de carbonato.
+
+## Modelo equivalente de uma célula a combustível
+
+De forma geral, a modelagem de células a combustível é muito similar a dos eletrolisadores e também apresenta alta não linearidade, sendo governada por parâmetros complexos como a densidade de corrente, a umidade da membrana (especialmente em células PEM) e as pressões parciais dos gases reagentes. Simplificações do modelo completo podem ser aplicadas conforme o foco e a profundidade do estudo em questão.
+
+O desempenho de uma célula é tradicionalmente caracterizado pela curva de polarização, um gráfico da tensão da célula versus a densidade de corrente (corrente por unidade de área ativa), como o da Figura \@ref(fig:figura21). A tensão de saída real da célula é sempre menor que a tensão ideal, devido as perdas. À medida que mais corrente é extraída da célula, a tensão diminui.
+
+```{r figura21, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Curva característica de uma célula a combustível mostrando as diferentes regiões de operação. Fonte: [27]."}
+
+knitr::include_graphics(path = 'figura21.png')
+
+```
+
+As três principais categorias de perdas são:
+
+1. **Perda por Ativação ($\eta_{act}$)**: A tensão cai em baixas correntes. É devida à barreira de energia que as espécies reagentes devem superar para iniciar a reação química no eletrodo.
+
+2. **Perda Ôhmica ($\eta_{ohm}$)**: Ocorre na faixa média da curva, sendo aproximadamente linear com a corrente. É causada pela resistência elétrica dos componentes, como o eletrólito e os eletrodos.
+
+3. **Perda de Concentração ($\eta_{conc}$)**: Ocorre em altas correntes. É causada pelo transporte lento e ineficiente dos gases reagentes (hidrogênio e oxigênio) para os locais da reação, levando a uma queda acentuada na tensão de saída. A operação nesta zona extrema deve ser evitada para preservar a integridade da célula.
+
+Assim, a tensão da célula pode ser dada pela equação \@ref(eq:ecel)
+
+\begin{equation}
+E_{cel} = E_{rev} - \eta_{act} - \eta_{ohm} - \eta_{conc}
+(\#eq:ecel)
+\end{equation}
+
+A tensão reversível $E_{rev}$ é descrita pela equação de Nernst \@ref(eq:nernst), assim como da célula de eletrólise. Como a Equação de Nernst depende apenas da estequiometria da reação global (a oxidação do hidrogênio e redução do oxigênio para formar água: $2H_2 + O_2 \rightarrow 2H_2O$) e das condições operacionais (T, pressões/concentrações), ela pode ser aplicada a diversos tipos de célula. O que muda na prática para a aplicação da equação é: 
+
+- Temperatura: cada tipo de célula opera em uma faixa de temperatura diferente (PEMFC: baixa; SOFC: alta), logo, o valor de T na equação mudará. 
+
+- Reação química: para as células a combustível a hidrogênio puro, a reação global é a mesma, mas em células que usam combustíveis diferentes (como metanol ou gás natural) ou eletrólitos diferentes (como a MCFC), a reação do eletrodo (e, portanto, os valores de $E_0$, $z$ e o quociente de pressões parciais dos reagentes) é específica.
+
+
+## Balanço da planta de uma célula a combustível
+
+O desempenho de uma planta de célula a combustível não depende apenas do stack eletroquímico, mas sobretudo do conjunto de subsistemas auxiliares, denominado Balanço de Planta (Balance of Plant – BoP). É esse arranjo de componentes que garante condições adequadas de operação em termos de temperatura, pressão, umidade, pureza dos gases e segurança, além de realizar a conversão da energia elétrica gerada em formas utilizáveis pela carga ou pela rede. A Figura \@ref(fig:figura22) apresenta o exemplo de um arranjo de uma planta de uma célula a combustível.
+
+```{r figura22, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Arranjo de uma planta PEMFC. Fonte [28]."}
+
+knitr::include_graphics(path = 'figura22.png')
+
+```
+
+Estudos recentes demonstram que, em diversas arquiteturas de células a combustível, o BoP pode representar mais de 50% do custo total do sistema, bem como responder por perdas parasitas significativas, que reduzem a eficiência líquida. Dessa forma, compreender a composição e as especificidades do BoP em diferentes tecnologias é fundamental para avaliar a viabilidade técnica e econômica da geração eletroquímica de energia.
+
+Embora existam diferenças relevantes entre células de baixa e alta temperatura, o BoP segue uma lógica funcional comum: preparação e fornecimento do combustível, condicionamento do oxidante, gerenciamento térmico e de água, eletrônica de potência, além de controle e segurança. No caso das tecnologias de baixa temperatura (PEMFC, AFC e PAFC), predominam subsistemas voltados à gestão hídrica e de pureza do hidrogênio, enquanto em sistemas de alta temperatura (MCFC e SOFC) a complexidade recai sobre resistência de materiais, estabilidade térmica e integração com reformadores.
+
+Desta forma, o BoP constitui a espinha dorsal de uma planta de célula a combustível, determinando não apenas a eficiência e a durabilidade, mas também a viabilidade econômica e de mercado. Tanto nas tecnologias de baixa temperatura quanto nos sistemas de alta temperatura a busca por soluções mais simples, robustas e de menor custo no BoP representa um dos caminhos mais promissores para a consolidação comercial das células a combustível em escala global.
+
+A evolução do BoP busca reduzir consumo parasita, sobretudo em compressores e bombas, que impactam diretamente a eficiência líquida. Também há esforços para miniaturizar sistemas de humidificação e resfriamento em PEMFCs, reduzir a contaminação por CO₂ em AFCs e aumentar a durabilidade de materiais resistentes à corrosão e altas temperaturas em MCFCs e SOFCs. Avanços recentes apontam para a integração de modelagem preditiva e controle inteligente, capazes de prolongar a vida útil e otimizar a resposta dinâmica do sistema. Além disso, há tendência de desenvolver BoPs modulares e compactos, visando aplicações veiculares e portáteis, sem sacrificar confiabilidade.
+
+Esses avanços no BoP refletem não apenas melhorias na eficiência energética e na durabilidade dos componentes, mas também estabelecem a base para a gestão eficiente dos subsistemas que garantem o fornecimento de combustível, oxidante, água, calor e energia elétrica. A seguir, são detalhados os principais subsistemas do BoP de um PEMFC, com suas exigências e particularidades.
+
+- **Sistema de Combustível**: O sistema de combustível é um dos elementos centrais do BoP. Nas PEMFCs, a exigência de hidrogênio com altíssima pureza (tipicamente > 99,99%), condição fundamental para evitar a degradação do catalisador de platina e a redução da condutividade da membrana. Para garantir esse requisito, o BoP inclui o uso de tanques de armazenamento pressurizado, válvulas de regulagem, sensores de vazamento e, em alguns casos, purificadores adicionais. 
+Quando o combustível é obtido por meio de reformadores de gás natural ou etanol, o subsistema deve incorporar etapas de remoção de monóxido de carbono e outros contaminantes, uma vez que traços acima de 10 ppm já são suficientes para envenenar o catalisador. Além disso, a gestão adequada da pressão e da vazão de hidrogênio é essencial para evitar gradientes de concentração e garantir a uniformidade de operação das células. 
+Em sistemas de maior porte, também se empregam linhas redundantes de alimentação, válvulas de segurança e sistemas automatizados de purga, que têm a função de remover gases inertes acumulados e manter a estabilidade eletroquímica do conjunto [29].
 
 
 
+- **Fornecimento de Oxidante**: O fornecimento de ar ao cátodo é um subsistema essencial no BoP das PEMFCs, sendo responsável por garantir a disponibilidade adequada de oxigênio para a reação eletroquímica. Em geral, empregam-se compressores para alimentar o ar em pressão controlada, além de filtros para remover particulados e contaminantes que possam comprometer a durabilidade da membrana [30]. 
+Um aspecto crítico é a umidificação do ar de entrada, necessária para manter o equilíbrio hídrico da membrana polimérica, cuja condutividade iônica depende fortemente do teor de água. A insuficiência de umidade pode levar à desidratação e aumento da resistência ôhmica, enquanto o excesso pode causar alagamento dos canais de fluxo, reduzindo a eficiência da célula. 
+Assim, o subsistema de fornecimento de oxidante deve ser integrado a estratégias de controle que equilibrem pressão, vazão e umidade, garantindo desempenho estável e prolongando a vida útil do sistema. Alguns dos elementos do sistema de fornecimento de oxidante são mostrados na Figura \@ref(fig:figura23).
+
+```{r figura23, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Componentes do Sistema de fornecimento de oxidante: (a) filtro de ar, (b) compressor de ar e (c) humidificador."}
+
+knitr::include_graphics(path = 'figura23.png')
+
+```
+
+- **Gestão Térmica e de Água**: O gerenciamento térmico é um dos pontos mais críticos do BoP em sistemas de PEMFCs, já que essas células operam em baixas temperaturas (tipicamente entre 60 – 90 °C) e dependem fortemente da estabilidade térmica para manter o desempenho eletroquímico. O calor gerado durante as reações deve ser dissipado de forma eficiente, evitando elevação excessiva da temperatura, que pode degradar a membrana polimérica e acelerar a perda de desempenho do catalisador. Para isso, recorre-se normalmente ao resfriamento líquido, com bombas de circulação, trocadores de calor e radiadores, que permitem manter a temperatura do conjunto em níveis seguros e homogêneos. A Figura \@ref(fig:figura24) mostra alguns desses componentes. Outro aspecto fundamental está no balanço de água. Durante a operação, a PEMFC consome água na região do ânodo, transporta parte dela pela membrana por eletro-osmose e ainda produz água no cátodo como subproduto da reação. Esse ciclo torna a gestão hídrica um desafio permanente: pouca água leva à desidratação da membrana e perda de condutividade iônica, enquanto o excesso provoca alagamento (flooding) nos canais de fluxo, reduzindo a difusão de reagentes. Assim, o BoP incorpora umidificadores, sistemas de recirculação e drenagem controlada, que asseguram o equilíbrio entre hidratação e remoção do excesso.
+Por fim, o gerenciamento integrado de calor e água deve ser apoiado por sensores e estratégias de controle em tempo real, capazes de ajustar a vazão de refrigerante e o nível de umidificação conforme a demanda elétrica. Esse equilíbrio é essencial para garantir não apenas a eficiência e a estabilidade de curto prazo, mas também a durabilidade do sistema em longas horas de operação. Quando bem implementada, a gestão térmica e hídrica amplia a vida útil da célula, reduz perdas de desempenho e contribui para a confiabilidade da planta [30] [31].
 
 
+```{r figura24, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Componentes do sistema térmico e de água: (a) radiador e (b) bomba de água."}
 
+knitr::include_graphics(path = 'figura24.png')
+
+```
+
+- **Eletrônica de Potência**: Nas células a combustível, a eletrônica de potência é um componente indispensável do BoP, pois atua como interface entre a energia elétrica gerada pelo stack e a carga externa. A célula fornece corrente contínua em tensão relativamente baixa e variável, em função da carga aplicada e do estado operacional da pilha. Para adequar essa energia ao uso final, o sistema utiliza conversores CC-CC, que estabilizam e elevam a tensão, e inversores CC-CA, quando é necessária a integração com redes elétricas convencionais ou alimentar uma carga CA. Essa conversão é essencial para garantir a compatibilidade com diferentes aplicações, desde sistemas estacionários de geração distribuída até aplicações móveis e veiculares. A Figura \@ref(fig:figura25) monstra os circuitos utilizados na conversão CC-CC (conversor elevador) e na conversão CC-CA (conversor em trifásico em ponte H). Em aplicações automotivas, a eletrônica de potência tem papel ainda mais crítico, já que deve lidar com variações rápidas de demanda de energia. Para amortecer picos de carga e proteger o stack contra transientes elétricos, são integrados ao sistema dispositivos de armazenamento, como baterias de íons de lítio ou supercapacitores, que fornecem ou absorvem energia instantaneamente. Essa configuração híbrida não apenas prolonga a vida útil da célula ao evitar sobrecargas, como também melhora a eficiência global da planta, ao permitir que a PEMFC opere próxima a uma faixa de potência mais estável.
+Além disso, a eletrônica de potência possibilita a implementação de estratégias de controle avançadas, como o rastreamento do ponto de máxima potência (MPPT), que otimiza a extração de energia em condições variáveis de operação. Esse tipo de gerenciamento é fundamental para explorar a flexibilidade das PEMFCs, garantindo desempenho confiável tanto em regime estacionário quanto em cenários dinâmicos de demanda [31].
+
+```{r figura25, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Circuitos de um conversor elevador (boost converter) para o estágio CC-CC e conversor trifásico em ponte H para o estágio CC-CA."}
+
+knitr::include_graphics(path = 'figura25.png')
+
+```
+
+- **Controle e Segurança**: O BoP das células a combustível de membrana de troca protônica (PEMFCs) integra sistemas avançados de controle e segurança, essenciais para a operação eficiente e segura do sistema. Sensores de pressão, temperatura, vazão e umidade monitoram continuamente as condições da célula, alimentando algoritmos de controle implementados em Controladores Lógicos Programáveis (PLC) ou unidades eletrônicas de controle (ECU). Esses sistemas ajustam automaticamente os fluxos de combustível e oxidante, o gerenciamento térmico e as estratégias de umidificação, garantindo operação dentro das condições seguras e otimizando o desempenho eletroquímico.
+A segurança em PEMFCs é reforçada por dispositivos como válvulas de alívio de pressão, sensores de detecção de hidrogênio e protocolos de desligamento emergencial. Estes elementos protegem tanto os operadores quanto os componentes do sistema, evitando acidentes em caso de falhas, vazamentos ou sobrepressão. Em particular, a operação com hidrogênio pressurizado exige atenção especial para evitar risco de explosão ou envenenamento do catalisador por contaminantes.
+Além disso, a integração de algoritmos de controle avançados permite a antecipação de transientes de carga e condições de operação fora do ponto ótimo, promovendo respostas rápidas do sistema sem comprometer a integridade do stack. Essa abordagem aumenta a confiabilidade do sistema e prolonga a vida útil da PEMFC, ao mesmo tempo em que mantém a eficiência energética do conjunto [32].
+
+# PROJETOS DEMONSTRATIVOS
+
+O hidrogênio verde, produzido a partir de fontes renováveis, é uma peça-chave para a descarbonização, e as células a combustível são a tecnologia central para converter esse hidrogênio de volta em eletricidade e calor de forma eficiente e limpa. A seguir serão apresentados alguns projetos atuais e significativos para produção de hidrogênio com eletrolisadores e que aplicam hidrogênio verde utilizando células a combustível em diferentes setores.
+
+## Projetos Demonstrativos com Eletrolisadores
+
+### Projeto NEOM de Hidrogênio Verde
+
+Este é considerado o maior projeto de hidrogênio verde em construção no mundo. Localizado na futurística cidade de NEOM, o projeto visa instalar mais de 2 GW de capacidade de eletrolisadores. A produção será destinada principalmente à exportação na forma de amônia verde. O projeto integra 4 GW de energia solar e eólica para alimentar os eletrolisadores. Com a missão de construir e operar a maior planta de hidrogênio verde do mundo, o projeto visa uma produção de até 600 toneladas diárias, destinada a descarbonizar setores como o transporte marítimo e a indústria pesada [33]. 
+
+A NEOM Green Hydrogen Company (NGHC) emerge como uma iniciativa na transição energética global, concebida a partir de uma joint venture que capitaliza as competências de três líderes de mercado. Esta aliança une a expertise em energia renovável da ACWA Power, a liderança global em gases industriais e hidrogênio da Air Products, e a visão futurista da NEOM, criando uma sinergia projetada para dominar o nascente mercado de hidrogênio verde [33].
+
+A viabilidade do projeto é ancorada por uma infraestrutura de energia renovável, que alimentará a planta inteiramente com aproximadamente 4 GW de eletricidade gerada em um local com mais de 300 km². Essa capacidade provém de instalações dedicadas, compreendendo um parque solar de 2,2 GW e um parque eólico com mais de 1,6 GW  [34]. A produção de hidrogênio a partir da água será realizada por um pacote de eletrólise com capacidade superior a 2,2 GW, utilizando eletrolisadores alcalinos (fornecidos pela Thyssenkrupp Nucera). Para superar os desafios de armazenamento e transporte do hidrogênio, a estratégia logística adota a sua conversão em amônia verde (NH₃), um vetor energético de alta densidade e com uma cadeia logística global já estabelecida. A meta é exportar até 1,2 milhão de toneladas anuais por meio de um cais dedicado [34]. 
+
+O cronograma do projeto é agressivo, com a conclusão da infraestrutura de geração de energia prevista para meados de 2026, permitindo o início das exportações de amônia verde. A plena disponibilidade comercial do produto em escala global é então esperada para 2027 [35]. O avanço é tangível, com a NGHC reportando a conclusão de 80% do projeto no início de 2025, o que mantém o empreendimento no caminho certo para cumprir seus prazos ambiciosos [33]. A Figura \@ref(fig:figura26) apresenta uma foto com as obras do projeto.
+
+```{r figura26, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Foto aérea das obras do projeto NEOM de hidrogênio verde. Fonte: [34]."}
+
+knitr::include_graphics(path = 'figura26.png')
+
+```
+
+### Projeto Piloto de Hidrogênio Verde Sinopec Xinjiang Kuqa
+
+
+Liderado pela China Petroleum & Chemical Corporation (Sinopec), este é o maior projeto da China para a produção de hidrogênio verde a partir de energia fotovoltaica e um dos maiores projetos do gênero no mundo. Sua operação teve início em julho de 2023, marcando o comissionamento bem-sucedido de todo o processo, desde a produção e transporte de hidrogênio verde até sua aplicação direta na refinação de petróleo [36] [37]. A missão central do projeto é aproveitar os abundantes recursos de energia solar da região de Kuqa para produzir hidrogênio verde em larga escala. Esse hidrogênio é então fornecido à refinaria Tahe, também da Sinopec, para substituir o hidrogênio cinza, produzido a partir de combustíveis fósseis, que era tradicionalmente utilizado nos seus processos de refino [36].
+
+O projeto foi desenvolvido com um investimento de aproximadamente US$ 417 milhões. A energia para o processo de eletrólise é fornecida por uma fazenda fotovoltaica dedicada com capacidade de 300 MW. A planta foi projetada para produzir 20.000 toneladas de hidrogênio verde por ano. Estima-se que o custo de produção do hidrogênio será de aproximadamente 2,55 dólares por quilograma [36] [37].
+
+A planta possui um total de 52 conjuntos de eletrolisadores com tecnologia alcalina, cada um tem uma capacidade nominal de produção de 1.000 metros cúbicos normais (Nm³/h) de hidrogênio. Os equipamentos foram fabricados por três empresas especializadas: Cockerill-Jingli Hydrogen, LONGi Hydrogen e PERIC Hydrogen [37]. O projeto inclui dez tanques esféricos de grande porte mostrados na Figura \@ref(fig:figura27), que oferecem uma capacidade total de armazenamento de 210.000 metros cúbicos de hidrogênio. Uma rede de dutos dedicada conecta a planta de produção à refinaria, com capacidade para transportar 28.000 metros cúbicos de hidrogênio por hora [36] [37].
+
+```{r figura27, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Tanques para o armazenamento do hidrogênio verde do projeto Sinopec Xinjiang Kuqa. Fonte: [36]."}
+
+knitr::include_graphics(path = 'figura27.png')
+
+```
+
+### Projeto Iberdrola Puertollano
+
+A usina de Puertollano (Ciudad Real), mostrada na Figura \@ref(fig:figura28), é composta por um parque solar fotovoltaico de 100 MW, um sistema de baterias de íon-lítio com uma capacidade de armazenamento de 20 MWh e um sistema de produção de hidrogênio através de eletrólise com tecnologia PEM de 20 MW. A capacidade de geração de 360 kg/hora de hidrogênio. Tudo a partir de fontes 100% renováveis. Com um investimento de 150 milhões de euros, a iniciativa evitará a emissão de 39.000 tCO2/ano. O hidrogênio verde produzido será usado na fábrica de amoníaco que a Fertiberia possui no município [38].
+
+```{r figura28, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Tanques para o armazenamento do hidrogênio verde do projeto Sinopec Xinjiang Kuqa. Fonte: [36]."}
+
+knitr::include_graphics(path = 'figura28.png')
+
+```
+
+O hidrogênio produzido é armazenado em um sistema composto por 11 tanques, cada um com capacidade para 7 toneladas, mantendo o gás a uma pressão de 60 bar, ideal para a entrega via dutos à planta adjacente da Fertiberia, o que evidencia a eficiência da localização [39].
+
+A iniciativa contribui diretamente para as metas do "Plano Nacional Integrado de Energia e Clima 2021-2030 (PNIEC)" da Espanha, que determina uma participação de 74% de fontes renováveis na matriz elétrica e uma meta nacional de 4 GW de capacidade instalada de eletrolisadores até 2030.
+
+## Projetos Demonstrativos com Células a Combustível
+
+### MF Hydra (Noruega) - Transporte Marítimo
+
+O MF Hydra é a primeira balsa do mundo a operar comercialmente utilizando hidrogênio verde líquido e células a combustível. O projeto, liderado pela operadora de balsas e barcos expressos Norled, é um marco na descarbonização do setor marítimo. A embarcação opera em uma rota na Noruega entre Hjelmeland-Skipavik-Nesvik. Equipado com um tanque de hidrogênio líquido de 80 m3, o navio é capaz de navegar na área do fiorde entre Hjelmeland, Nesvik e Skipavik por até três semanas sem reabastecimento. Seu sofisticado sistema de propulsão permite que as baterias operem em conjunto com as células de combustível de hidrogênio líquido e inclui um recurso de redundância que permite que a balsa navegue com biodiesel. A Figura \@ref(fig:figura29) mostra a imagem da balsa MF Hydra em operação.
+
+```{r figura29, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Imagem do MF Hydra. Fonte [40]."}
+
+knitr::include_graphics(path = 'figura29.png')
+
+```
+
+O MF Hydra pode transportar até 295 passageiros e 80 veículos e é movido por duas células de combustível Ballard FCwave™, totalizando 400 kW de potência (duas células a combustível de 200 kW cada) [41]. O hidrogênio verde é armazenado em tanques criogênicos a -253 °C e, quando necessário, é aquecido e direcionado para as células a combustível, que geram eletricidade para alimentar os motores elétricos da balsa. O único subproduto é a água.
+
+### Projeto de Transporte Urbano JIVE
+
+O projeto JIVE (Joint Initiative for Hydrogen Vehicles Across Europe) existe para auxiliar na comercialização de ônibus movidos a células de combustível (FCBs) como uma opção de transporte público com emissão zero em toda a Europa. O projeto visa abordar o atual alto custo de propriedade dos FCBs em comparação com os ônibus convencionais e a falta de infraestrutura de reabastecimento de hidrogênio em toda a Europa, apoiando a implementação de 131 FCBs em sete locais distribuídos entre Reino Unido, Alemanha, Holanda e Itália. Combinado com seu projeto irmão, o JIVE 2, quase 300 ônibus movidos a células de combustível foram implementados em dezesseis locais até 2025 – a maior implementação na Europa até o momento [42]. A Figura \@ref(fig:figura30) mostra um modelo de ônibus movido por célula a combustível do projeto JIVE.
+
+```{r figura30, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Imagem de um ônibus movido por célula a combustível do projeto JIVE."}
+
+knitr::include_graphics(path = 'figura30.png')
+
+```
+
+Dentre os objetivos qualitativos do projeto podem ser citados:
+
+-	demonstrar através da experiência da implementação em larga escala do uso de ônibus movidos a células a combustível;
+
+-	aumentar a conscientização sobre o uso da tecnologia de células de combustível para uma implementação mais ampla, com foco nos compradores de ônibus e nos órgãos reguladores;
+
+-	gerar impactos ambientais positivos operando células de combustível por longos períodos.
+
+### Projeto Caradia iLint
+
+O projeto Coradia iLint representa um marco na transição energética do transporte ferroviário, sendo reconhecido como o primeiro trem de passageiros do mundo movido a hidrogênio [43], [44]. O projeto foi liderado por uma colaboração estratégica entre a Landesnahverkehrsgesellschaft Niedersachsen (LNVG), o estado da Baixa Saxônia, a fabricante Alstom, a operadora Eisenbahnen und Verkehrsbetriebe Elbe-Weser (EVB) e a empresa Linde. O Coradia iLint foi concebido com uma missão de não apenas provar que a propulsão a hidrogênio é uma alternativa viável e livre de emissões para linhas não eletrificadas em substituição às frotas a diesel [43], mas também servir como um laboratório real para estabelecer processos e padrões operacionais e acumular conhecimento para o desenvolvimento de futuras gerações de trens a hidrogênio. Embora seu sucesso pioneiro tenha sido amplamente celebrado, a implementação enfrentou desafios operacionais significativos, inerentes à introdução de uma tecnologia disruptiva [44].
+
+O sistema de propulsão do trem de passageiros é composto por duas células de combustível, cada uma com 210 kW de potência, que convertem hidrogênio em energia elétrica para a tração. A gestão energética é otimizada por um sistema de baterias de íon-lítio, que desempenha um papel crítico ao permitir o armazenamento flexível de energia, a recuperação da energia de frenagem regenerativa e o fornecimento de um impulso de aceleração (boost) essencial para o cumprimento dos horários, além de alimentar os sistemas de bordo [44]. Para o armazenamento do combustível, o trem é equipado com dois tanques que comportam 130 kg de hidrogênio cada, operando a uma pressão de aproximadamente 350 bar. Em termos de desempenho, cada unidade tem capacidade para até 157 assentos e pode atingir uma velocidade máxima de 140 km/h [2]. A autonomia do veículo foi demonstrada ao estabelecer um recorde mundial de 1.174 km (730 milhas) com um único abastecimento de tanque. O escopo completo do projeto prevê a conversão total da frota para 14 trens de hidrogênio (Hydrogen Electric Multiple Units, ou HEMUs) [44], como o apresentado na Figura \@ref(fig:figura31). 
+
+```{r figura31, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Trem de passageiros movido a hidrogênio, operado pela EVB. Fonte: [44]."}
+
+knitr::include_graphics(path = 'figura31.png')
+
+```
+
+A adoção da tecnologia de hidrogênio pelo projeto Coradia iLint oferece vantagens estratégicas substanciais, como a operação limpa e silenciosa, emitindo apenas vapor de água e condensação [43]. Esta abordagem contorna os elevados custos associados à eletrificação de linhas ferroviárias e elimina a dependência do diesel, cujo preço e aceitação pública se tornaram problemáticos. Adicionalmente, o projeto fomenta a economia regional ao possibilitar a produção local de hidrogênio verde. Contudo, a implementação prática revelou desafios operacionais consideráveis. Os obstáculos tecnológicos incluíram a baixa disponibilidade dos trens e componentes nos primeiros meses. Foi necessário o desenvolvimento de processos operacionais e padrões de segurança totalmente novos. Por fim, as realidades econômicas se manifestaram em custos adicionais inesperados [44]. 
+
+# EXEMPLO: CÁLCULO DE PRODUÇÃO DE H₂ EM UM ELETROLISADOR PEM
+
+Um eletrolisador do tipo PEM (Membrana de Troca Protônica) opera com uma corrente constante de 500 A. O sistema é composto por um stack de 57 células ligadas em série, sendo a tensão nominal de cada célula de 1,99 V. Determine a produção de Hidrogênio (H2) em Normal Metros Cúbicos por hora (Nm3/h) e em kg/h, considerando uma eficiência faradaica de 99%. Também estime a eficiência energética do eletrolisador considerando o Valor de Aquecimento Superior ou HHV (Higher Heating Value) do hidrogênio.
+
+1. **Dados Iniciais**:
+
+----
+
+- Corrente ($iA$): 500 A.
+
+- Número de células em série ($N$): 57
+
+- Eficiência faradaica ($\eta_F$): 99%.
+
+- Constante de Faraday ($F$): 96485 C/mol
+
+- Massa molar (M) do hidrogênio: $H_2≈2,016$ g/mol 
+	
+2. **Cálculo da Produção de Hidrogênio**:
+
+
+----
+
+Primeiro, calculamos a taxa molar por segundo e depois convertemos para Nm3/h e kg/h:
+
+- Passo A: Taxa molar ($\dot{N}_{H_2}$)
+
+$$\dot{N}_{H_2} = \frac{N\,iA}{2F}\,\eta_F = \frac{57\,500}{2\cdot 96\,458}\cdot 0{,}99 \approx 0{,}1462\ \mathrm{mol/s}$$
+
+- Passo B: Conversão para Normal Metro Cúbico por hora (Nm3/h)
+
+Para calcular a produção em Normal Metros Cúbicos por hora (Nm3/h), precisamos converter a taxa molar de produção para volume, considerando as condições normais de temperatura e pressão (CNTP). O Nm3 é a unidade padrão na indústria porque, como gases são compressíveis, medir apenas em m3 sem especificar a pressão e temperatura é impreciso. O "Normal" geralmente refere-se a temperatura de 0 °C (273,15 K) e pressão de 1 atm. Nessas condições, 1 mol de qualquer gás ideal ocupa aproximadamente 22,414 litros ou 0,022414 m3.
+
+Como já temos a taxa molar, basta converter mol/s para a vazão volumétrica normal ($\dot{V}_{nH2}$) em Nm3/h, através da seguinte equação:
+
+$$\dot{V}_{nH_2} = \dot{N}_{H_2}\,\mathrm{mol/s}\cdot 0{,}022414\ \mathrm{m^3/mol}\cdot 3600\ \mathrm{s/h}$$
+
+$$\dot{V}_{nH_2} = 0{,}1462 \cdot 0{,}022414 \cdot 3600 \approx 11{,}79\ \mathrm{Nm^3/h}$$
+
+- Passo C: Conversão para kg/h
+
+Para converter mol/s em kg/h, multiplicamos pela massa molar (M), pelos segundos em uma hora (3600) e dividimos por 1000 (para converter g em kg):
+
+$$\dot{m}_{H_2} = \frac{\dot{N}_{H_2}\,\mathrm{mol/s}\cdot M_{H_2}\,\mathrm{kg/mol}\cdot 3600\ \mathrm{s/h}}{1000\ \mathrm{g/kg}}$$
+$$\dot{m}_{H_2} = \frac{0{,}1462 \cdot 2{,}016 \cdot 3600}{1000} \approx 1{,}061\ \mathrm{kg/h}$$
+
+3. **Cálculo da Eficiência**:
+
+
+----
+
+- Passo A: Cálculo da potência do eletrolisador
+
+A potência (P) do eletrolisador depende de sua tensão e corrente. A tensão total do stack será a tensão de cada célula multiplicado pelo número de células em série:
+
+$$V_{stack} = 57 \cdot 1{,}99\ \mathrm{V} = 113{,}43\ \mathrm{V}$$
+
+E a potência consumida será:
+
+$$P = 113{,}43\ \mathrm{V} \cdot 500\ \mathrm{A} = 56\,715\ \mathrm{W} \approx 56{,}71\ \mathrm{kW}$$
+- Passo B: Cálculo da eficiência do eletrolisador
+
+Para calcular a eficiência energética vamos utilizar a equação (23), lembrando que o $HHV_{H_2}$ é de aproximadamente 3,54 kWh/Nm3 (ou 39,4 kWh/kg), logo:
+
+$$\eta_{ele} = \frac{\dot{V}_{nH_2}\cdot HHV_{H_2}}{P} = \frac{11{,}79\ \mathrm{Nm^3/h}\cdot 3{,}54\ \mathrm{kWh/Nm^3}}{56{,}7\ \mathrm{kW}} \approx 73{,}6\%$$
+
+A diferença entre a energia do $H_2$ e a energia elétrica consumida, é dissipada em forma de calor. Quanto maior for a tensão da célula, menor será a eficiência do sistema, indicando que há maiores perdas ôhmicas, de ativação e de concentração.
 
 
 # REFERÊNCIAS {.unnumbered}
