@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>CAPÍTULO 4 CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂</title>
+  <meta name="description" content="CAPÍTULO 4 CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="CAPÍTULO 4 CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CAPÍTULO 4 CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  
+  
+  
+
+<meta name="author" content="Autores:  Prof. Robson Bauwelz Gonzatti  Prof. Rondineli Rodrigues Pereira" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="integração-com-as-energias-renováveis.html"/>
+<link rel="next" href="referências.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLIDE E CÉLULAS A COMBUSTÍVEL DE H₂</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> INTRODUÇÃO</a></li>
+<li class="chapter" data-level="2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html"><i class="fa fa-check"></i><b>2</b> PRODUÇÃO DE HIDROGÊNIO</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#produ%C3%A7%C3%A3o-a-partir-de-combust%C3%ADveis-f%C3%B3sseis-rotas-dominantes"><i class="fa fa-check"></i><b>2.1</b> Produção a partir de combustíveis fósseis (rotas dominantes)</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#reforma-a-vapor-de-metano-smr-do-ingl%C3%AAs-steam-methane-reforming"><i class="fa fa-check"></i><b>2.1.1</b> Reforma a Vapor de Metano (SMR, do inglês Steam Methane Reforming)</a></li>
+<li class="chapter" data-level="2.1.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#gaseifica%C3%A7%C3%A3o-do-carv%C3%A3o-gc"><i class="fa fa-check"></i><b>2.1.2</b> Gaseificação do Carvão (GC)</a></li>
+<li class="chapter" data-level="2.1.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#oxida%C3%A7%C3%A3o-parcial"><i class="fa fa-check"></i><b>2.1.3</b> Oxidação Parcial</a></li>
+<li class="chapter" data-level="2.1.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#reforma-autot%C3%A9rmica"><i class="fa fa-check"></i><b>2.1.4</b> Reforma Autotérmica</a></li>
+<li class="chapter" data-level="2.1.5" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#decomposi%C3%A7%C3%A3o-termocatal%C3%ADtica"><i class="fa fa-check"></i><b>2.1.5</b> Decomposição Termocatalítica</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-da-%C3%A1gua"><i class="fa fa-check"></i><b>2.2</b> Eletrólise da água</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-alcalina"><i class="fa fa-check"></i><b>2.2.1</b> Eletrólise alcalina</a></li>
+<li class="chapter" data-level="2.2.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-pem"><i class="fa fa-check"></i><b>2.2.2</b> Eletrólise PEM</a></li>
+<li class="chapter" data-level="2.2.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-membrana-de-troca-ani%C3%B4nica-aem"><i class="fa fa-check"></i><b>2.2.3</b> Eletrólise com membrana de troca aniônica (AEM)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-%C3%B3xido-s%C3%B3lido-soec"><i class="fa fa-check"></i><b>2.2.4</b> Eletrólise com óxido sólido (SOEC)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#comparativos-entre-as-tecnologias-de-eletr%C3%B3lise"><i class="fa fa-check"></i><b>2.3</b> Comparativos entre as tecnologias de eletrólise</a></li>
+<li class="chapter" data-level="2.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#secao24"><i class="fa fa-check"></i><b>2.4</b> Modelagem matemática de uma célula PEM</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#an%C3%A1lise-da-efici%C3%AAncia-da-eletr%C3%B3lise-e-consumo-de-energia-espec%C3%ADfico"><i class="fa fa-check"></i><b>2.4.1</b> Análise da eficiência da eletrólise e consumo de energia específico</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html"><i class="fa fa-check"></i><b>3</b> INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#benef%C3%ADcios-e-desafios-da-integra%C3%A7%C3%A3o-de-renov%C3%A1veis"><i class="fa fa-check"></i><b>3.1</b> Benefícios e desafios da integração de renováveis</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#vantagens-estrat%C3%A9gicas-de-integra%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>3.1.1</b> Vantagens estratégicas de integração</a></li>
+<li class="chapter" data-level="3.1.2" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#desafios-t%C3%A9cnicos-e-econ%C3%B4micos"><i class="fa fa-check"></i><b>3.1.2</b> Desafios Técnicos e Econômicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html"><i class="fa fa-check"></i><b>4</b> CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#secao41"><i class="fa fa-check"></i><b>4.1</b> Tipos de células a combustível</a></li>
+<li class="chapter" data-level="4.2" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#a-estrutura-da-c%C3%A9lula-a-combust%C3%ADvel-e-seus-componentes"><i class="fa fa-check"></i><b>4.2</b> A estrutura da célula a combustível e seus componentes</a></li>
+<li class="chapter" data-level="4.3" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-baixa-temperatura"><i class="fa fa-check"></i><b>4.3</b> Células a combustível de baixa temperatura</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-eletr%C3%B3lito-de-membrana-polim%C3%A9rica-de-troca-de-pr%C3%B3tons-pemfc"><i class="fa fa-check"></i><b>4.3.1</b> Células a combustível de eletrólito de membrana polimérica de troca de prótons (PEMFC)</a></li>
+<li class="chapter" data-level="4.3.2" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-alcalinas-afc"><i class="fa fa-check"></i><b>4.3.2</b> Células a combustível alcalinas (AFC)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>REFERÊNCIAS</a></li>
+<li class="divider"></li>
+<li><a href="https://ch2v.unifei.edu.br/" target="blank">CH2V</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="células-a-combustível-de-hidrogênio" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">CAPÍTULO 4</span> CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO<a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-hidrog%C3%AAnio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Células a combustível, ou Fuel Cells (FCs), são dispositivos eletroquímicos que convertem diretamente a energia química de um combustível gasoso em eletricidade, realizando o processo inversor dos eletrolisadores. Elas são vistas como potenciais fontes de energia alternativa para aplicações estacionárias e de mobilidade.</p>
+<p>Diferentemente de uma bateria, que armazena energia e precisa ser recarregada, a célula a combustível opera continuamente, produzindo eletricidade em corrente contínua (CC), além de água e calor, desde que o combustível (como o hidrogênio) e um oxidante (como o oxigênio, geralmente do ar atmosférico) sejam constantemente fornecidos, como mostrado na Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura10">4.1</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura10"></span>
+<img src="figura10.png" alt="Entradas e saídas de uma célula a combustível. Fonte: Adaptado de [19]." width="70%" />
+<p class="caption">
+Figura 4.1: Entradas e saídas de uma célula a combustível. Fonte: Adaptado de [19].
+</p>
+</div>
+<p>O princípio de operação das células a combustível, descoberto originalmente em 1839 por William R. Grove, baseia-se em uma reação eletroquímica. Os processos eletrolíticos para a geração de hidrogênio, separam a água e o hidrogênio em um eletrolisador. As células a combustível normalmente usam o processo eletrolítico inverso do eletrolisador, com diferentes tipos de eletrólito. O princípio de funcionamento de todas as células é semelhante, exceto o tipo de eletrólito [19].</p>
+<p>Uma célula básica, como mostrado no diagrama de blocos da Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura11">4.2</a>, consiste em um eletrólito posicionado entre dois eletrodos. O eletrólito possui a propriedade especial de permitir a passagem de íons positivos (prótons), mas bloquear os elétrons. O gás hidrogênio (<span class="math inline">\(H_2\)</span>) passa sobre o ânodo (Eletrodo de Combustível) e, com a ajuda de um catalisador (geralmente platina), separa-se em elétrons (<span class="math inline">\(e^-\)</span>) e prótons de hidrogênio (íons positivos, <span class="math inline">\(H^+\)</span>). Os elétrons são forçados a viajar através de um circuito elétrico externo (a carga) para chegar ao cátodo, gerando assim a corrente elétrica. Os prótons (íons) passam através do eletrólito e se combinam com os elétrons que chegam do circuito externo e com o oxigênio (geralmente do ar) para formar água (<span class="math inline">\(H_2O\)</span>) e calor no cátodo (Eletrodo de Oxidante). Esse calor pode ser utilizado para atender as necessidades de aquecimento, incluindo água quente e aquecimento do ambiente.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura11"></span>
+<img src="figura11.png" alt="Diagrama de blocos de uma célula a combustível. Fonte: Adaptado de [19]." width="70%" />
+<p class="caption">
+Figura 4.2: Diagrama de blocos de uma célula a combustível. Fonte: Adaptado de [19].
+</p>
+</div>
+<p>Sistemas de células a combustível representam uma área industrial nova e promissora, recebendo considerável investimento comercial como uma futura tecnologia de energia. O desenvolvimento e o progresso dessa tecnologia devem ser observados de perto, pois as FCs complementam os motores a combustão e reduzem a dependência dos combustíveis fósseis. Essa tecnologia traz implicações ambientais significativas, pois o setor de transporte, por exemplo, é responsável por 32% da emissão global de <span class="math inline">\(CO_2\)</span> [20]. A viabilidade, eficiência e robustez da tecnologia de células a combustível dependem criticamente do entendimento, previsão, monitoramento e controle do sistema.</p>
+<p>As células a combustível são ativamente estudadas para diversas aplicações que podem ser separadas em:</p>
+<ol style="list-style-type: decimal">
+<li><p>Aplicações em Mobilidade (Automotivas): O uso em powertrains automotivos é enfatizado devido à sua importância no consumo global de combustível e na geração de emissões. O desempenho transiente é um requisito chave para o sucesso dos veículos a célula a combustível.</p></li>
+<li><p>Geração de Energia Estacionária e Residencial (Geração Distribuída - GD): Fornecem energia limpa e eficiente para edifícios e residências, sendo atrativas devido à sua alta eficiência de conversão de combustível e baixíssimas emissões de gases poluentes.</p></li>
+</ol>
+<div id="secao41" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Tipos de células a combustível<a href="células-a-combustível-de-hidrogênio.html#secao41" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As células a combustível são classificadas principalmente pelo tipo de eletrólito que utilizam, sendo os tipos principais:</p>
+<ul>
+<li><p>Células a combustível de eletrólito de membrana polimérica trocadora de prótons (Proton Exchange Membrane Fuel Cells ou Polymer Electrolyte Membrane Fuel Cells – PEMFC).</p></li>
+<li><p>Células a combustível alcalinas (Alkaline Fuel Cells – AFC).</p></li>
+<li><p>Células a combustível de troca aniônica (Anion Exchange Membrane Fuel Cells – AEMFC)</p></li>
+<li><p>Células a combustível de óxido sólido (Solid Oxide Fuel Cells – SOFC).</p></li>
+<li><p>Células a combustível de carbonatos fundidos (Molten Carbonate Fuel Cells – MCFC).</p></li>
+<li><p>Células a combustível de ácido fosfórico (Phosphoric Acid Fuel Cells – PAFC).</p></li>
+</ul>
+<p>A Tabela <a href="células-a-combustível-de-hidrogênio.html#tab:tabela5">4.1</a> apresenta as principais características dos tipos de célula a combustíveis mais comuns.</p>
+<div id="jygookhtoh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jygookhtoh table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jygookhtoh thead, #jygookhtoh tbody, #jygookhtoh tfoot, #jygookhtoh tr, #jygookhtoh td, #jygookhtoh th {
+  border-style: none;
+}
+
+#jygookhtoh p {
+  margin: 0;
+  padding: 0;
+}
+
+#jygookhtoh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jygookhtoh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jygookhtoh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jygookhtoh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jygookhtoh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jygookhtoh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jygookhtoh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jygookhtoh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jygookhtoh .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jygookhtoh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jygookhtoh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jygookhtoh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jygookhtoh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jygookhtoh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jygookhtoh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jygookhtoh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jygookhtoh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jygookhtoh .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jygookhtoh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jygookhtoh .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jygookhtoh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jygookhtoh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jygookhtoh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jygookhtoh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jygookhtoh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jygookhtoh .gt_left {
+  text-align: left;
+}
+
+#jygookhtoh .gt_center {
+  text-align: center;
+}
+
+#jygookhtoh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jygookhtoh .gt_font_normal {
+  font-weight: normal;
+}
+
+#jygookhtoh .gt_font_bold {
+  font-weight: bold;
+}
+
+#jygookhtoh .gt_font_italic {
+  font-style: italic;
+}
+
+#jygookhtoh .gt_super {
+  font-size: 65%;
+}
+
+#jygookhtoh .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jygookhtoh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jygookhtoh .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jygookhtoh .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jygookhtoh .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jygookhtoh .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jygookhtoh .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#jygookhtoh .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#jygookhtoh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <caption><span id="tab:tabela5">Tabela 4.1: </span>Comparação das características operacionais das células a combustível.</caption>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Tipo">Tipo</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Sigla">Sigla</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Eletrólito">Eletrólito</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Faixa-de-Temperatura">Faixa de Temperatura</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Aplicações-Comuns">Aplicações Comuns</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Tipo" class="gt_row gt_center">Membrana de Eletrólito Polimérico Trocadora de Prótons</td>
+<td headers="Sigla" class="gt_row gt_center">PEMFC</td>
+<td headers="Eletrólito" class="gt_row gt_center">Polímero Sólido (p. ex., Nafion)</td>
+<td headers="Faixa de Temperatura" class="gt_row gt_center">Baixa (50°C a 100°C)</td>
+<td headers="Aplicações Comuns" class="gt_row gt_center">Automotiva, residencial, portátil.</td></tr>
+    <tr><td headers="Tipo" class="gt_row gt_center">Alcalina</td>
+<td headers="Sigla" class="gt_row gt_center">AFC</td>
+<td headers="Eletrólito" class="gt_row gt_center">Hidróxido de Potássio Líquido</td>
+<td headers="Faixa de Temperatura" class="gt_row gt_center">Baixa (60°C a 90°C)</td>
+<td headers="Aplicações Comuns" class="gt_row gt_center">Espaço (transporte inicial).</td></tr>
+    <tr><td headers="Tipo" class="gt_row gt_center">Membrana de Eletrólito Polimérico Condutora de Ânions</td>
+<td headers="Sigla" class="gt_row gt_center">AEMFC</td>
+<td headers="Eletrólito" class="gt_row gt_center">Polímero sólido</td>
+<td headers="Faixa de Temperatura" class="gt_row gt_center">Baixa (60°C a 80°C)</td>
+<td headers="Aplicações Comuns" class="gt_row gt_center">Ainda em desenvolvimento.</td></tr>
+    <tr><td headers="Tipo" class="gt_row gt_center">Óxido Sólido</td>
+<td headers="Sigla" class="gt_row gt_center">SOFC</td>
+<td headers="Eletrólito" class="gt_row gt_center">Cerâmica Sólida</td>
+<td headers="Faixa de Temperatura" class="gt_row gt_center">Alta (600°C a 1000°C)</td>
+<td headers="Aplicações Comuns" class="gt_row gt_center">Geração estacionária, cogeração de calor e energia.</td></tr>
+    <tr><td headers="Tipo" class="gt_row gt_center">Carbonato Fundido</td>
+<td headers="Sigla" class="gt_row gt_center">MCFC</td>
+<td headers="Eletrólito" class="gt_row gt_center">Carbonato Fundido</td>
+<td headers="Faixa de Temperatura" class="gt_row gt_center">Alta (600°C a 700°C)</td>
+<td headers="Aplicações Comuns" class="gt_row gt_center">Geração estacionária, cogeração de calor e energia.</td></tr>
+    <tr><td headers="Tipo" class="gt_row gt_center">Ácido Fosfórico</td>
+<td headers="Sigla" class="gt_row gt_center">PAFC</td>
+<td headers="Eletrólito" class="gt_row gt_center">Ácido Fosfórico Líquido</td>
+<td headers="Faixa de Temperatura" class="gt_row gt_center">Média(150°C a 220°C)</td>
+<td headers="Aplicações Comuns" class="gt_row gt_center">Geração estacionária, dispersa.</td></tr>
+  </tbody>
+  
+</table>
+</div>
+</div>
+<div id="a-estrutura-da-célula-a-combustível-e-seus-componentes" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> A estrutura da célula a combustível e seus componentes<a href="células-a-combustível-de-hidrogênio.html#a-estrutura-da-c%C3%A9lula-a-combust%C3%ADvel-e-seus-componentes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Uma única célula a combustível tipicamente produz uma tensão baixa de cerca de 0,4 V a 0,9 V e correntes elevadas entre 0,5 a 1,0 A/cm2. Para produzir a tensão e potência necessárias para a maioria das aplicações, múltiplas células são conectadas em série, formando um Stack, como mostrado na Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura12">4.3</a>.</p>
+<p>Os componentes básicos de uma célula individual são:</p>
+<ul>
+<li><p>Conjunto Membrana Eletrodo (do inglês, Membrane Electrode Assembly – MEA): Consiste na membrana (eletrólito polimérico no caso da célula PEM, por exemplo), os eletrodos (ânodo e cátodo) e as camadas de difusão de gás. O catalisador (geralmente platina na célula PEM) é aplicado à superfície do ânodo e do cátodo para acelerar a reação.</p></li>
+<li><p>Placas bipolares (em inglês, Flow Field Plates): Distribuem os gases reagentes através de canais de fluxo, coletam a corrente produzida pela reação eletroquímica e fornecem suporte estrutural.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura12"></span>
+<img src="figura12.png" alt="Esquemático da operação e componentes de um stack de célula a combustível. Fonte: [21]." width="70%" />
+<p class="caption">
+Figura 4.3: Esquemático da operação e componentes de um stack de célula a combustível. Fonte: [21].
+</p>
+</div>
+<p>A Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura13">4.4</a> mostra um exemplo de um stack de célula a combustível comercial.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura13"></span>
+<img src="figura13.png" alt="Exemplo de um stack de célula a combustível tipo PEM. Fonte: [22]." width="70%" />
+<p class="caption">
+Figura 4.4: Exemplo de um stack de célula a combustível tipo PEM. Fonte: [22].
+</p>
+</div>
+<p>Várias células a combustível podem ser ligadas em série e paralelo para aumentar a capacidade de potência de saída, como mostra o diagrama de blocos da Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura14">4.5</a> [23] [24]. Um inversor PWM (Pulse Width Modulation) é muitas vezes empregado para produzir uma tensão alternada (CA) fixa ou variável, com uma frequência também fixa ou variável. Normalmente, utiliza-se um transformador antes de se conectar o inversor à rede elétrica. Em um sistema híbrido de célula a combustível, outras fontes de energia, como baterias e supercapacitores, também podem ser integradas para aumentar ainda mais a eficiência e a estabilidade do sistema.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura14"></span>
+<img src="figura14.png" alt="Diagrama de blocos de um sistema de células a combustível conectado à rede elétrica. Fonte: Adaptado de [19]." width="70%" />
+<p class="caption">
+Figura 4.5: Diagrama de blocos de um sistema de células a combustível conectado à rede elétrica. Fonte: Adaptado de [19].
+</p>
+</div>
+</div>
+<div id="células-a-combustível-de-baixa-temperatura" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Células a combustível de baixa temperatura<a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-baixa-temperatura" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Como apresentado na seção <a href="células-a-combustível-de-hidrogênio.html#secao41">4.1</a>, as células a combustível (FCs) são comumente classificadas com base no tipo de eletrólito utilizado, o que determina suas características operacionais, como a temperatura de operação. As células podem ser divididas em dois grupos principais: células de baixa temperatura e células de alta temperatura.</p>
+<p>As principais células a combustível de baixa temperatura são as células de eletrólito de membrana polimérica trocadora de prótons (PEMFC) e as células alcalinas (AFC). As células de membrana de troca aniônica (AEMFC) estão em desenvolvimento e tem ganhado atenção nos últimos anos. A seguir será detalhado o funcionamento de cada umas destas células.</p>
+<div id="células-a-combustível-de-eletrólito-de-membrana-polimérica-de-troca-de-prótons-pemfc" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Células a combustível de eletrólito de membrana polimérica de troca de prótons (PEMFC)<a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-eletr%C3%B3lito-de-membrana-polim%C3%A9rica-de-troca-de-pr%C3%B3tons-pemfc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A PEMFC é a principal tecnologia atual entre as células de baixa temperatura devido a sua alta densidade de potência, eletrólito sólido e faixa de temperatura de operação (50°C a 100°C), sendo adequadas para aplicações automotivas e sistemas de geração distribuída de pequeno e médio porte. A baixa temperatura permite uma partida rápida, no entanto, o gerenciamento térmico é desafiador, pois a temperatura deve ser mantida abaixo de 100°C para que a membrana permaneça adequadamente umidificada. A membrana de polímero é um excelente condutor de íons de hidrogênio.</p>
+<p>Os componentes básicos da célula a combustível PEM são o anodo, o eletrólito e catodo, como indica a Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura15">4.6</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura15"></span>
+<img src="figura15.png" alt="Esquemático de uma célula a combustível PEM. Fonte: Adaptado de [19]." width="70%" />
+<p class="caption">
+Figura 4.6: Esquemático de uma célula a combustível PEM. Fonte: Adaptado de [19].
+</p>
+</div>
+<p>O eletrólito é uma membrana de polímero revestido por um catalisador de metal, como a platina. O anodo tem uma placa plana com canais embutidos para dispersar o gás hidrogênio sobre a superfície do catalisador. Quando o hidrogênio pressurizado entra no anodo e em seguida passa pelo canal, o catalisador faz dois átomos do gás hidrogênio (<span class="math inline">\(2H_2\)</span>) se oxidarem em quatro íons de hidrogênio (<span class="math inline">\(4H^+\)</span>) e abandonarem 4 elétrons (<span class="math inline">\(4H^+\)</span>). A reação no anodo pode ser representada pela equação química <a href="células-a-combustível-de-hidrogênio.html#eq:anodofc">(4.1)</a>.</p>
+<p><span class="math display" id="eq:anodofc">\[\begin{equation}
+2H_2 \rightarrow 4H^+ + 4e^-
+\tag{4.1}
+\end{equation}\]</span></p>
+<p>Os elétrons livres fluem pelo caminho de menor resistência da carga externa para o outro eletrodo (cátodo). A corrente de carga é causada pelo fluxo de elétrons. A direção do fluxo de corrente consiste no sentido oposto do fluxo de elétrons. Os íons de hidrogênio passam através da membrana do anodo para o catodo. Ao entrar no catodo, os elétrons reagem com o oxigênio do ar exterior e os íons de hidrogênio do catodo formando água. A reação catódica pode ser representada pela equação <a href="células-a-combustível-de-hidrogênio.html#eq:catodofc">(4.2)</a>. Todo esse processo está representado na Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura15">4.6</a>.</p>
+<p><span class="math display" id="eq:catodofc">\[\begin{equation}
+O_2 + 4H^+ + 4e^- \rightarrow 2H_2O
+\tag{4.2}
+\end{equation}\]</span></p>
+<p>Portanto, a célula a combustível PEM combina hidrogênio com oxigênio para produzir água, e isso gera energia térmica no processo de reação do catodo. A energia térmica pode ser extraída por meio de um trocador de calor, como na Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura11">4.2</a>, para uso em várias aplicações. A reação geral do anodo e catodo pode ser representada pela equação química dada em <a href="células-a-combustível-de-hidrogênio.html#eq:globalfc">(4.3)</a>.</p>
+<p><span class="math display" id="eq:globalfc">\[\begin{equation}
+2H_2 + O_2 \rightarrow 2H_2O + \text{energia (calor)}
+\tag{4.3}
+\end{equation}\]</span></p>
+<p>Uma célula a combustível PEM funciona a temperaturas relativamente baixas, de cerca de 80°C, e pode variar rapidamente a sua saída para atender às mudanças na demanda de energia (com resposta a um degrau de carga em centenas de milissegundos) [23]. O dispositivo é de certa forma leve, possui alta densidade de energia e pode iniciar a operação muito rapidamente (em alguns segundos). Essa célula é adequada para muitas aplicações, incluindo o transporte e a distribuição para cargas residenciais. Por exemplo, uma célula a combustível PEM equipa o Toyota Mirai, o primeiro carro a hidrogênio a ser produzido em massa e vendido comercialmente no mundo.</p>
+<p>Entretanto, a platina utilizada como catalisador é extremamente sensível ao monóxido de carbono, e a eliminação deste é crucial para a longevidade da célula a combustível. Isso se soma ao custo geral do sistema PEM. A execução na prática requer unidades de controle, como o regulador de pressão do hidrogênio, como ilustra a Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura11">4.2</a>, e um controle do fluxo de ar (ou de <span class="math inline">\(O_2\)</span>).</p>
+<p>A célula a combustível com membrana polimérica de troca de prótons (PEMFC) emprega camadas de catalisador revestidas em ambos os lados de uma membrana polimérica para catalisar as reações no catodo e no anodo, conforme Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura15">4.6</a>.</p>
+<p>Na maioria dos projetos, o catalisador é baseado em platina, um metal precioso muito caro. A platina pode contribuir com 10% a 15% do custo de um stack de células a combustível. A menos que o teor de platina seja reduzido, ele representará uma parcela maior do custo à medida que os volumes de fabricação aumentam. Muitos pesquisadores estão se concentrando em encontrar substitutos mais baratos e duráveis para a platina, mesmo que ainda não apresentem um desempenho comparável ao da platina. Atualmente, catalisadores à base de ligas de platina (com menor teor de platina) e catalisadores não baseados em platina (utilizando metais não preciosos) são substitutos promissores. Diferentes tipos catalisadores com nanoestruturas tipo Core-shell, nanocristais e outras estão em desenvolvimento [25]. Contudo, ainda há um longo caminho a percorrer antes que eles possam ser empregados na fabricação prática e aplicações industriais, como mostrado na Figura <a href="células-a-combustível-de-hidrogênio.html#fig:figura16">4.7</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura16"></span>
+<img src="figura16.png" alt="Linha do tempo para tecnologia dos catalisadores de Platina, liga de Platina, core-shell, metais não preciosos, nanocristais com forma controlada e nanoestrutura. Fonte: Adaptado de [25]." width="70%" />
+<p class="caption">
+Figura 4.7: Linha do tempo para tecnologia dos catalisadores de Platina, liga de Platina, core-shell, metais não preciosos, nanocristais com forma controlada e nanoestrutura. Fonte: Adaptado de [25].
+</p>
+</div>
+</div>
+<div id="células-a-combustível-alcalinas-afc" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Células a combustível alcalinas (AFC)<a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-alcalinas-afc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="integração-com-as-energias-renováveis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referências.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

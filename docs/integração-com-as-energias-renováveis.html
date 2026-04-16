@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>CAPÍTULO 3 INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂</title>
+  <meta name="description" content="CAPÍTULO 3 INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="CAPÍTULO 3 INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CAPÍTULO 3 INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  
+  
+  
+
+<meta name="author" content="Autores:  Prof. Robson Bauwelz Gonzatti  Prof. Rondineli Rodrigues Pereira" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="produção-de-hidrogênio.html"/>
+<link rel="next" href="células-a-combustível-de-hidrogênio.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLIDE E CÉLULAS A COMBUSTÍVEL DE H₂</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> INTRODUÇÃO</a></li>
+<li class="chapter" data-level="2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html"><i class="fa fa-check"></i><b>2</b> PRODUÇÃO DE HIDROGÊNIO</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#produ%C3%A7%C3%A3o-a-partir-de-combust%C3%ADveis-f%C3%B3sseis-rotas-dominantes"><i class="fa fa-check"></i><b>2.1</b> Produção a partir de combustíveis fósseis (rotas dominantes)</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#reforma-a-vapor-de-metano-smr-do-ingl%C3%AAs-steam-methane-reforming"><i class="fa fa-check"></i><b>2.1.1</b> Reforma a Vapor de Metano (SMR, do inglês Steam Methane Reforming)</a></li>
+<li class="chapter" data-level="2.1.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#gaseifica%C3%A7%C3%A3o-do-carv%C3%A3o-gc"><i class="fa fa-check"></i><b>2.1.2</b> Gaseificação do Carvão (GC)</a></li>
+<li class="chapter" data-level="2.1.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#oxida%C3%A7%C3%A3o-parcial"><i class="fa fa-check"></i><b>2.1.3</b> Oxidação Parcial</a></li>
+<li class="chapter" data-level="2.1.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#reforma-autot%C3%A9rmica"><i class="fa fa-check"></i><b>2.1.4</b> Reforma Autotérmica</a></li>
+<li class="chapter" data-level="2.1.5" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#decomposi%C3%A7%C3%A3o-termocatal%C3%ADtica"><i class="fa fa-check"></i><b>2.1.5</b> Decomposição Termocatalítica</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-da-%C3%A1gua"><i class="fa fa-check"></i><b>2.2</b> Eletrólise da água</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-alcalina"><i class="fa fa-check"></i><b>2.2.1</b> Eletrólise alcalina</a></li>
+<li class="chapter" data-level="2.2.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-pem"><i class="fa fa-check"></i><b>2.2.2</b> Eletrólise PEM</a></li>
+<li class="chapter" data-level="2.2.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-membrana-de-troca-ani%C3%B4nica-aem"><i class="fa fa-check"></i><b>2.2.3</b> Eletrólise com membrana de troca aniônica (AEM)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-%C3%B3xido-s%C3%B3lido-soec"><i class="fa fa-check"></i><b>2.2.4</b> Eletrólise com óxido sólido (SOEC)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#comparativos-entre-as-tecnologias-de-eletr%C3%B3lise"><i class="fa fa-check"></i><b>2.3</b> Comparativos entre as tecnologias de eletrólise</a></li>
+<li class="chapter" data-level="2.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#secao24"><i class="fa fa-check"></i><b>2.4</b> Modelagem matemática de uma célula PEM</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#an%C3%A1lise-da-efici%C3%AAncia-da-eletr%C3%B3lise-e-consumo-de-energia-espec%C3%ADfico"><i class="fa fa-check"></i><b>2.4.1</b> Análise da eficiência da eletrólise e consumo de energia específico</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html"><i class="fa fa-check"></i><b>3</b> INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#benef%C3%ADcios-e-desafios-da-integra%C3%A7%C3%A3o-de-renov%C3%A1veis"><i class="fa fa-check"></i><b>3.1</b> Benefícios e desafios da integração de renováveis</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#vantagens-estrat%C3%A9gicas-de-integra%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>3.1.1</b> Vantagens estratégicas de integração</a></li>
+<li class="chapter" data-level="3.1.2" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#desafios-t%C3%A9cnicos-e-econ%C3%B4micos"><i class="fa fa-check"></i><b>3.1.2</b> Desafios Técnicos e Econômicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html"><i class="fa fa-check"></i><b>4</b> CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#secao41"><i class="fa fa-check"></i><b>4.1</b> Tipos de células a combustível</a></li>
+<li class="chapter" data-level="4.2" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#a-estrutura-da-c%C3%A9lula-a-combust%C3%ADvel-e-seus-componentes"><i class="fa fa-check"></i><b>4.2</b> A estrutura da célula a combustível e seus componentes</a></li>
+<li class="chapter" data-level="4.3" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-baixa-temperatura"><i class="fa fa-check"></i><b>4.3</b> Células a combustível de baixa temperatura</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-eletr%C3%B3lito-de-membrana-polim%C3%A9rica-de-troca-de-pr%C3%B3tons-pemfc"><i class="fa fa-check"></i><b>4.3.1</b> Células a combustível de eletrólito de membrana polimérica de troca de prótons (PEMFC)</a></li>
+<li class="chapter" data-level="4.3.2" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-alcalinas-afc"><i class="fa fa-check"></i><b>4.3.2</b> Células a combustível alcalinas (AFC)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>REFERÊNCIAS</a></li>
+<li class="divider"></li>
+<li><a href="https://ch2v.unifei.edu.br/" target="blank">CH2V</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="integração-com-as-energias-renováveis" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">CAPÍTULO 3</span> INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS<a href="integração-com-as-energias-renováveis.html#integra%C3%A7%C3%A3o-com-as-energias-renov%C3%A1veis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Diversas fontes de energia renovável podem alimentar o processo de eletrólise, no qual a água é decomposta em hidrogênio e oxigênio. A escolha da fonte primária impacta não apenas a sustentabilidade, mas também a eficiência, a economia e a configuração tecnológica mais adequada para a produção de hidrogênio [14] [15].</p>
+<p>As fontes mais aplicáveis para a geração de hidrogênio verde incluem:</p>
+<ul>
+<li><p><strong>Energia Solar (Fotovoltaica e Térmica)</strong>: A energia solar fotovoltaica (FV) converte diretamente a luz do sol em eletricidade. A energia solar térmica, por sua vez, concentra a radiação solar para gerar calor, que pode ser usado para alimentar ciclos de potência ou para fornecer a energia térmica necessária em eletrolisadores de alta temperatura (SOEC), aumentando significativamente a eficiência geral do processo [14]. A energia solar fotovoltaica se destaca como um foco principal de pesquisa e desenvolvimento devido à sua maturidade tecnológica, custo decrescente e vasta disponibilidade global [14] [16]. Sistemas que integram painéis fotovoltaicos com eletrolisadores demonstram grande potencial, com a eficiência de conversão de energia solar em hidrogênio podendo superar 30% [16]. Sua natureza modular permite a implantação em diversas escalas, desde pequenas instalações até grandes usinas.</p></li>
+<li><p><strong>Energia Eólica</strong>: A energia cinética dos ventos é convertida em eletricidade por meio de aerogeradores. O Brasil possui um enorme potencial eólico, tanto em terra (onshore) quanto no mar (offshore), onde os ventos são mais intensos e constantes [17].
+A energia eólica se consolida como uma das rotas mais promissoras e neutras para o clima na produção de hidrogênio [14]. O Brasil, em particular, detém um potencial eólico gigantesco, especialmente no que se refere ao potencial offshore. A combinação de parques eólicos com plantas de eletrólise é uma estratégia chave para a produção em larga escala de hidrogênio verde, aproveitando a alta capacidade de geração para alimentar eletrolisadores de grande porte [17].</p></li>
+<li><p><strong>Energia Hidrelétrica</strong>: Utiliza a força da água em movimento, geralmente armazenada em reservatórios, para girar turbinas e gerar eletricidade. É uma fonte consolidada e de baixo custo, que compõe a maior parte da matriz elétrica brasileira [14] [17].
+A energia hidrelétrica oferece vantagens significativas, como o baixo custo da eletricidade e o rápido tempo de resposta das usinas [14]. No Brasil, onde as hidrelétricas representam 65% da matriz elétrica, a capacidade de armazenamento dos reservatórios confere grande estabilidade ao fornecimento de energia [17]. Essa constância é ideal para alimentar eletrolisadores de forma contínua, uma sinergia que se alinha perfeitamente com as características operacionais dos eletrolisadores alcalinos, como será detalhado adiante.</p></li>
+<li><p><strong>Energia Geotérmica</strong>: Aproveita o calor do interior da Terra para gerar vapor que aciona turbinas, produzindo eletricidade de forma contínua e estável [14].
+A principal vantagem da energia geotérmica é sua capacidade de fornecer eletricidade e calor de forma estável e contínua, sem a intermitência característica das fontes solar e eólica. Por essa razão, sua integração com eletrolisadores visa a produção constante de hidrogênio, e não o armazenamento de energia para compensar flutuações [14]. Essa característica a torna particularmente compatível com eletrolisadores que operam em alta temperatura e requerem um fornecimento de energia ininterrupto para máxima eficiência.</p></li>
+<li><p><strong>Biomassa/Biogás</strong>: A queima de matéria orgânica ou de biogás pode gerar calor para acionar usinas a vapor ou alimentar motores e turbinas que produzem eletricidade [15] [17].
+A viabilidade de cada uma dessas fontes, no entanto, depende de uma análise aprofundada de sua maturidade tecnológica, custo e, crucialmente, de sua sinergia operacional com as tecnologias de eletrólise.</p></li>
+</ul>
+<div id="benefícios-e-desafios-da-integração-de-renováveis" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Benefícios e desafios da integração de renováveis<a href="integração-com-as-energias-renováveis.html#benef%C3%ADcios-e-desafios-da-integra%C3%A7%C3%A3o-de-renov%C3%A1veis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A integração de fontes de energia renováveis com eletrolisadores é uma peça-chave para a descarbonização da economia, mas essa sinergia apresenta um conjunto dual de vantagens estratégicas e significativos obstáculos técnicos e econômicos que precisam ser superados.</p>
+<div id="vantagens-estratégicas-de-integração" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Vantagens estratégicas de integração<a href="integração-com-as-energias-renováveis.html#vantagens-estrat%C3%A9gicas-de-integra%C3%A7%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Armazenamento de Energia e Mitigação da Intermitência</strong>: A produção de hidrogênio verde funciona como um mecanismo de armazenamento de energia em larga escala. Ela permite capturar e guardar o excedente de eletricidade gerado por fontes intermitentes como a solar e a eólica, superando suas limitações de disponibilidade e garantindo um fornecimento de energia mais estável [14] [17].</p></li>
+<li><p><strong>Equilíbrio e Estabilidade da Rede Elétrica</strong>: Mais do que um benefício passivo, a operação de plantas de hidrogênio como “cargas flexíveis” representa uma ferramenta estratégica para a gestão da rede elétrica. Ao absorver a sobreoferta de geração renovável, especialmente durante os períodos de alta incidência solar, essas plantas ajudam a estabilizar a rede, evitar o desperdício de energia (curtailment) e otimizar o uso da infraestrutura [18].</p></li>
+<li><p><strong>Descarbonização de Setores Industriais</strong>: O hidrogênio verde pode ser utilizado para descarbonizar setores industriais de difícil abatimento, como a siderurgia e a indústria química. Esse processo, conhecido como interligação setorial (sector coupling), permite que a energia limpa do setor elétrico seja transferida para outros setores da economia, ampliando o alcance da transição energética [17].</p></li>
+</ul>
+</div>
+<div id="desafios-técnicos-e-econômicos" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Desafios Técnicos e Econômicos<a href="integração-com-as-energias-renováveis.html#desafios-t%C3%A9cnicos-e-econ%C3%B4micos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Variabilidade da Geração de Energia</strong>: As flutuações de potência inerentes às fontes solar e eólica podem forçar os eletrolisadores a operar em carga parcial ou a ligar e desligar com frequência. Essa operação intermitente pode deteriorar o desempenho e a vida útil dos equipamentos, especialmente dos eletrolisadores alcalinos (AEL), que são menos flexíveis [14].</p></li>
+<li><p><strong>Custos de Energia e Viabilidade Econômica</strong>: O custo da eletricidade é o maior componente no custo final da produção de hidrogênio verde [18]. Embora a produção de H₂ verde ainda não seja economicamente viável em todos os cenários, as projeções são otimistas. Espera-se que o custo do hidrogênio de fonte fotovoltaica caia para menos de US$ 2,5 por quilo até 2030, tornando-o competitivo [16].</p></li>
+<li><p><strong>Impactos na Infraestrutura Elétrica</strong>: A integração de plantas de hidrogênio de grande porte exige estudos de estabilidade para garantir uma conexão segura ao sistema elétrico. Além disso, a demanda adicional pode sobrecarregar a infraestrutura de transmissão existente, exigindo investimentos em sua expansão e reforço [18].</p></li>
+</ul>
+<p>Para mitigar esses desafios, é fundamental selecionar a tecnologia de eletrolisador mais adequada às características de cada fonte de energia renovável. A eficiência, a durabilidade e a viabilidade econômica de um projeto de hidrogênio verde dependem criticamente da correta compatibilização entre as características operacionais da fonte de energia renovável e a tecnologia do eletrolisador. Cada tipo possui particularidades que o tornam mais ou menos adequado para diferentes regimes de fornecimento de energia.</p>
+<p>Os eletrolisadores PEM são a tecnologia mais adequada para fontes de energia variáveis, como a solar fotovoltaica e a eólica. A principal razão é seu rápido tempo de resposta, na ordem de milissegundos a segundos, que permite acompanhar as flutuações de potência de forma ágil. Além disso, os eletrolisadores PEM podem operar de forma eficiente em cargas parciais mais baixas, a partir de 10-20% de sua capacidade nominal, tornando-os ideais para lidar com a intermitência [18] [16].</p>
+<p>Os eletrolisadores Alcalinos, por serem uma tecnologia madura e de menor custo de capital, são uma opção viável, porém menos flexíveis. Seu tempo de resposta é significativamente mais lento (minutos a horas) e sua faixa de operação mínima é mais restrita (20-40% da capacidade nominal). Essas características os tornam mais adequados para fontes de energia estáveis e contínuas, como a hidrelétrica, ou para sistemas conectados à rede que garantem um fornecimento constante, evitando a degradação causada pela operação em carga parcial [14] [18].</p>
+<p>Já os eletrolisadores de Óxido Sólido operam em altas temperaturas (entre 600-1000 °C) e requerem tanto eletricidade quanto calor para funcionar com máxima eficiência [14] [15]. Portanto, os eletrolisadores SOEC são ideais para integração com fontes que podem fornecer ambos os insumos de forma estável, como a energia geotérmica e sistemas de energia solar térmica concentrada. Devido ao seu tempo de resposta lento, são mais compatíveis com fontes de geração contínua, que permitem uma operação otimizada [14] [18].</p>
+<p>A Tabela <a href="integração-com-as-energias-renováveis.html#tab:tabela4">3.1</a> sintetiza a compatibilidade entre os principais tipos de eletrolisadores e as fontes de energia renováveis.</p>
+<div id="kgwehshqij" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kgwehshqij table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#kgwehshqij thead, #kgwehshqij tbody, #kgwehshqij tfoot, #kgwehshqij tr, #kgwehshqij td, #kgwehshqij th {
+  border-style: none;
+}
+
+#kgwehshqij p {
+  margin: 0;
+  padding: 0;
+}
+
+#kgwehshqij .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#kgwehshqij .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#kgwehshqij .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#kgwehshqij .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#kgwehshqij .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#kgwehshqij .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#kgwehshqij .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#kgwehshqij .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#kgwehshqij .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#kgwehshqij .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#kgwehshqij .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#kgwehshqij .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#kgwehshqij .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#kgwehshqij .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#kgwehshqij .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kgwehshqij .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#kgwehshqij .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#kgwehshqij .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#kgwehshqij .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kgwehshqij .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#kgwehshqij .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kgwehshqij .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#kgwehshqij .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kgwehshqij .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kgwehshqij .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kgwehshqij .gt_left {
+  text-align: left;
+}
+
+#kgwehshqij .gt_center {
+  text-align: center;
+}
+
+#kgwehshqij .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#kgwehshqij .gt_font_normal {
+  font-weight: normal;
+}
+
+#kgwehshqij .gt_font_bold {
+  font-weight: bold;
+}
+
+#kgwehshqij .gt_font_italic {
+  font-style: italic;
+}
+
+#kgwehshqij .gt_super {
+  font-size: 65%;
+}
+
+#kgwehshqij .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#kgwehshqij .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#kgwehshqij .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#kgwehshqij .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#kgwehshqij .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#kgwehshqij .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#kgwehshqij .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#kgwehshqij .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#kgwehshqij div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <caption><span id="tab:tabela4">Tabela 3.1: </span>Comparação entre a compatibilidade dos tipos de eletrolisadores e as fontes de energia renováveis.</caption>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Tipo-de-Eletrolisador">Tipo de Eletrolisador</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Tempo-de-Resposta">Tempo de Resposta</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Operação-Mínima">Operação Mínima</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Fonte-Renovável-Mais-Adequada">Fonte Renovável Mais Adequada</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Justificativa">Justificativa</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Tipo de Eletrolisador" class="gt_row gt_center">PEM</td>
+<td headers="Tempo de Resposta" class="gt_row gt_center">Rápido (ms a s) [18]</td>
+<td headers="Operação Mínima" class="gt_row gt_center">10-20% [18]</td>
+<td headers="Fonte Renovável Mais Adequada" class="gt_row gt_center">Solar Fotovoltaica e Eólica</td>
+<td headers="Justificativa" class="gt_row gt_center">Alta flexibilidade para lidar com a intermitência e variabilidade da geração [16].</td></tr>
+    <tr><td headers="Tipo de Eletrolisador" class="gt_row gt_center">AEL</td>
+<td headers="Tempo de Resposta" class="gt_row gt_center">Lento (min a h) [18]</td>
+<td headers="Operação Mínima" class="gt_row gt_center">20-40% [18]</td>
+<td headers="Fonte Renovável Mais Adequada" class="gt_row gt_center">Hidrelétrica e Fontes com Suporte da Rede</td>
+<td headers="Justificativa" class="gt_row gt_center">Requer fornecimento de energia estável para evitar degradação por operação em carga parcial [14].</td></tr>
+    <tr><td headers="Tipo de Eletrolisador" class="gt_row gt_center">SOEC</td>
+<td headers="Tempo de Resposta" class="gt_row gt_center">Lento (min a h) [18]</td>
+<td headers="Operação Mínima" class="gt_row gt_center">30-50% [18]</td>
+<td headers="Fonte Renovável Mais Adequada" class="gt_row gt_center">Geotérmica e Solar Térmica</td>
+<td headers="Justificativa" class="gt_row gt_center">Necessita de fontes estáveis que forneçam tanto eletricidade quanto calor para maximizar a eficiência [14].</td></tr>
+  </tbody>
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="produção-de-hidrogênio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="células-a-combustível-de-hidrogênio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

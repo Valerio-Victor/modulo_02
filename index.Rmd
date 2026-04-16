@@ -1,0 +1,874 @@
+---
+title: "FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂"
+author: "**Autores**: _<br>[**Prof. Robson Bauwelz Gonzatti**](http://lattes.cnpq.br/7615990862728462) <br>[**Prof. Rondineli Rodrigues Pereira**](http://lattes.cnpq.br/4491600595131576)_"
+date: "**Última Atualização**: `r format(Sys.Date(), '%d de %B de %Y')`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: ["packages.bib"]
+csl: "abnt_numerico.csl"
+link-citations: yes
+classoption: openany
+github-repo: rstudio/bookdown-demo
+---
+
+# INTRODUÇÃO
+
+A expressão "economia do hidrogênio" é usada para indicar o papel do hidrogênio no futuro cenário energético. O interesse pelo hidrogênio, como portador de energia, tem crescido nos últimos anos devido ao aumento da poluição do ar no mundo. O hidrogênio é um portador de energia limpo e flexível que pode ser usado para fornecer tanto energia elétrica quanto calor em diversos setores de uso final. Veículos e a geração de energia estacionária alimentados por hidrogênio são tecnologias com emissão zero. O hidrogênio pode ser produzido tanto a partir de combustíveis fósseis tradicionais quanto de fontes de energia livres de carbono, sendo utilizado para armazenar energia e fornecer gerenciamento de resposta à rede elétrica.
+
+O eletrolisador é um dispositivo que realiza a eletrólise da água, convertendo energia elétrica em energia química (hidrogênio e oxigênio gasosos). O processo é o oposto da reação em uma célula a combustível. Hoje, apenas 4% do hidrogênio é produzido por eletrólise; outros métodos de custo mais baixo são muitas vezes preferidos, como a reforma a vapor de gás natural [1]. A eletrólise é considerada a forma mais limpa de produzir hidrogênio usando fontes de energia renováveis e tem (juntamente com outras tecnologias de armazenamento) o potencial de atuar como armazenamento de energia neste setor. Estudos mostram que a eletricidade representa 70% a 90% do custo de um quilograma de hidrogênio produzido por eletrólise [1]. Consequentemente, a competitividade da eletrólise estará estritamente relacionada aos preços da eletricidade. No entanto, a eletrólise pode ser competitiva em circunstâncias em que as regulamentações permitam um pagamento por serviços de rede (grid services) — operando como uma carga controlável — ou quando o contexto político criar condições para reduzir significativamente o custo da eletricidade.
+
+Atualmente, existem duas tecnologias comerciais distintas de eletrólise da água que operam em baixas temperaturas: eletrolisadores alcalinos (AEC) e eletrolisadores de membranas polimériccas PEM. Os eletrolisadores alcalinos, uma tecnologia comercialmente mais madura entre as duas, contêm dois eletrodos imersos em um eletrólito alcalino líquido que consiste em uma solução concentrada de hidróxido de potássio ($KOH$). Em contraste, os eletrolisadores PEM usam um polímero sólido condutor de prótons como eletrólito e água deionizada. Como resultado, os eletrolisadores PEM têm muitas vantagens sobre os eletrolisadores alcalinos, como um design de sistema relativamente simples e a capacidade de operar com segurança em densidades de corrente mais altas. Uma terceira tecnologia, atualmente em fase pré-comercial, são os sistemas de membrana de troca alcalina (AEM), que tem o potencial de colocar a eletrólise da água em uma nova trajetória de redução de custos.
+
+A eletrólise da água por tecnologia PEM é conhecida há muitos anos; no entanto, devido a componentes caros, como membranas e materiais de placa bipolar, e vida útil limitada, os eletrolisadores PEM se estabeleceram apenas em aplicações de nicho de escala relativamente pequena, como geradores de hidrogênio e oxigênio de laboratório, sistemas de suporte à vida, fornecimento de combustível para pequenos sistemas de células a combustível etc. Em geral, os sistemas de eletrólise da água por PEM podem fornecer uma fonte relativamente simples, escalável e de fácil implantação de hidrogênio de alta pureza para aplicações de varejo e comerciais menores próximas ao ponto de consumo. Nos últimos anos, as células a combustível PEM de hidrogênio fizeram um progresso significativo em direção à comercialização, resultando em um interesse crescente em tecnologias para produção de hidrogênio no local, como a eletrólise da água por PEM. Assim, o uso da eletrólise da água por PEM para a produção de combustível de hidrogênio tornou-se um vetor de interesse para oportunidades de implantação de células a combustível em setores como mobilidade sustentável, manuseio de materiais e energia de reserva (back-up power).
+
+O rápido desenvolvimento da tecnologia de célula a combustível PEM de escala relativamente pequena também contribuiu para um efeito de "salto" na compreensão fundamental dos requisitos e funcionalidades de certos componentes e atributos da tecnologia de eletrólise por PEM que são comuns tanto para células a combustível PEM quanto para eletrolisadores, como aspectos de fabricação, componentes (membranas, placas, catalisador), design do campo de fluxo etc. No entanto, novas tendências no desenvolvimento de sistemas de eletrólise da água por PEM abriram novas lacunas e requisitos tecnológicos que não haviam sido discutidos anteriormente em relação à eletrólise da água por PEM. [1].
+
+Neste módulo, serão abordados os principais métodos para produção de hidrogênio, considerando as rotas convencionais e as rotas de baixo carbono, os desafios da integração com as energias renováveis, bem como as principais tecnologias de eletrólise e células a combustível de hidrogênio. Por fim, serão apresentados projetos demonstrativos e aplicações destas tecnologias.
+
+# PRODUÇÃO DE HIDROGÊNIO
+
+Historicamente, a maior parte do hidrogênio produzido no mundo provém de fontes não renováveis, mas as tecnologias de eletrólise da água são cruciais para o desenvolvimento do hidrogênio verde, ou de baixo carbono, um vetor energético universal e livre de carbono [1]. A seguir são apresentadas as principais rotas para produção de hidrogênio.
+
+## Produção a partir de combustíveis fósseis (rotas dominantes)
+
+Atualmente, a maior parte do hidrogênio global ainda é obtida a partir de combustíveis fósseis, como gás natural e carvão. Atualmente, cerca de 96% de todo o hidrogênio é obtido de combustíveis fósseis, com a maior parte proveniente da reforma a vapor de gás natural [2]. Essas rotas de produção são maduras e geralmente apresentam os menores custos específicos de produção de hidrogênio.
+
+### Reforma a Vapor de Metano (SMR, do inglês Steam Methane Reforming)
+
+É o método de produção de hidrogênio mais amplamente utilizado no mundo, respondendo por mais de 48% da produção global. O processo tipicamente usa gás natural como insumo, sendo realizado em reatores sob elevadas pressões e temperaturas (cerca de 800 a 900 °C) e requer uma quantidade significativa de calor externo [3].
+
+A reforma a vapor se dá em reatores que normalmente operam sob elevadas pressões e temperaturas, sendo os hidrocarbonetos (gás natural) convertidos em gás de síntese (mistura contendo $H_2$, $CO$, $CH_4$, etc.) em um leito catalítico, normalmente a base níquel, que tem a função de facilitar a cinética das reações e diminuir a temperatura do processo [4], [5].
+
+No caso específico da produção de hidrogênio a partir da reforma a vapor do gás natural, o processo industrial, de forma geral, ocorre como indicado esquematicamente na Figura \@ref(fig:figura1).
+
+```{r figura1, echo=FALSE, message=FALSE, warning=FALSE, out.width="80%", fig.align='center', fig.cap="Representação esquemática do processo de produção de hidrogênio através da reforma a vapor. Fonte: [4]."}
+
+knitr::include_graphics(path = 'figura1.png')
+
+```
+
+Parte do gás natural que chega na planta de produção de hidrogênio é queimado em uma caldeira para a produção de vapor, que será usado no processo de reforma [4]. A composição do gás natural depende de sua origem, mas, em geral, nela predomina a presença de metano ($CH_4$), com teores acima de 70%, seguido de outros compostos, alguns dos quais possuem enxofre em sua composição. Desta forma, após ser comprimido até a pressão de trabalho, o gás natural é direcionado para a unidade de dessulfurização, onde é efetuada a remoção do enxofre, antes de ser efetivamente reformado. A dessulfurização evita que o enxofre danifique os catalisadores dos reatores usados no processo [4].
+
+Em seguida, o gás natural é direcionado ao pré-reformador, no qual os hidrocarbonetos de cadeias mais longas são convertidos predominantemente em metano. Os produtos do pré-reformador são aquecidos (800-900°C), e direcionados ao reformador, onde o metano é então convertido em hidrogênio e monóxido de carbono. Em seguida, a mistura reagente (gás de síntese) entra nos reatores de shift (deslocamento gás-água). Nestes reatores, o monóxido de carbono produzido durante a reforma, que neste estágio do processo corresponde a 8,0-10,0% (vol.) da composição do gás de síntese, pode ser convertido em hidrogênio.
+
+A reação de deslocamento gás-água pode ser executada em duas etapas, sendo que a primeira ocorre a alta temperatura (350 a 450°C) e reduz o teor de monóxido de carbono para cerca de 4,0-4,5%. A segunda ocorre em temperaturas menores (180 a 340°C) produzindo um fluxo gasoso rico em hidrogênio e no qual a concentração volumétrica de monóxido de carbono é reduzida para 0,4-0,8%.
+
+Ao sair dos reatores shift, o fluxo gasoso rico em $H_2$ ainda contém alguns gases indesejados, como por exemplo, metano não reagido, frações residuais de $CO$, $CO_2$ etc. Assim, estes gases devem ser removidos da mistura, o que se dá em unidades de purificação (por exemplo, PSA, do inglês Pressure Swing Adsorption), que são capazes de produzir um fluxo gasoso com concentração de hidrogênio superior a 99,99% (vol.) [4].
+
+### Gaseificação do Carvão (GC)
+
+É uma opção viável devido à abundância do carvão em termos de reservas. É um método amplamente utilizado, correspondendo a cerca de 18% da produção de hidrogênio [2], ficando atrás apenas da reforma a vapor e da reforma de óleo [3]. Devido à sua eficiência inferior (60-75%) em comparação com o método de SMR (70-85%), não é tão amplamente utilizado como este último [3]. No entanto, em países e regiões onde as reservas de carvão são relativamente abundantes ou os preços do gás natural não são favoráveis, como a China, a gaseificação de carvão é também o processo dominante de produção de hidrogênio.
+
+A gaseificação de carvão ocorre em um equipamento específico conhecido como gaseificador. Dependendo do modo de contato entre os reagentes e o gaseificador, os gaseificadores podem ser subdivididos em vários tipos, entre os quais o gaseificador de fluxo arrastado (entrained flow gasifier) é o tipo mais limpo e eficiente [3]. Entretanto, o seu mecanismo básico é o mesmo: o carvão é secado e moído e depois alimentado num gaseificador, onde reage sucessivamente com oxigênio e vapor sob condições de alta temperatura para produzir uma mistura gasosa contendo $H_2$, $CO$ e $CO_2$. A mistura gasosa gerada consome $CO$ e produz $H_2$ através da reação de shift (deslocamento de gás-água). Finalmente, o $CO_2$ é removido da mistura na unidade de PSA [3].
+
+Uma desvantagem óbvia da gaseificação do carvão para a produção de hidrogênio é o seu significativo impacto ambiental. De acordo com relatórios na literatura, a GC tem aproximadamente o dobro das emissões de carbono da SMR quando ambas as tecnologias dominantes de produção de hidrogênio a partir de combustíveis fósseis são avaliadas a partir de uma perspectiva de ciclo de vida completo [3]. Na verdade, a gaseificação de carvão tem o mais alto potencial de aquecimento global de todos os métodos de produção de hidrogênio existentes, e tem um potencial de acidificação considerável, provavelmente relacionado com o maior teor de enxofre no carvão.
+
+### Oxidação Parcial
+
+Neste processo, o gás de síntese é produzido a partir da oxidação parcial de um combustível usando ar, oxigênio ou vapor de água como oxidantes, em condições não-estequiométricas, e em um reator que normalmente opera sob elevadas temperaturas e pressões. O gás de síntese gerado, contendo $H_2$, $CO$ e $CO_2$, deve, em seguida, passar por etapas de purificação e separação de componentes indesejáveis, num processo semelhante ao utilizado para a purificação e limpeza dos gases produzidos por reforma a vapor de metano. A oxidação parcial é o método mais adequado para produzir hidrogênio a partir de matérias-primas com altas taxas de carbono para hidrogênio, como óleo pesado e nafta [3]. O reator de oxidação parcial tende a ser mais compacto do que o reator de reforma a vapor, pois neste último é necessário fornecer calor adicional através do uso de trocadores de calor. No caso da oxidação parcial, como o processo é exotérmico, não há necessidade de fornecimento de calor adicional [4].
+
+### Reforma Autotérmica
+
+A reforma autotérmica combina as reações de reforma a vapor e oxidação parcial em um único reator, onde parte do metano é queimado com oxigênio para fornecer a energia necessária, tornando-o autotérmico [3], [5].
+
+### Decomposição Termocatalítica
+
+A decomposição termocatalítica do metano, também conhecida como pirólise do metano ou craqueamento do metano, é um processo no qual o metano é basicamente decomposto em seus componentes elementares, isto é, hidrogênio ($H_2$) e carbono sólido ($C$). A reação pode ocorrer sem o uso de catalisadores, porém, como a reação é endotérmica, a energia requerida pela reação (calor) é significativa e elevadas temperaturas operacionais (1200 a 1300°C) são necessárias. Assim, para que as reações de decomposição ocorram a baixa temperatura torna-se imprescindível o uso de catalisadores, o que pode reduzir a temperatura operacional significativamente, a qual, dependendo do catalisador utilizado, pode variar de 600 a 800°C [4].
+
+Cabe ressaltar que todas as tecnologias de reforma apresentas emitem dióxido de carbono ($CO_2$) em maior ou menor quantidade, dependendo do processo específico escolhido, das pressões e temperaturas de trabalho, bem como do tipo de catalisador utilizado.
+
+Assim, a utilização de técnicas de captura de CO2 é fundamental para que as instalações de produção de $H_2$ a partir da reforma de hidrocarbonetos (metano/gás natural) se alinhem com os objetivos mundiais de reduzir as emissões de gases causadores de efeito estufa nos próximos anos. O hidrogênio produzido a partir da reforma de hidrocarbonetos só poderá ser considerado como “$H_2$ Azul” se a planta de produção estiver integrada a um sistema de Captura e Armazenamento de Carbono, de outra forma, o hidrogênio será enquadrado na categoria de “$H_2$ Cinza”.
+
+## Eletrólise da água
+
+A eletrólise da água é um processo eletroquímico que utiliza eletricidade para decompor a água em hidrogênio e oxigênio, conforme \@ref(eq:equacao1):
+
+\begin{equation}
+H_2O + \text{Eletricidade} + \text{Calor} \rightarrow H_2 + \frac{1}{2} O_2
+(\#eq:equacao1)
+\end{equation}
+
+A reação apresentada em \@ref(eq:equacao1) requer uma tensão de célula termodinâmica teórica de 1,23 V para decompor a água em hidrogênio e oxigênio à temperatura ambiente. No entanto, experimentalmente, a tensão de célula necessária para a decomposição eficiente da água é de 1,48 V [6]. A tensão adicional é necessária para superar a cinética e a resistência ôhmica do eletrólito e dos componentes da célula do eletrolisador, que serão mais bem explicadas na seção \@ref(secao24).
+
+Este método é fundamental para a produção de hidrogênio verde, ou de baixo carbono, quando a eletricidade utilizada é proveniente de fontes de energia renovável, apesar de ainda suprir apenas uma pequena parcela da demanda de produção hidrogênio [2]. As principais tecnologias de eletrólise são:
+
+1.  **Eletrólise com Membranas Polimérica ou de Troca de Prótons (PEM, do inglês, polymer electrolyte membrane ou proton exchange membrane)**: É uma tecnologia promissora e considerada a mais adequada para acoplamento com fontes renováveis intermitentes, como eólica e solar. As vantagens incluem alta eficiência, resposta rápida a flutuações de energia, alta densidade de corrente, design modular e produção de hidrogênio de alta pureza. No entanto, o regime ácido (pH) da membrana requer o uso de catalisadores de metais nobres, como irídio (ânodo) e platina (cátodo), elevando os custos. Eletrolisadores PEM usam a menor quantidade de água para produzir $H_2$ em comparação com outras tecnologias de eletrólise.
+
+2.  **Eletrólise Alcalina**: É uma tecnologia madura e bem estabelecida, utilizada pela indústria há quase um século. Utiliza um eletrólito líquido (solução aquosa de hidróxido de potássio, $KOH$) e opera em temperaturas entre 70 °C e 90 °C. Caracteriza-se pelo custo de capital relativamente baixo, durabilidade comprovada e elevada eficiência nominal (65% a 80%). É avaliada como a tecnologia mais bem estabelecida para a produção de $H_2$ verde em larga escala.
+
+3.  **Eletrólise de Óxido Sólido**: Opera em altas temperaturas (600 °C a 1000 °C), utilizando vapor de água. Sua principal vantagem é a elevada eficiência, pois parte da energia necessária para a decomposição da água é fornecida na forma de calor, reduzindo o consumo de eletricidade. Embora promissora, ainda está em fase de desenvolvimento e não está comercialmente disponível para a produção de $H_2$ em larga escala.
+
+4.  **Eletrólise de Membrana de Troca Aniônica (Anion Exchange Membrane - AEM)**: É uma abordagem promissora que busca combinar as vantagens da eletrólise alcalina e PEM, permitindo o uso de catalisadores e componentes de baixo custo. No entanto, a tecnologia AEM ainda está em um estágio inicial de desenvolvimento, exigindo melhorias em estabilidade da membrana e desempenho da pilha, ou stack.
+
+### Eletrólise alcalina
+
+A eletrólise alcalina da água é uma tecnologia madura e bem estabelecida para a produção industrial de hidrogênio até a faixa de multi-megawatts em aplicações comerciais em todo o mundo. O fenômeno da eletrólise alcalina da água foi introduzido pela primeira vez por Troostwijk e Diemann no ano de 1789 [6]. Após diversos desenvolvimentos, no ano de 1939, entrou em operação a primeira planta industrial de eletrolisador alcalino de água em larga escala com capacidade de $10.000\ \mathrm{Nm^3H_2/h}$ [6]. Posteriormente, no início do século XX, mais de 400 unidades de eletrolisadores alcalinos industriais foram instaladas e operadas com sucesso para aplicações industriais. No entanto, o eletrolisador alcalino de água opera em temperaturas mais baixas (30–80 °C) com uma solução alcalina concentrada de 20% a 30% ($KOH/NaOH\ 5,M$). Além disso, no eletrolisador alcalino, são utilizados eletrodos de aço inoxidável revestidos com níquel ($Ni$) e diafragmas à base de amianto/$ZrO_2$ como separador. O portador de carga iônica é o íon hidroxila ($OH^-$), com $KOH/NaOH$ e água permeando através da estrutura porosa do diafragma para fornecer a funcionalidade da reação eletroquímica.
+
+A eletrólise alcalina da água é um design de sistema favorável para aplicações em larga escala. Hoje, o custo de investimento da eletrólise alcalina é de 500–1000 $USD/kW$, e a vida útil do sistema é de 90.000 h [6]. Contudo, o principal desafio associado à eletrólise alcalina da água é a densidade de corrente limitada ($0{,}1$–$0{,}5\ \mathrm{A/cm^2}$) devido à moderada mobilidade do $OH^-$ e ao uso de eletrólitos corrosivos ($KOH$). Devido à alta sensibilidade do eletrólito $KOH$ ao $CO_2$ ambiente e à subsequente formação de sal de carbonato de potássio ($K_2CO_3$), ocorre uma diminuição no número de íons hidroxila e na condutividade iônica. Além disso, o sal de $K_2CO_3$ fecha os poros da camada de difusão de gás do ânodo, o que subsequentemente diminui a transferibilidade de íons através do diafragma e acarreta a consequente redução da produção de hidrogênio. Além disso, a eletrólise alcalina da água produz gases de baixa pureza (99,9%) (Hidrogênio e Oxigênio) devido ao fato de o diafragma existente não impedir completamente o cruzamento (crossover) dos gases de uma meia-célula para a outra.
+
+A eletrólise alcalina da água é uma técnica de decomposição eletroquímica da água na presença de eletricidade. A decomposição eletroquímica da água consiste em duas reações de meia-célula individuais, como a reação de evolução de hidrogênio (HER) no cátodo, \@ref(eq:catodo) e a reação de evolução de oxigênio (OER) no ânodo, \@ref(eq:anodo).
+
+\begin{equation}
+H_2O + 2e^- \rightarrow H_2 + 2OH^-
+\quad \text{(cátodo)}
+(\#eq:catodo)
+\end{equation}
+\begin{equation}
+OH^- \rightarrow \frac{1}{2} O_2 + H_2O + 2e^-
+\quad \text{(ânodo)}
+(\#eq:anodo)
+\end{equation}
+
+Durante o processo de eletrólise alcalina, inicialmente no lado do cátodo, dois mols de solução alcalina são reduzidos para produzir um mol de hidrogênio ($H_2$) e dois mols de íons hidroxila ($OH^-$); o $H_2$ produzido pode ser eliminado da superfície catódica e os íons hidroxila restantes ($OH^-$) são transferidos, sob a influência do circuito elétrico entre o ânodo e o cátodo, através do separador poroso para o lado do ânodo. No ânodo, os íons hidroxila ($OH^-$) são descarregados para produzir meia molécula de oxigênio ($O_2$) e uma molécula de água ($H_2O$), mostrado na Figura \@ref(fig:figura2).
+
+Os principais componentes da célula de eletrólise alcalina da água são, respectivamente: diafragmas/separadores, coletores de corrente (camada de difusão de gás), placas separadoras (placas bipolares) e placas terminais, também mostrados na Figura \@ref(fig:figura2).
+
+```{r figura2, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Diagrama esquemático de um eletrolisador alcalino. Fonte: [6]."}
+
+knitr::include_graphics(path = 'figura2.png')
+
+```
+
+Em geral, diafragmas de amianto/Zirfon/aço inoxidável perfurado revestido com níquel são usados como separadores na eletrólise alcalina. A malha/espuma de níquel é usada como camadas de difusão de gás, e placas separadoras de aço inoxidável ou aço inoxidável revestido com níquel são usadas como placas bipolares e placas terminais, respectivamente.
+
+As bolhas dos gases hidrogênio e oxigênio, produzidas no cátodo e no ânodo, respectivamente, aumentam a resistência da célula, reduzindo o contato entre os eletrodos e o eletrólito. Consequentemente, a eficiência é reduzida. Deve-se, então, dar atenção especial ao projeto da célula para maximizar o contato entre o eletrodo e o eletrólito líquido. Células alcalinas avançadas usam uma "configuração de zero gap" (espaço zero) para diminuir o impacto das bolhas de gás e as perdas ôhmicas, reduzindo o espaço entre os eletrodos [1], como mostrado na Figura \@ref(fig:figura3).
+
+```{r figura3, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="(a) Projeto convencional; (b) projeto de espaço zero de uma célula de eletrolisador alcalina. Fonte: [7]."}
+
+knitr::include_graphics(path = 'figura3.png')
+
+```
+
+As principais desvantagens relacionadas à tecnologia alcalina são:
+
+-   O ambiente corrosivo.
+-   A baixa densidade de corrente.
+-   A taxa de produção limitada de 25% a 100% devido à difusão de gases através do diafragma em carga parcial.
+
+A pressão operacional típica desta tecnologia é de 25–30 bar, mas eletrolisadores de até 60 bar estão disponíveis [1].
+
+Existem duas estruturas de células para eletrólise alcalina no mercado: bipolar e monopolar, conforme apresentado na Figura \@ref(fig:figura4). Na configuração bipolar, Figura \@ref(fig:figura4) (a), cada eletrodo possui duas polaridades e as células são conectadas em série. A tensão aplicada à pilha é a soma da tensão das células individuais. A corrente que flui através da pilha é a mesma para todas as células.
+
+-   Vantagens: Apresenta densidades de corrente mais altas, o que permite produzir gás sob pressão mais elevada, e resulta em uma pilha mais compacta do que o design unipolar.
+-   Desvantagens: Não pode ser reparada sem a necessidade de manutenção de toda a pilha.
+
+Na configuração monopolar, Figura \@ref(fig:figura4) (b), as células são conectadas em paralelo e os eletrodos são ligados à fonte de alimentação CC correspondente. A tensão total aplicada à pilha (stack) é a mesma aplicada a uma célula individual, e os eletrodos possuem uma polaridade única.
+
+-   Vantagens: É mais simples do ponto de vista da fabricação e permite uma manutenção e reparo mais fáceis sem a necessidade de desligar toda a pilha.
+-   Desvantagens: Geralmente opera em baixas densidades de corrente e temperaturas mais baixas.
+
+```{r figura4, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Diagramas esquemáticos de eletrolisadores alcalinos com estrutura (a) bipolar e (b) monopolar. Fonte: [8]."}
+
+knitr::include_graphics(path = 'figura4.png')
+
+```
+
+### Eletrólise PEM
+
+Os eletrolisadores de água PEM utilizam um eletrólito sólido, composto por uma membrana polimérica (ou membrana de troca de prótons) como condutor iônico. O esquema de operação de um eletrolisador de água PEM é mostrado na Figura \@ref(fig:figura5). A água é oxidada no ânodo, de acordo com \@ref(eq:anodo2), para produzir oxigênio, que é eliminado na superfície do ânodo, os prótons remanescentes atravessam a membrana condutora e os elétrons viajam pelo circuito externo. No lado do cátodo, os prótons e elétrons são recombinados para produzir o hidrogênio gasoso que é liberado no cátodo, de acordo com \@ref(eq:catodo2).
+
+\begin{equation}
+H_2 \rightarrow \frac{1}{2} O_2 + 2H^+ + 2e^-
+\quad \text{(ânodo)}
+(\#eq:anodo2)
+\end{equation}
+\begin{equation}
+2H^+ + 2e^- \rightarrow H_2
+\quad \text{(cátodo)}
+(\#eq:catodo2)
+\end{equation}
+
+```{r figura5, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Esquema de uma célula de um eletrolisador PEM. Fonte: Adaptado de [6]."}
+
+knitr::include_graphics(path = 'figura5.png')
+
+```
+
+Os principais componentes da célula de eletrólise da água PEM são o conjunto membrana-eletrodo (que consiste na membrana e nos materiais dos eletrodos anódico e catódico), a camada de difusão de gás, as placas separadoras (placas bipolares) e as placas terminais, respectivamente. As membranas de troca de prótons típicas são Nafion®, Fumapem®, Flemion® e Aciplex®, respectivamente. No entanto, a membrana mais amplamente utilizada é a Nafion® (Nafion® 115, 117 e 212), pois a membrana Nafion® oferece diversas vantagens, como alta condutividade de prótons, capacidade de alta densidade de corrente, alta resistência mecânica e estabilidade química. Os materiais de eletrodo de ânodo e cátodo de última geração são eletrocatalisadores à base de metais nobres, especialmente $IrO_2$ para a Reação de Evolução de Oxigênio (OER) e Platina ($Pt$) suportada em carbono para a Reação de Evolução de Hidrogênio (HER), respectivamente [6]. Esses metais nobres são muito caros, e o irídio é mais escasso que a platina [1]. O titânio poroso/malha de titânio e o tecido de carbono são utilizados como camadas de difusão de gás no ânodo e no cátodo. Placas bipolares com diferentes designs de campo de fluxo, feitas de material de titânio revestido com platina/ouro, são usadas como separadores e placas terminais, respectivamente. No entanto, essas placas separadoras são caras e responsáveis por 48% do custo total da célula [9]. Portanto, os custos de alguns são as principais desvantagens dos eletralisadores PEM e utilização de materiais não-nobres representam um desafio e são grandes áreas de estudos [1].
+
+### Eletrólise com membrana de troca aniônica (AEM)
+
+A eletrólise da água com AEM (do inglês, Anion Exchange Membrane ou Membrana de Troca Aniônica) é uma tecnologia em desenvolvimento para a produção de hidrogênio verde. Nos últimos anos, muitas organizações e instituições de pesquisa têm trabalhado ativamente no desenvolvimento da eletrólise com AEM devido ao seu baixo custo e alto desempenho em comparação com outras tecnologias convencionais de eletrólise. Os primeiros estudos sobre eletrólise AEM datam de 2011 e posteriormente, muitos pesquisadores vêm contribuindo para o desenvolvimento da AEM [6]. A tecnologia de eletrólise da água com AEM é semelhante à eletrólise alcalina da água convencional, a principal diferença é a substituição dos diafragmas convencionais (amianto) por uma membrana de troca aniônica (membranas de troca iônica de amônio quaternário). A eletrólise da água com AEM oferece diversas vantagens, tais como: uso de catalisadores de metais de transição de baixo custo, em vez de catalisadores de metais nobres; uso de água destilada ou solução alcalina ($KOH$) de baixa concentração como eletrólito, em vez de alta concentração. Apesar das vantagens significativas, a AEM ainda requer mais investigações e melhorias em relação à estabilidade da MEA (Membrane Electrode Assembly - Conjunto Membrana-Eletrodo) e à eficiência da célula, que são essenciais para aplicações comerciais ou em larga escala. Atualmente, a estabilidade relatada é de 2000h com Sustanion e 1000h para Fumatech (A 201 e FAA3-50), e \>35.000 h para o eletrolisador AEM multicore da Enapter [6].
+
+A reação eletroquímica consiste em duas reações de meia-célula: a reação de evolução de hidrogênio (HER) e a reação de evolução de oxigênio (OER). Inicialmente, no lado do cátodo, a molécula de água é reduzida para gerar hidrogênio (H2) e íons hidroxila (OH-) pela adição de dois elétrons. O hidrogênio é liberado da superfície do cátodo e os íons hidroxila (OH-) difundem-se através da membrana de troca iônica para o lado do ânodo pela atração positiva do mesmo, enquanto os elétrons são transportados através do circuito externo para o ânodo. No lado do ânodo, os íons hidroxila recombinam-se como moléculas de água e oxigênio ao perder elétrons. O oxigênio produzido é liberado do ânodo. O princípio básico de funcionamento de um eletrolisador AEM está apresentado na Figura \@ref(fig:figura6) e reações de meia-célula da eletrólise da água com AEM são descritas em \@ref(eq:anodo3) e \@ref(eq:catodo3).
+
+\begin{equation}
+OH^- \rightarrow \frac{1}{2} O_2 + H_2O + 2e^-
+\quad \text{(ânodo)}
+(\#eq:anodo3)
+\end{equation}
+\begin{equation}
+H_2O + 2e^- \rightarrow H_2 + 2OH^-
+\quad \text{(cátodo)}
+(\#eq:catodo3)
+\end{equation}
+
+```{r figura6, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Esquema de uma célula de um eletrolisador AEM. Fonte: Adaptado de  [6]."}
+
+knitr::include_graphics(path = 'figura6.png')
+
+```
+
+Geralmente, os componentes da célula de eletrólise da água com AEM são, respectivamente:
+
+-   Membrana (separador).
+-   Materiais de eletrodo.
+-   Coletores de corrente (camada de difusão de gás).
+-   Placas separadoras (placas bipolares).
+-   Placas terminais.
+
+As membranas de troca aniônica típicas são membranas de troca iônica de amônio quaternário, como as membranas comerciais Sustanion®, Fumasep e Fumatech. Os materiais de eletrodo comumente usados para ânodo e cátodo são eletrocatalisadores à base de metais de transição, especialmente Níquel e materiais de liga $NiFeCo$, respectivamente. A espuma de níquel/malha de níquel porosa e o tecido de carbono são usados como camadas de difusão de gás do ânodo e do cátodo. Aço inoxidável e placas separadoras de aço inoxidável revestidas de níquel são usadas como placas bipolares e placas terminais, respectivamente [6].
+
+A tecnologia de eletrólise com AEM encontra-se em fase de desenvolvimento até a escala de kW. Globalmente, várias organizações e instituições de pesquisa estão trabalhando ativamente no desenvolvimento de eletrolisadores de água com AEM, no entanto, diversas inovações e melhorias ainda são necessárias para escalar essa tecnologia para aplicações comerciais [6]. Os principais desafios são a estabilidade limitada (atualmente 35000 h, com uma meta de estabilidade de 100000 h) e o alto custo de produção de hidrogênio [6].
+
+### Eletrólise com óxido sólido (SOEC)
+
+A célula de eletrólise da água de óxido sólido (SOEC - Solid Oxide Electrolysis Cell) é uma das células de conversão eletroquímica; ela converte energia elétrica em energia química. O desenvolvimento da eletrólise da água de óxido sólido começou nos EUA na década de 1970 pela General Electric e pelo Brookhaven National Laboratory, seguido pela Dornier na Alemanha [6].
+
+Tipicamente, o eletrolisador de água de óxido sólido opera com água na forma de vapor a altas temperaturas (500–850 °C), o que pode reduzir drasticamente o consumo de energia para separar a água em hidrogênio e oxigênio e, consequentemente, aumentar a eficiência energética. Essa melhoria na eficiência energética pode levar a uma forte redução no custo do hidrogênio, visto que o consumo de energia é o principal contribuinte para o custo de produção de hidrogênio na eletrólise.
+
+Além disso, a eletrólise da água de óxido sólido oferece duas grandes vantagens em comparação com as tecnologias de eletrólise existentes: A primeira é a alta temperatura de operação, que resulta em termodinâmica e cinética de reação favoráveis, permitindo eficiências de conversão inigualáveis. A segunda é que a eletrólise da água de óxido sólido pode ser facilmente integrada termicamente com síntese química a jusante (subsequente), isto é, a produção de metanol, éter dimetílico e amônia [6].
+
+Ademais, a eletrólise de óxido sólido não requer o uso de eletrocatalisadores de metais nobres e oferece alta eficiência de conversão. Apesar dessas vantagens, a estabilidade insuficiente a longo prazo impediu a comercialização da eletrólise da água de óxido sólido. Até o momento, a estabilidade relatada é de apenas 20.000 h com eletrólito fino de zircônia estabilizada com ítria [6].
+
+Tipicamente, a eletrólise da água de óxido sólido opera em temperaturas mais altas com o consumo de água na forma de vapor e gera hidrogênio verde e oxigênio. Durante o processo de eletrólise de óxido sólido, inicialmente no lado do cátodo, a molécula de água é reduzida em hidrogênio ($H_2$) e íon óxido ($O^{2-}$) pela adição de dois elétrons.
+
+O hidrogênio liberado da superfície catódica e os íons óxido restantes ($O^{2-}$) viajam através da membrana de troca iônica para o lado do ânodo. No lado do ânodo, os íons óxido ($O^{2-}$) são posteriormente oxidados para gerar oxigênio e elétrons; em seguida, o oxigênio produzido é liberado da superfície anódica e os elétrons viajam através do circuito externo para o lado do cátodo pela atração positiva do mesmo.
+
+As reações de ânodo e cátodo na SOEC são descritas em \@ref(eq:anodo4) e \@ref(eq:catodo4).
+
+\begin{equation}
+O^{2-} \rightarrow \frac{1}{2} O_2 + H_2O + 2e^-
+\quad \text{(ânodo)}
+(\#eq:anodo4)
+\end{equation}
+\begin{equation}
+H_2O + 2e^- \rightarrow H_2 + O^{2-}
+\quad \text{(cátodo)}
+(\#eq:catodo4)
+\end{equation}
+
+O princípio básico de funcionamento da eletrólise da água de óxido sólido é mostrado na Figura \@ref(fig:figura7).
+
+```{r figura7, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Esquema de uma célula de um eletrolisador SOEC. Fonte: Adaptado de [6]."}
+
+knitr::include_graphics(path = 'figura7.png')
+
+```
+
+A célula de eletrólise de água de óxido sólido (SOEC) é composta por três componentes principais: dois eletrodos porosos (ânodo e cátodo) e um eletrólito cerâmico denso capaz de conduzir íons óxido ($O^{2-}$). O eletrólito mais utilizado é a zircônia estabilizada com ítria (YSZ), que é especificamente um material cerâmico denso à base de óxido de zircônio dopado com 8 mol% de ítria (estrutura cristalina cúbica estabilizada pela adição de ítria) [6]. Isso ocorre porque o eletrólito de zircônia estabilizada com ítria apresenta um desempenho estável e excelente em temperaturas mais altas (700–850 °C). Além disso, o eletrólito YSZ possui alta condutividade iônica (10-2–10-1 S/cm) associada a uma boa estabilidade química e térmica. O material do eletrodo de hidrogênio (cátodo) de última geração é um compósito cerâmico-metal composto por YSZ e níquel ($Ni$-YSZ), que é um catalisador de metal não nobre com alta condutividade eletrônica [6]. Os eletrodos de oxigênio (ânodo) mais amplamente utilizados são materiais de perovskita, como LSCF (Ferrita de Cobalto, Estrôncio e Lantânio) e LSM (Manganita de Estrôncio e Lantânio). O LSCF é o material com condutividade iônica-eletrônica mista, que possui alta condutividade elétrica e iônica (102 e 10-2 S/cm), juntamente com altas propriedades de difusão de oxigênio. Tipicamente, o LSM é considerado material “tradicional” de referência porque apresenta bom desempenho [6].
+
+Devido às elevadas temperaturas de operação inerentes à tecnologia SOEC, este sistema é particularmente interessante para práticas de cogeração e integração térmica com processos industriais [6]. Ao aproveitar o calor residual de fontes externas (como indústrias siderúrgicas, de cimento, reatores nucleares ou usinas solares térmicas) para a geração do vapor de entrada, a demanda por energia elétrica no processo de eletrólise é minimizada. Esta sinergia permite que a eficiência global da planta, frequentemente referida como eficiência térmica de sistema, possa se aproximar ou até superar 90%, uma vez que parte da energia necessária para a quebra da molécula de água é fornecida na forma de calor térmico de baixo custo em vez de eletricidade de alto valor. Assim, a SOEC deixa de ser apenas um componente isolado para se tornar um elemento central em ecossistemas de simbiose industrial e economia circular.
+
+## Comparativos entre as tecnologias de eletrólise
+
+As principais características técnicas das quatro tecnologias de eletrólise apresentadas estão resumidas na Tabela \@ref(tab:tabela1).
+
+```{r tabela1, echo=FALSE, message=FALSE, warning=FALSE, tab.cap="Características técnicas de tecnologias de típicas de eletrólise de água. Fonte: [6]"}
+library(magrittr, include.only = '%>%')
+library(gt)
+
+param_tec <- readxl::read_xlsx(path = 'tabelas.xlsx',
+                               sheet = 1) 
+
+param_tec %>%
+  gt(caption = 'Características técnicas de tecnologias de típicas de eletrólise de água. Fonte: [6]') %>%
+  tab_style(
+    style = list(
+      cell_fill(color = "#2e7d32"),
+      cell_text(color = "#e8f5e9", weight = "bold")
+    ),
+    locations = cells_column_labels()
+  ) %>% 
+  cols_align(
+  align = "center",
+  columns = everything()
+)
+
+
+```
+
+Um resumo com as principais vantagens e desvantagens de cada uma está na Tabela \@ref(tab:tabela2).
+
+```{r tabela2, echo=FALSE, message=FALSE, warning=FALSE, tab.cap="Vantagens e desvantagens de tecnologias de típicas de eletrólise de água. Fonte: [6]"}
+library(magrittr, include.only = '%>%')
+library(gt)
+
+param_tec <- readxl::read_xlsx(path = 'tabelas.xlsx',
+                               sheet = 2) %>% 
+  janitor::clean_names()
+
+param_tec %>%
+  gt(caption = 'Vantagens e desvantagens de tecnologias de típicas de eletrólise de água. Fonte: [6]',
+     groupname_col = "tecnologia_de_eletrolise") %>%
+  
+  cols_label(
+    tecnologia_de_eletrolise = "Tecnologia de Eletrólise",
+    vantagens = "Vantagens",
+    desvantagens = "Desvantagens"
+  ) %>%
+  tab_style(
+    style = list(
+      cell_fill(color = "#2e7d32"),
+      cell_text(color = "#e8f5e9", weight = "bold")
+    ),
+    locations = cells_column_labels()
+  ) %>% 
+  tab_options(row_group.as_column = TRUE) %>% 
+  cols_align(
+    align = "center",
+    columns = everything()
+  )
+
+```
+
+Por fim, a Tabela \@ref(tab:tabela3) apresenta um apanhado dos principais fabricantes de eletrolisadores e as especificações de alguns modelos de eletrolisadores comerciais.
+
+```{r tabela3, echo=FALSE, message=FALSE, warning=FALSE, tab.cap="Principais fabricantes globais de eletrolisadores e suas especificações. Fonte: [6]"}
+library(magrittr, include.only = '%>%')
+library(gt)
+
+param_tec <- readxl::read_xlsx(path = 'tabelas.xlsx',
+                               sheet = 3) %>% 
+  janitor::clean_names()
+
+param_tec %>%
+  gt(caption = 'Principais fabricantes globais de eletrolisadores e suas especificações. Fonte: [6]',
+     groupname_col = "eletrolise") %>%
+  
+  cols_label(
+    tecnologia_fabricante = 'Tecnologia/Fabricante',
+    pais_de_origem = 'País de Origem',
+    nome_generico_modelo = 'Nome (Modelo)',
+    capacidade_de_h2_nm3_h = 'Capacidade de H₂ (Nm³/h)',
+    pressao_bar = 'Pressão (bar)',
+    consumo_de_energia_k_wh_nm3 = 'Consumo de Energia (kWh/Nm³)'
+  ) %>%
+  tab_style(
+    style = list(
+      cell_fill(color = "#2e7d32"),
+      cell_text(color = "#e8f5e9", weight = "bold")
+    ),
+    locations = cells_column_labels()
+  ) %>% 
+  tab_options(row_group.as_column = TRUE) %>% 
+  cols_align(
+    align = "center",
+    columns = everything()
+  )
+
+```
+
+## Modelagem matemática de uma célula PEM {#secao24}
+
+A eletrólise da água consiste na conversão de energia elétrica em energia química, com a separação das moléculas de água em hidrogênio e oxigênio. O processo é fundamentado na variação de energia livre de Gibbs ($\Delta G$) da reação global \@ref(eq:eletrglobal) [10].
+
+\begin{equation}
+2H_2O(l) \rightarrow 2H_2(g) + O_2(g)
+(\#eq:eletrglobal)
+\end{equation}
+
+Na equação, $H_2O(l)$ representa a água em estado líquido que serve como reagente e é decomposta pela passagem de corrente elétrica. O termo $H_2(g)$ representa o hidrogênio molecular produzido ao final do processo, liberado na forma gasosa no cátodo. Por sua vez, $O_2(g)$ corresponde ao oxigênio molecular gerado na reação, também liberado como gás no ânodo.
+
+A tensão mínima teórica necessária para que essa reação ocorra é a tensão reversível, definida pela equação de Nernst \@ref(eq:nernst), que indica o limite mínimo de energia requerido para a decomposição da água [1].
+
+\begin{equation}
+E_{rev} = E_{rev}^{0}(T) + \frac{RT}{2F} \ln \left( \frac{P_{H_2} \, P_{O_2}^{1/2}}{P_{H_2O}} \right)
+(\#eq:nernst)
+\end{equation}
+
+Na expressão, $E_{rev}^{0}(T)$ corresponde ao potencial padrão dependente da temperatura, que indica o potencial eletroquímico da reação em condições padrão, ajustado para a temperatura de operação. O termo R representa a constante universal dos gases (R = 8,3145 J/mol.K), enquanto $T$ é a temperatura absoluta (em K) e F é a constante de Faraday (F = 96.485,3321 C/mol), associada à carga elétrica por mol de elétrons. O termo $P_{H_2}$ representa a pressão parcial de hidrogênio, enquanto $P_{O_2}$ indica a pressão parcial de oxigênio, elevada à potência $^{1/2}$ por conta da estequiometria da reação. Por fim, $P_{H_2O}$ corresponde à pressão parcial da água, que aparece no denominador da expressão.
+
+No estado padrão (P = 1 atm e T = 298.15 K), a energia livre de Gibbs da reação global (10) é 236.483 kJ/mol (este valor positivo indica que a reação de separação da água é um processo não espontâneo, exigindo energia de uma fonte externa). Conhecendo os valores da energia livre de Gibbs da reação $\Delta G_{R}^{0}$, a constante de Faraday (F) e o número de mols de elétrons transferidos durante a reação (n = 2) permite a estimativa de $E_{rev}^{0}$.
+
+\begin{equation}
+E_{rev}^{0} = \frac{\Delta G_{R}^{0}}{nF} = 1{,}229\ \mathrm{V}
+(\#eq:erev0)
+\end{equation}
+
+O potencial padrão dependente da temperatura pode ser descrito pela relação empírica \@ref(eq:erevT) [11].
+
+\begin{equation}
+E_{rev}^{0}(T) = 1{,}229\ \mathrm{V} - 0{,}0008456\ \mathrm{V}\,(T - 298{,}15\ \mathrm{K})
+(\#eq:erevT)
+\end{equation}
+
+Além do mais, a expressão \@ref(eq:nernst) mostra que a operação pressurizada eleva $E_rev$, pois o aumento das pressões parciais dos produtos desloca o equilíbrio, exigindo maior energia de entrada.
+
+A tensão termoneutra, $E_{th}^{0}$, que representa o potencial necessário para que a eletrólise se processe em regime adiabático (isto é, sem transferência líquida de calor com o meio externo), pode ser calculada por \@ref(eq:eth0) [1].
+
+\begin{equation}
+E_{th}^{0} = \frac{\Delta H_{R}^{0}}{nF} = 1{,}481\ \mathrm{V}
+(\#eq:eth0)
+\end{equation}
+
+O símbolo \Delta H\_{R}\^{0} corresponde à variação de entalpia da reação, que expressa o calor total envolvido no processo de decomposição da água (-285,83 kJ/mol em situações padrão). E o fator $nF$, com n = 2, no denominador indica a quantidade de carga necessária para a transferência dos dois mols de elétrons envolvidos na reação global da eletrólise.
+
+Essas relações são fundamentais, pois formam a base para o cálculo de eficiência e para a modelagem da tensão aplicada, que sempre supera os valores termodinâmicos teóricos devido a perdas internas.
+
+A tensão operacional da célula é composta pela soma da tensão reversível e das sobretensões:
+
+\begin{equation}
+E_{cell} = E_{rev} + \eta_{ativ} + \eta_{ohm} + \eta_{conc}
+(\#eq:ecell)
+\end{equation}
+
+O termo $E_{rev}$ corresponde à tensão reversível, que é o valor teórico mínimo exigido pela termodinâmica para que a eletrólise ocorra. O termo $\eta_{ativ}$ representa a sobretensão de ativação, originada da energia extra necessária para iniciar as reações eletroquímicas nos eletrodos. Já $\eta_{ohm}$ corresponde à sobretensão ôhmica, associada às resistências internas do sistema, incluindo membrana, eletrodos e contatos elétricos. Por fim, $\eta_{conc}$ representa a sobretensão de concentração, causada pelas limitações no transporte de massa e pela diferença entre a concentração de reagentes na superfície do eletrodo e no volume da solução.
+
+**Sobretensão de Ativação:**
+
+----
+
+Resultado da cinética das reações eletroquímicas, especialmente da evolução de oxigênio (OER) no ânodo, a sobretensão é baseada na equação de Butler-Volmer que pode ser representada de forma simplificada em \@ref(eq:etaativ) [11].
+
+\begin{equation}
+\eta_{ativ} = \frac{RT}{\alpha F}\,\operatorname{arcsinh}\!\left(\frac{i}{2i_0}\right)
+(\#eq:etaativ)
+\end{equation}
+
+Onde $R$ é a constante universal dos gases, $T$ a temperatura absoluta, refletindo o efeito térmico sobre a cinética da reação. O parâmetro α é o coeficiente de transferência de carga, que mede a sensibilidade da velocidade da reação à variação de potencial. Já $F$ corresponde à constante de Faraday, $i$ é a densidade de corrente e $i_0$ o parâmetro de troca, valor que expressa a atividade eletroquímica intrínseca do eletrodo e geralmente baixo para a OER. 
+
+
+**Sobretensão Ôhmica**
+
+----
+
+A sobretensão ôhmica está relacionada principalmente à resistência da membrana, pela lei de Ohm \@ref(eq:etaohm) [11].
+
+\begin{equation}
+\eta_{ohm} = i\,R_{mem}
+(\#eq:etaohm)
+\end{equation}
+
+Com
+
+\begin{equation}
+R_{mem} = \frac{\delta_{mem}}{\sigma_{mem}}
+(\#eq:rmem)
+\end{equation}
+
+onde $i$ representa a densidade de corrente aplicada, $R_{mem}$ é a resistência ôhmica da membrana,  $\delta_{mem}$ indica a espessura da membrana e $\sigma_{mem}$ sua condutividade iônica, mostrando que membranas mais espessas ou menos condutivas aumentam a perda ôhmica no sistema.
+
+A condutividade depende fortemente da hidratação da membrana e também da temperatura [11], conforme apresentado em \@ref(eq:sigmamem):
+
+\begin{equation}
+\sigma_{mem} = \left(0.005139\,\lambda - 0.00326\right)\exp\!\left[1268\left(\frac{1}{303} - \frac{1}{T}\right)\right]
+(\#eq:sigmamem)
+\end{equation}
+
+onde $T$ é a temperatura absoluta, expressa em Kelvin ($K$) e $\lambda$ é o teor de água na membrana. O teor de água na membrana ($\lambda$) é um parâmetro determinante para a condutividade e para a estabilidade operacional dela.
+
+**Sobretensão de Concentração**
+
+----
+
+A sobretensão de concentração torna-se relevante somente em densidades de corrente muito elevadas, quando o transporte de reagentes e produtos se torna limitante [11]. Ela pode ser calculada como apresentado em \@ref(eq:etaconc).
+
+\begin{equation}
+\eta_{conc} = -\frac{RT}{nF}\,\ln\!\left(1 - \frac{i}{i_{lim}}\right)
+(\#eq:etaconc)
+\end{equation}
+
+Onde $R$ é a constante universal dos gases, $T$ a temperatura absoluta, refletindo o efeito térmico sobre o processo difusivo. O parâmetro $n$ corresponde ao número de elétrons envolvidos na reação eletroquímica, enquanto $F$ é a constante de Faraday, que relaciona carga elétrica e quantidade de matéria. O termo dentro do logaritmo, $\left(1 - \frac{i}{i_{lim}}\right)$, expressa a razão entre a corrente aplicada $i$ e a corrente limite de difusão $i_{lim}$, que define o ponto em que o transporte de massa se torna o fator limitante. À medida que $i$ se aproxima de $i_{lim}$, o logaritmo cresce e a sobretensão de concentração aumenta significativamente.
+
+Em eletrolisadores PEM comerciais, trabalha-se geralmente abaixo do regime limitante, o que permite desconsiderar esse termo na maior parte das simulações. A  Figura \@ref(fig:figura8) exemplifica a sensibilidade das contribuições das sobretensões ôhmica e de ativação em função da densidade de corrente. 
+
+```{r figura8, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Contribuições das sobretensões (ôhmica e ativação) em função da densidade de corrente. Fonte: [12]."}
+
+knitr::include_graphics(path = 'figura8.png')
+
+```
+
+O desempenho de uma célula de eletrólise é tradicionalmente caracterizado pela sua curva de polarização, um gráfico da tensão da célula versus a densidade de corrente (corrente por unidade de área ativa). A Figura \@ref(fig:figura9) mostra a curva de polarização de uma célula de eletrólise PEM em diferentes temperaturas.
+
+```{r figura9, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Curva de polarização de um eletrolisador PEM em função da densidade de corrente e da temperatura. Fonte: [12]."}
+
+knitr::include_graphics(path = 'figura9.png')
+
+```
+
+### Análise da eficiência da eletrólise e consumo de energia específico
+
+A eficiência em um eletrolisador indica o desempenho do dispositivo, se ele tem um consumo adequado de energia e tensão para a produção de hidrogênio do dispositivo. As principais eficiências são a de Faraday ($\eta_F$), de tensão ($\eta_V$) e do eletrolisador ($\eta_{ele}$).
+
+Em um eletrolisador, como um eletrolisador PEM, estas eficiências são definidas da seguinte forma:
+
+- **Eficiência de Faraday ($\eta_F$)**: Relaciona a quantidade real de produto (hidrogênio) obtida com a quantidade teoricamente máxima que poderia ser produzida pela corrente elétrica aplicada. Mede as perdas causadas por reações laterais ou cruzamento de gás através da membrana. A eficiência de Faraday normalmente é calculada utilizando modelos empíricos ou semi-empíricos em função das condições operativas como corrente, temperatura e pressão e é reduzida significativamente em baixas densidades de corrente [13].
+
+- **Eficiência de Tensão ($\eta_V$)**: Relaciona a tensão termicamente neutra reversível ($E_{th}^{0}$), que é a tensão mínima necessária para a reação ocorrer, com a tensão de operação real da célula ($E_{cell}$), incluindo perdas por polarização, como em \@ref(eq:etav).
+
+\begin{equation}
+\eta_{V} = \frac{E_{th}^{0}}{E_{cell}}
+(\#eq:etav)
+\end{equation}
+
+- **Eficiência Global do Eletrolisador ($\eta_{ele}$)**: É o produto das eficiências de Faraday e de Tensão, \@ref(eq:etaele), representando a eficiência total do sistema na conversão de energia elétrica em energia química (hidrogênio). A eficiência do eletrolisador pode também ser calculada pela razão entre o Valor de Aquecimento Superior do Hidrogênio ($HHV_{H_2}$), que tem um valor de 3,54 kWh/Nm3, e o consumo de energia ($C_E)$, como em \@ref(eq:etaelehhv). Assim, a taxa de fluxo de produção de hidrogênio e oxigênio podem ser calculadas diretamente pela lei de Faraday através das equações \@ref(eq:producaoh2) e \@ref(eq:producaoo2), respectivamente [13]. Onde $N$ é o número de células em série, o termo $iA$ é a corrente total aplicada, sendo $i$ a densidade de corrente e $A$ a área ativa, $F$ é a constante de Faraday, usada para relacionar carga elétrica ao fluxo molar, e $\eta_F$ a eficiência de Faraday.
+
+\begin{equation}
+\eta_{ele} = \eta_{F}\,\eta_{V}
+(\#eq:etaele)
+\end{equation}
+
+\begin{equation}
+\eta_{ele} = \frac{HHV_{H_2}}{C_E}\cdot 100
+(\#eq:etaelehhv)
+\end{equation}
+
+\begin{equation}
+\dot{N}_{H_2} = \frac{N\,iA}{2F}\,\eta_{F}
+(\#eq:producaoh2)
+\end{equation}
+
+\begin{equation}
+\dot{N}_{O_2} = \frac{N\,iA}{4F}\,\eta_{F}
+(\#eq:producaoo2)
+\end{equation}
+
+Outros aspectos devem ser levados em conta para a modelagem da resposta dinâmica de um eletrolisador, no entanto, fogem do escopo deste material.
+
+# INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS
+
+Diversas fontes de energia renovável podem alimentar o processo de eletrólise, no qual a água é decomposta em hidrogênio e oxigênio. A escolha da fonte primária impacta não apenas a sustentabilidade, mas também a eficiência, a economia e a configuração tecnológica mais adequada para a produção de hidrogênio [14] [15].
+
+As fontes mais aplicáveis para a geração de hidrogênio verde incluem:
+
+- **Energia Solar (Fotovoltaica e Térmica)**: A energia solar fotovoltaica (FV) converte diretamente a luz do sol em eletricidade. A energia solar térmica, por sua vez, concentra a radiação solar para gerar calor, que pode ser usado para alimentar ciclos de potência ou para fornecer a energia térmica necessária em eletrolisadores de alta temperatura (SOEC), aumentando significativamente a eficiência geral do processo [14]. A energia solar fotovoltaica se destaca como um foco principal de pesquisa e desenvolvimento devido à sua maturidade tecnológica, custo decrescente e vasta disponibilidade global [14] [16]. Sistemas que integram painéis fotovoltaicos com eletrolisadores demonstram grande potencial, com a eficiência de conversão de energia solar em hidrogênio podendo superar 30% [16]. Sua natureza modular permite a implantação em diversas escalas, desde pequenas instalações até grandes usinas.
+
+- **Energia Eólica**: A energia cinética dos ventos é convertida em eletricidade por meio de aerogeradores. O Brasil possui um enorme potencial eólico, tanto em terra (onshore) quanto no mar (offshore), onde os ventos são mais intensos e constantes [17].
+A energia eólica se consolida como uma das rotas mais promissoras e neutras para o clima na produção de hidrogênio [14]. O Brasil, em particular, detém um potencial eólico gigantesco, especialmente no que se refere ao potencial offshore. A combinação de parques eólicos com plantas de eletrólise é uma estratégia chave para a produção em larga escala de hidrogênio verde, aproveitando a alta capacidade de geração para alimentar eletrolisadores de grande porte [17].
+
+
+- **Energia Hidrelétrica**: Utiliza a força da água em movimento, geralmente armazenada em reservatórios, para girar turbinas e gerar eletricidade. É uma fonte consolidada e de baixo custo, que compõe a maior parte da matriz elétrica brasileira [14] [17].
+A energia hidrelétrica oferece vantagens significativas, como o baixo custo da eletricidade e o rápido tempo de resposta das usinas [14]. No Brasil, onde as hidrelétricas representam 65% da matriz elétrica, a capacidade de armazenamento dos reservatórios confere grande estabilidade ao fornecimento de energia [17]. Essa constância é ideal para alimentar eletrolisadores de forma contínua, uma sinergia que se alinha perfeitamente com as características operacionais dos eletrolisadores alcalinos, como será detalhado adiante.
+
+- **Energia Geotérmica**: Aproveita o calor do interior da Terra para gerar vapor que aciona turbinas, produzindo eletricidade de forma contínua e estável [14].
+A principal vantagem da energia geotérmica é sua capacidade de fornecer eletricidade e calor de forma estável e contínua, sem a intermitência característica das fontes solar e eólica. Por essa razão, sua integração com eletrolisadores visa a produção constante de hidrogênio, e não o armazenamento de energia para compensar flutuações [14]. Essa característica a torna particularmente compatível com eletrolisadores que operam em alta temperatura e requerem um fornecimento de energia ininterrupto para máxima eficiência.
+
+- **Biomassa/Biogás**: A queima de matéria orgânica ou de biogás pode gerar calor para acionar usinas a vapor ou alimentar motores e turbinas que produzem eletricidade [15] [17].
+A viabilidade de cada uma dessas fontes, no entanto, depende de uma análise aprofundada de sua maturidade tecnológica, custo e, crucialmente, de sua sinergia operacional com as tecnologias de eletrólise.
+
+## Benefícios e desafios da integração de renováveis
+
+A integração de fontes de energia renováveis com eletrolisadores é uma peça-chave para a descarbonização da economia, mas essa sinergia apresenta um conjunto dual de vantagens estratégicas e significativos obstáculos técnicos e econômicos que precisam ser superados.
+
+### Vantagens estratégicas de integração
+
+- **Armazenamento de Energia e Mitigação da Intermitência**: A produção de hidrogênio verde funciona como um mecanismo de armazenamento de energia em larga escala. Ela permite capturar e guardar o excedente de eletricidade gerado por fontes intermitentes como a solar e a eólica, superando suas limitações de disponibilidade e garantindo um fornecimento de energia mais estável [14] [17].
+
+- **Equilíbrio e Estabilidade da Rede Elétrica**: Mais do que um benefício passivo, a operação de plantas de hidrogênio como "cargas flexíveis" representa uma ferramenta estratégica para a gestão da rede elétrica. Ao absorver a sobreoferta de geração renovável, especialmente durante os períodos de alta incidência solar, essas plantas ajudam a estabilizar a rede, evitar o desperdício de energia (curtailment) e otimizar o uso da infraestrutura [18].
+
+- **Descarbonização de Setores Industriais**: O hidrogênio verde pode ser utilizado para descarbonizar setores industriais de difícil abatimento, como a siderurgia e a indústria química. Esse processo, conhecido como interligação setorial (sector coupling), permite que a energia limpa do setor elétrico seja transferida para outros setores da economia, ampliando o alcance da transição energética [17].
+
+### Desafios Técnicos e Econômicos
+
+- **Variabilidade da Geração de Energia**: As flutuações de potência inerentes às fontes solar e eólica podem forçar os eletrolisadores a operar em carga parcial ou a ligar e desligar com frequência. Essa operação intermitente pode deteriorar o desempenho e a vida útil dos equipamentos, especialmente dos eletrolisadores alcalinos (AEL), que são menos flexíveis [14].
+
+- **Custos de Energia e Viabilidade Econômica**: O custo da eletricidade é o maior componente no custo final da produção de hidrogênio verde [18]. Embora a produção de H₂ verde ainda não seja economicamente viável em todos os cenários, as projeções são otimistas. Espera-se que o custo do hidrogênio de fonte fotovoltaica caia para menos de US$ 2,5 por quilo até 2030, tornando-o competitivo [16].
+
+- **Impactos na Infraestrutura Elétrica**: A integração de plantas de hidrogênio de grande porte exige estudos de estabilidade para garantir uma conexão segura ao sistema elétrico. Além disso, a demanda adicional pode sobrecarregar a infraestrutura de transmissão existente, exigindo investimentos em sua expansão e reforço [18].
+
+Para mitigar esses desafios, é fundamental selecionar a tecnologia de eletrolisador mais adequada às características de cada fonte de energia renovável. A eficiência, a durabilidade e a viabilidade econômica de um projeto de hidrogênio verde dependem criticamente da correta compatibilização entre as características operacionais da fonte de energia renovável e a tecnologia do eletrolisador. Cada tipo possui particularidades que o tornam mais ou menos adequado para diferentes regimes de fornecimento de energia.
+
+Os eletrolisadores PEM são a tecnologia mais adequada para fontes de energia variáveis, como a solar fotovoltaica e a eólica. A principal razão é seu rápido tempo de resposta, na ordem de milissegundos a segundos, que permite acompanhar as flutuações de potência de forma ágil. Além disso, os eletrolisadores PEM podem operar de forma eficiente em cargas parciais mais baixas, a partir de 10-20% de sua capacidade nominal, tornando-os ideais para lidar com a intermitência [18] [16].
+
+Os eletrolisadores Alcalinos, por serem uma tecnologia madura e de menor custo de capital, são uma opção viável, porém menos flexíveis. Seu tempo de resposta é significativamente mais lento (minutos a horas) e sua faixa de operação mínima é mais restrita (20-40% da capacidade nominal). Essas características os tornam mais adequados para fontes de energia estáveis e contínuas, como a hidrelétrica, ou para sistemas conectados à rede que garantem um fornecimento constante, evitando a degradação causada pela operação em carga parcial [14] [18].
+
+Já os eletrolisadores de Óxido Sólido operam em altas temperaturas (entre 600-1000 °C) e requerem tanto eletricidade quanto calor para funcionar com máxima eficiência [14] [15]. Portanto, os eletrolisadores SOEC são ideais para integração com fontes que podem fornecer ambos os insumos de forma estável, como a energia geotérmica e sistemas de energia solar térmica concentrada. Devido ao seu tempo de resposta lento, são mais compatíveis com fontes de geração contínua, que permitem uma operação otimizada [14] [18].
+
+A Tabela \@ref(tab:tabela4) sintetiza a compatibilidade entre os principais tipos de eletrolisadores e as fontes de energia renováveis.
+
+```{r tabela4, echo=FALSE, message=FALSE, warning=FALSE, tab.cap="Comparação entre a compatibilidade dos tipos de eletrolisadores e as fontes de energia renováveis."}
+library(magrittr, include.only = '%>%')
+library(gt)
+
+param_tec <- readxl::read_xlsx(path = 'tabelas.xlsx',
+                               sheet = 4) 
+
+param_tec %>%
+  gt(caption = 'Comparação entre a compatibilidade dos tipos de eletrolisadores e as fontes de energia renováveis.') %>%
+  tab_style(
+    style = list(
+      cell_fill(color = "#2e7d32"),
+      cell_text(color = "#e8f5e9", weight = "bold")
+    ),
+    locations = cells_column_labels()
+  ) %>% 
+  cols_align(
+  align = "center",
+  columns = everything()
+)
+
+
+```
+
+# CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO
+
+Células a combustível, ou Fuel Cells (FCs), são dispositivos eletroquímicos que convertem diretamente a energia química de um combustível gasoso em eletricidade, realizando o processo inversor dos eletrolisadores. Elas são vistas como potenciais fontes de energia alternativa para aplicações estacionárias e de mobilidade.
+
+Diferentemente de uma bateria, que armazena energia e precisa ser recarregada, a célula a combustível opera continuamente, produzindo eletricidade em corrente contínua (CC), além de água e calor, desde que o combustível (como o hidrogênio) e um oxidante (como o oxigênio, geralmente do ar atmosférico) sejam constantemente fornecidos, como mostrado na Figura \@ref(fig:figura10).
+
+```{r figura10, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Entradas e saídas de uma célula a combustível. Fonte: Adaptado de [19]."}
+
+knitr::include_graphics(path = 'figura10.png')
+
+```
+
+O princípio de operação das células a combustível, descoberto originalmente em 1839 por William R. Grove, baseia-se em uma reação eletroquímica. Os processos eletrolíticos para a geração de hidrogênio, separam a água e o hidrogênio em um eletrolisador. As células a combustível normalmente usam o processo eletrolítico inverso do eletrolisador, com diferentes tipos de eletrólito. O princípio de funcionamento de todas as células é semelhante, exceto o tipo de eletrólito [19].
+
+Uma célula básica, como mostrado no diagrama de blocos da Figura \@ref(fig:figura11), consiste em um eletrólito posicionado entre dois eletrodos. O eletrólito possui a propriedade especial de permitir a passagem de íons positivos (prótons), mas bloquear os elétrons. O gás hidrogênio ($H_2$) passa sobre o ânodo (Eletrodo de Combustível) e, com a ajuda de um catalisador (geralmente platina), separa-se em elétrons ($e^-$) e prótons de hidrogênio (íons positivos, $H^+$). Os elétrons são forçados a viajar através de um circuito elétrico externo (a carga) para chegar ao cátodo, gerando assim a corrente elétrica. Os prótons (íons) passam através do eletrólito e se combinam com os elétrons que chegam do circuito externo e com o oxigênio (geralmente do ar) para formar água ($H_2O$) e calor no cátodo (Eletrodo de Oxidante). Esse calor pode ser utilizado para atender as necessidades de aquecimento, incluindo água quente e aquecimento do ambiente.
+
+```{r figura11, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Diagrama de blocos de uma célula a combustível. Fonte: Adaptado de [19]."}
+
+knitr::include_graphics(path = 'figura11.png')
+
+```
+
+Sistemas de células a combustível representam uma área industrial nova e promissora, recebendo considerável investimento comercial como uma futura tecnologia de energia. O desenvolvimento e o progresso dessa tecnologia devem ser observados de perto, pois as FCs complementam os motores a combustão e reduzem a dependência dos combustíveis fósseis. Essa tecnologia traz implicações ambientais significativas, pois o setor de transporte, por exemplo, é responsável por 32% da emissão global de $CO_2$ [20]. A viabilidade, eficiência e robustez da tecnologia de células a combustível dependem criticamente do entendimento, previsão, monitoramento e controle do sistema.
+
+As células a combustível são ativamente estudadas para diversas aplicações que podem ser separadas em:
+
+1.	Aplicações em Mobilidade (Automotivas): O uso em powertrains automotivos é enfatizado devido à sua importância no consumo global de combustível e na geração de emissões. O desempenho transiente é um requisito chave para o sucesso dos veículos a célula a combustível.
+
+2.	Geração de Energia Estacionária e Residencial (Geração Distribuída - GD): Fornecem energia limpa e eficiente para edifícios e residências, sendo atrativas devido à sua alta eficiência de conversão de combustível e baixíssimas emissões de gases poluentes.
+
+## Tipos de células a combustível {#secao41}
+
+As células a combustível são classificadas principalmente pelo tipo de eletrólito que utilizam, sendo os tipos principais:
+
+-	Células a combustível de eletrólito de membrana polimérica trocadora de prótons (Proton Exchange Membrane Fuel Cells ou Polymer Electrolyte Membrane Fuel Cells – PEMFC).
+
+-	Células a combustível alcalinas (Alkaline Fuel Cells – AFC).
+
+-	Células a combustível de troca aniônica (Anion Exchange Membrane Fuel Cells – AEMFC)
+
+-	Células a combustível de óxido sólido (Solid Oxide Fuel Cells – SOFC).
+
+-	Células a combustível de carbonatos fundidos (Molten Carbonate Fuel Cells – MCFC).
+
+-	Células a combustível de ácido fosfórico (Phosphoric Acid Fuel Cells – PAFC).
+
+
+A Tabela \@ref(tab:tabela5) apresenta as principais características dos tipos de célula a combustíveis mais comuns.
+
+
+```{r tabela5, echo=FALSE, message=FALSE, warning=FALSE, tab.cap="Comparação das características operacionais das células a combustível."}
+library(magrittr, include.only = '%>%')
+library(gt)
+
+param_tec <- readxl::read_xlsx(path = 'tabelas.xlsx',
+                               sheet = 5) 
+
+param_tec %>%
+  gt(caption = 'Comparação das características operacionais das células a combustível.') %>%
+  tab_style(
+    style = list(
+      cell_fill(color = "#2e7d32"),
+      cell_text(color = "#e8f5e9", weight = "bold")
+    ),
+    locations = cells_column_labels()
+  ) %>% 
+  cols_align(
+  align = "center",
+  columns = everything()
+)
+
+
+```
+
+## A estrutura da célula a combustível e seus componentes
+
+Uma única célula a combustível tipicamente produz uma tensão baixa de cerca de 0,4 V a 0,9 V e correntes elevadas entre 0,5 a 1,0 A/cm2. Para produzir a tensão e potência necessárias para a maioria das aplicações, múltiplas células são conectadas em série, formando um Stack, como mostrado na Figura \@ref(fig:figura12).
+
+Os componentes básicos de uma célula individual são:
+
+- Conjunto Membrana Eletrodo (do inglês, Membrane Electrode Assembly – MEA): Consiste na membrana (eletrólito polimérico no caso da célula PEM, por exemplo), os eletrodos (ânodo e cátodo) e as camadas de difusão de gás. O catalisador (geralmente platina na célula PEM) é aplicado à superfície do ânodo e do cátodo para acelerar a reação.
+
+- Placas bipolares (em inglês, Flow Field Plates): Distribuem os gases reagentes através de canais de fluxo, coletam a corrente produzida pela reação eletroquímica e fornecem suporte estrutural.
+
+```{r figura12, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Esquemático da operação e componentes de um stack de célula a combustível. Fonte: [21]."}
+
+knitr::include_graphics(path = 'figura12.png')
+
+```
+
+A Figura \@ref(fig:figura13) mostra um exemplo de um stack de célula a combustível comercial.
+
+```{r figura13, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Exemplo de um stack de célula a combustível tipo PEM. Fonte: [22]."}
+
+knitr::include_graphics(path = 'figura13.png')
+
+```
+
+Várias células a combustível podem ser ligadas em série e paralelo para aumentar a capacidade de potência de saída, como mostra o diagrama de blocos da Figura \@ref(fig:figura14) [23] [24]. Um inversor PWM (Pulse Width Modulation) é muitas vezes empregado para produzir uma tensão alternada (CA) fixa ou variável, com uma frequência também fixa ou variável. Normalmente, utiliza-se um transformador antes de se conectar o inversor à rede elétrica. Em um sistema híbrido de célula a combustível, outras fontes de energia, como baterias e supercapacitores, também podem ser integradas para aumentar ainda mais a eficiência e a estabilidade do sistema.
+
+```{r figura14, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Diagrama de blocos de um sistema de células a combustível conectado à rede elétrica. Fonte: Adaptado de [19]."}
+
+knitr::include_graphics(path = 'figura14.png')
+
+```
+
+## Células a combustível de baixa temperatura
+
+Como apresentado na seção \@ref(secao41), as células a combustível (FCs) são comumente classificadas com base no tipo de eletrólito utilizado, o que determina suas características operacionais, como a temperatura de operação. As células podem ser divididas em dois grupos principais: células de baixa temperatura e células de alta temperatura.
+
+As principais células a combustível de baixa temperatura são as células de eletrólito de membrana polimérica trocadora de prótons (PEMFC) e as células alcalinas (AFC). As células de membrana de troca aniônica (AEMFC) estão em desenvolvimento e tem ganhado atenção nos últimos anos. A seguir será detalhado o funcionamento de cada umas destas células.
+
+### Células a combustível de eletrólito de membrana polimérica de troca de prótons (PEMFC)
+
+A PEMFC é a principal tecnologia atual entre as células de baixa temperatura devido a sua alta densidade de potência, eletrólito sólido e faixa de temperatura de operação (50°C a 100°C), sendo adequadas para aplicações automotivas e sistemas de geração distribuída de pequeno e médio porte. A baixa temperatura permite uma partida rápida, no entanto, o gerenciamento térmico é desafiador, pois a temperatura deve ser mantida abaixo de 100°C para que a membrana permaneça adequadamente umidificada. A membrana de polímero é um excelente condutor de íons de hidrogênio.
+
+Os componentes básicos da célula a combustível PEM são o anodo, o eletrólito e catodo, como indica a Figura \@ref(fig:figura15). 
+
+```{r figura15, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Esquemático de uma célula a combustível PEM. Fonte: Adaptado de [19]."}
+
+knitr::include_graphics(path = 'figura15.png')
+
+```
+
+O eletrólito é uma membrana de polímero revestido por um catalisador de metal, como a platina. O anodo tem uma placa plana com canais embutidos para dispersar o gás hidrogênio sobre a superfície do catalisador. Quando o hidrogênio pressurizado entra no anodo e em seguida passa pelo canal, o catalisador faz dois átomos do gás hidrogênio ($2H_2$) se oxidarem em quatro íons de hidrogênio ($4H^+$) e abandonarem 4 elétrons ($4H^+$). A reação no anodo pode ser representada pela equação química \@ref(eq:anodofc).
+
+\begin{equation}
+2H_2 \rightarrow 4H^+ + 4e^-
+(\#eq:anodofc)
+\end{equation}
+
+Os elétrons livres fluem pelo caminho de menor resistência da carga externa para o outro eletrodo (cátodo). A corrente de carga é causada pelo fluxo de elétrons. A direção do fluxo de corrente consiste no sentido oposto do fluxo de elétrons. Os íons de hidrogênio passam através da membrana do anodo para o catodo. Ao entrar no catodo, os elétrons reagem com o oxigênio do ar exterior e os íons de hidrogênio do catodo formando água. A reação catódica pode ser representada pela equação \@ref(eq:catodofc). Todo esse processo está representado na Figura \@ref(fig:figura15).
+
+\begin{equation}
+O_2 + 4H^+ + 4e^- \rightarrow 2H_2O
+(\#eq:catodofc)
+\end{equation}
+
+Portanto, a célula a combustível PEM combina hidrogênio com oxigênio para produzir água, e isso gera energia térmica no processo de reação do catodo. A energia térmica pode ser extraída por meio de um trocador de calor, como na Figura \@ref(fig:figura11), para uso em várias aplicações. A reação geral do anodo e catodo pode ser representada pela equação química dada em \@ref(eq:globalfc).
+
+\begin{equation}
+2H_2 + O_2 \rightarrow 2H_2O + \text{energia (calor)}
+(\#eq:globalfc)
+\end{equation}
+
+Uma célula a combustível PEM funciona a temperaturas relativamente baixas, de cerca de 80°C, e pode variar rapidamente a sua saída para atender às mudanças na demanda de energia (com resposta a um degrau de carga em centenas de milissegundos) [23]. O dispositivo é de certa forma leve, possui alta densidade de energia e pode iniciar a operação muito rapidamente (em alguns segundos). Essa célula é adequada para muitas aplicações, incluindo o transporte e a distribuição para cargas residenciais. Por exemplo, uma célula a combustível PEM equipa o Toyota Mirai, o primeiro carro a hidrogênio a ser produzido em massa e vendido comercialmente no mundo.
+
+Entretanto, a platina utilizada como catalisador é extremamente sensível ao monóxido de carbono, e a eliminação deste é crucial para a longevidade da célula a combustível. Isso se soma ao custo geral do sistema PEM. A execução na prática requer unidades de controle, como o regulador de pressão do hidrogênio, como ilustra a Figura \@ref(fig:figura11), e um controle do fluxo de ar (ou de $O_2$).
+
+A célula a combustível com membrana polimérica de troca de prótons (PEMFC) emprega camadas de catalisador revestidas em ambos os lados de uma membrana polimérica para catalisar as reações no catodo e no anodo, conforme Figura \@ref(fig:figura15).
+
+Na maioria dos projetos, o catalisador é baseado em platina, um metal precioso muito caro. A platina pode contribuir com 10% a 15% do custo de um stack de células a combustível. A menos que o teor de platina seja reduzido, ele representará uma parcela maior do custo à medida que os volumes de fabricação aumentam. Muitos pesquisadores estão se concentrando em encontrar substitutos mais baratos e duráveis para a platina, mesmo que ainda não apresentem um desempenho comparável ao da platina. Atualmente, catalisadores à base de ligas de platina (com menor teor de platina) e catalisadores não baseados em platina (utilizando metais não preciosos) são substitutos promissores. Diferentes tipos catalisadores com nanoestruturas tipo Core-shell, nanocristais e outras estão em desenvolvimento [25]. Contudo, ainda há um longo caminho a percorrer antes que eles possam ser empregados na fabricação prática e aplicações industriais, como mostrado na Figura \@ref(fig:figura16).
+
+
+```{r figura16, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%", fig.align='center', fig.cap="Linha do tempo para tecnologia dos catalisadores de Platina, liga de Platina, core-shell, metais não preciosos, nanocristais com forma controlada e nanoestrutura. Fonte: Adaptado de [25]."}
+
+knitr::include_graphics(path = 'figura16.png')
+
+```
+
+### Células a combustível alcalinas (AFC)
+
+
+
+
+
+
+
+
+
+# REFERÊNCIAS {.unnumbered}
+
+[1] D. Bessarabov, H. Wang, H. Li e N. Zhao, PEM Electrolysis for Hydrogen Production: Principles and Applications, Boca Raton: CRC Press, 2017.
+
+[2] IRENA, “Hydrogen from renewable power: Technology outlook for the energy transition,” International Renewable Energy Agency, Abu Dhabi, 2018.
+
+[3] M. Ji e J. Wang, “Review and comparison of various hydrogen production methods based on costs and life cycle impact assessment indicators,” International Journal of Hydrogen Energy, vol. 46, pp. 38612-38635, 2021.
+
+[4] Centro de Hidrogênio Verde (CH2V), “Módulo 1: Introdução e conceitos básicos,” em Curso Básico em Hidrogênio Verde, Itajubá, 2023.
+
+[5] Empresa de Pesquisa Energética (EPE), “Hidrogênio Cinza: Produção a partir da reforma a vapor do gás natural,” Marcos Frederico Farias de Souza, 2022.
+
+[6] S. S. Kumar e H. Lim, “An overview of water electrolysis technologies for green hydrogen production,” Energy Reports, 25 Outubro 2022.
+
+[7] H. I. Lee, H.-S. Cho, M. Kim, J. H. Lee, C. Lee, S. Lee, S.-K. Kim, C.-H. Kim, K. B. Yi e W.-C. Cho, “The Structural Effect of Electrode Mesh on Hydrogen Evolution Reaction Performance for Alkaline Water Electrolysis,” Frontiers in Chemistry, vol. 9, novembro 2021.
+
+[8] Y. Zheng, S. You, H. W. Bindner e M. Münster, “Optimal day-ahead dispatch of an alkaline electrolyser system concerning thermal–electric properties and state-transitional dynamics,” Applied Energy, 2022.
+
+[9] IRENA, “Green Hydrogen Cost Reduction: Scaling Up Electrolysers to meet the 1.5°C climate goal.,” International Renewable Energy Agency, Abu Dhabi, 2020.
+
+[10] V. A. M. Lopez, H. Ziar, J. W. Haverkort, M. Zeman e O. Isabella, “Dynamic operation of water electrolyzers: A review for applications in photovoltaic systems integration,” Renewable and Sustainable Energy Reviews, vol. 173, agosto 2023.
+
+[11] D. S. Falcão e A. M. F. R. Pinto, “A review on PEM electrolyzer modelling: Guidelines for beginners,” Journal of Cleaner Production, março 2020.
+
+[12] P. B. Arough, A. Moranda, A. Niyati e O. Paladino, “Parametric Sensitivity of a PEM Electrolyzer Mathematical Model: Experimental Validation on a Single-Cell Test Bench,” Energies, 2025.
+
+[13] A. Hernandez-Gomez, V. Ramirez e D. Guilbert, “Investigation of PEM electrolyzer modeling: Electrical domain, efficiency, and specific energy comsumption,” International Journal of Hydrogen Energy, vol. 45, pp. 14625-14639, abril 2020.
+
+[14] A. Mohammadi e M. Mehrpooya, “A comprehensive review on coupling different types of electrolyzer to renewable energy sources,” Energy, pp. 632-655, 12 June 2018.
+
+[15] M. Awad, A. Said, M. H. Saad, A. Farouk, M. Metwally Mahmoud, M. S. Alshammari, M. L. Alghaythi, S. H.E. Abdel Aleem, A. Y. Abdelaziz e A. I. Omar, “A review of water electrolysis for green hydrogen generation considering PV/wind/hybrid/hydropower/geothermal/tidal and wave/biogas energy systems, economic analysis, and its application,” Alexandria Engineering Journal, pp. 213-239, 28 December 2024.
+
+[16] H. RENAUDINEAU, A. M. LLOR, R. CORTÉS D., C. A. ROJAS, C. RESTREPO e S. KOURO, “Photovoltaic Green Hydrogen Challenges and Opportunities: A Power Electronics Perspective,” IEEE INDUSTRIAL ELECTRONICS MAGAZINE, pp. 31-41, Marh 2022.
+
+[17] P. SMITH SCHNEIDER, D. GABRIEL LOPES, J. TEIXEIRA FERNANDES e A. LAMARE SOARES MURTA, Energias renováveis e sua integração no H₂Verde, Brasília: LaSUS FAU UnB, 2023.
+
+[18] F. Andrade Mourinho, Impactos da Integração de Plantas de Hidrogênio Verde na Operação do SIN, ONS, 2024.
+
+[19] M. H. Rashid, Eletrônica de potência: dispositivos, circuitos e aplicações, São Paulo: Pearson, 2014.
+
+[20] J. T. Pukrushpan, A. G. Stefanopoulou e H. Peng, Control of Fuel Cell Power Systems: Principles, Modeling, Analysis and Feedback Design, London: Springer, 2004.
+
+[21] T. e. a. Sutharssan, “A review on prognostics and health monitoring of proton exchange membrane fuel cell,” Renewable and Sustainable Energy Reviews, vol. 75, pp. 440-450, 2017.
+
+[22] Ballard, “FCgen®–HPS Durable heavy duty fuel cell stack,” 2024. [Online]. Available: <https://www.ballard.com/wp-content/uploads/2024/08/Ballard_FCgen_HPS_specs.pdf>. [Acesso em 9 novembro 2025].
+
+[23] C. Wang, N. M. H. e H. Gao, “Control of PEM fuel cell distributed generation systems,” IEEE Transactions on Energy Conversion, vol. 21, nº 2, pp. 586-595, 2006.
+
+[24] C. Wang e M. H. Nehrir, “Short-time overloading capability and distributed generation applications of solid oxide fuel cells,” IEEE Transactions on Energy Conversion, vol. 22, nº 4, pp. 898-906, 2007.
+
+[25] N. H. Y. A. A. A.-S. A. R. S. H. G. R. K. T. A.-S. S. A. A. A. S. I. K. Z. A. &. A. Q. F. Jawad, “Fuel Cell Types, Properties of Membrane, and Operating Conditions: A Review,” Sustainability, 2022.
+
+[26] G. Das, J.-H. Choi, P. Nguyen, D.-J. Kim e Y. Yoon, “Anion Exchange Membranes for Fuel Cell Application: A Review,” Polymers, 2022.
+
+[27] B. Barac, M. Krpan e T. Capuder, “Modelling of PEM Fuel Cell for Power System Dynamic Studies,” IEEE Transactions on Power Systems, vol. 39, nº 2, pp. 3286-3298, março 2024.
+
+[28] E. Crespi, G. Guandalini e S. Campanari, “D5.6 – Report on beyond the project improvements and scale-up simulations,” 2022.
+
+[29] F. Barbir, PEM Fuel Cells: Theory and Practice, 3rd ed., Cambridge, MA: Academic Press, 2020.
+
+[30] R. O'Hayre, S.-W. Cha, W. Colella e F. B. Prinz, Fuel Cell Fundamentals, Hoboken, NJ: John Wiley & Sons, 2016.
+
+[31] National Energy Technology Laboratory (U.S.), Fuel Cell Handbook, Morgantown, WV: U.S. Dept. Energy, Office of Fossil Energy, National Energy Technology Laboratory, 2004.
+
+[32] Y. Xia, H. Lei, X. Wu, G. Hu, H. Pan e B. Fang, “Design of New Test System for Proton Exchange Membrane Fuel Cell,” Energies, 10 Janeiro 2023.
+
+[33] NGHC, “About,” NEOM Green Hydrogen Company, 24 Maio 2024. [Online]. Available: <https://nghc.com/about/>. [Acesso em 14 Dezembro 2025].
+
+[34] NGHC, “The Plant,” NEOM Green Hydrogen Company, 24 Maio 2024. [Online]. Available: <https://nghc.com/the-plant/>. [Acesso em 14 Dezembro 2025].
+
+[35] Fuel Cells Works, “NEOM to Begin First Commercial Green Hydrogen Output in 2027,” Fuel Cells Works, 24 Maio 2024. [Online]. Available: <https://fuelcellsworks.com/2025/11/07/green-hydrogen/neom-to-begin-first-commercial-green-hydrogen-output-in-2027>. [Acesso em 14 Dezembro 2025].
+
+[36] Sinopec, “Sinopec Xinjiang Kuqa Green Hydrogen Pilot Project Enters Operation, Leading China's Green Hydrogen Development,” China Petroleum & Chemical Corporation,, 03 Julho 2023. [Online]. Available: <http://www.sinopecgroup.com/group/en/000/000/062/62516.shtml>. [Acesso em 14 Dezembro 2025].
+
+[37] IHFCA, “IHFCA Vice-chair Member Sinopec Achieved Milestone in Building China’s Largest Solar Power-to-Hydrogen Project,” International Hydrogen Fuel Cell Association, 30 Agosto 2023. [Online]. Available: <http://www.ihfca.net/web/NewDetail.aspx?ID=1160>. [Acesso em 14 Dezembro 2025].
+
+[38] Iberdrola, “Usina de hidrogênio verde Puertollano,” Iberdrola, [Online]. Available: <https://www.iberdrola.com/quem-somos/nossa-atividade/hidrogenio-verde/usina-hidrogenio-verde-puertollano#>. [Acesso em 14 Dezembro 2025].
+
+[39] e-FUEL-TODAY, “Iberdrola commissions largest green hydrogen plant in Puertollano,” e-FUEL-TODAY, 04 Maio 2023. [Online]. Available: <https://efuel-today.com/en/iberdrola-commissions-largest-green-hydrogen-plant-in-puertollano/>. [Acesso em 14 Dezembro 2025].
+
+[40] Ballard Power Systems, “#PoweredByBallard: The first hydrogen-powered vessels set sail,” Ballard Power Systems, 31 May 2023. [Online]. Available: <https://blog.ballard.com/marine/first-hydrogen-powered-vessels-marine>. [Acesso em 02 November 2025].
+
+[41] Ballard Power Systems, “Norled's MF Hydra achieves significant operational milestones,” Ballard Power Systems, 30 September 2024. [Online]. Available: <https://blog.ballard.com/marine/norled-hydra-operational-milestones-ballard-fcwave>. [Acesso em 02 November 2025].
+
+[42] Fuel Cell Buses, “Fuel Cell Electric Buses Knowledge Base, “JIVE”,” Fuel Cell Buses, [Online]. Available: <https://www.fuelcellbuses.eu/projects/jive>. [Acesso em 09 November 2025].
+
+[43] ALSTOM, “Towards clean and future-oriented mobility,” 25 Janeiro 2025. [Online]. Available: <https://www.alstom.com/solutions/rolling-stock/alstom-coradia-ilint-worlds-1st-hydrogen-powered-passenger-train>. [Acesso em 13 Dezembro 2025].
+
+[44] C. Grimm, “Running the World's First Commercial Hydrogen Train Fleet,” 16 Maio 2023. [Online]. Available: <https://railroads.dot.gov/sites/fra.dot.gov/files/2023-06/Lessons%20Learned%20and%20Best%20Practices%20from%204%2B%20Years%20of%20Safe%20Operation%20of%20iLint%20Hydrogen%20Fueled%20Train%20in%20Germany.pdf>. [Acesso em 13 Dezembro 2025].
+
+[45] L. Fan, Z. Tu e S. H. Chan, “Recent development of hydrogen and fuel cell technologies: A review,” Energy Reports, vol. 7, pp. 8421-8446, 2021.
+
+[46] B. Gou, W. K. Na e B. Diong, Fuel Cells – Modeling, Control, and Applications, Boca Raton, FL: CRC Press, 2010.
+
+[47] C. Li e J.-B. Baek, “The promise of hydrogen production from alkaline anion exchange membrane electrolyzers,” Nano Energy, 2021.
+
+[48] D. e. a. Manzo, “Fuel cell technology review: Types, economy, applications, and vehicle-to-grid scheme,” Sustainable Energy Technologies and Assessments, vol. 75, 2025.
+
+[49] M. H. Nehrir e C. Wang, Modeling and Control of Fuel Cells: Distributed Generation Applications, New Jersey: Wiley-IEEE Press, 2023.
+
+[50] P. Millet e S. Grigoriev, “Water electrolysis technologies,” em Renewable Hydrogen Technologies: Production, Purification, Storage, Applications and Safety. , Amsterdam, Elsevier, 2013, p. 472.

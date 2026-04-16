@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>CAPÍTULO 2 PRODUÇÃO DE HIDROGÊNIO | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂</title>
+  <meta name="description" content="CAPÍTULO 2 PRODUÇÃO DE HIDROGÊNIO | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="CAPÍTULO 2 PRODUÇÃO DE HIDROGÊNIO | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CAPÍTULO 2 PRODUÇÃO DE HIDROGÊNIO | FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂" />
+  
+  
+  
+
+<meta name="author" content="Autores:  Prof. Robson Bauwelz Gonzatti  Prof. Rondineli Rodrigues Pereira" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="integração-com-as-energias-renováveis.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLIDE E CÉLULAS A COMBUSTÍVEL DE H₂</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> INTRODUÇÃO</a></li>
+<li class="chapter" data-level="2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html"><i class="fa fa-check"></i><b>2</b> PRODUÇÃO DE HIDROGÊNIO</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#produ%C3%A7%C3%A3o-a-partir-de-combust%C3%ADveis-f%C3%B3sseis-rotas-dominantes"><i class="fa fa-check"></i><b>2.1</b> Produção a partir de combustíveis fósseis (rotas dominantes)</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#reforma-a-vapor-de-metano-smr-do-ingl%C3%AAs-steam-methane-reforming"><i class="fa fa-check"></i><b>2.1.1</b> Reforma a Vapor de Metano (SMR, do inglês Steam Methane Reforming)</a></li>
+<li class="chapter" data-level="2.1.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#gaseifica%C3%A7%C3%A3o-do-carv%C3%A3o-gc"><i class="fa fa-check"></i><b>2.1.2</b> Gaseificação do Carvão (GC)</a></li>
+<li class="chapter" data-level="2.1.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#oxida%C3%A7%C3%A3o-parcial"><i class="fa fa-check"></i><b>2.1.3</b> Oxidação Parcial</a></li>
+<li class="chapter" data-level="2.1.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#reforma-autot%C3%A9rmica"><i class="fa fa-check"></i><b>2.1.4</b> Reforma Autotérmica</a></li>
+<li class="chapter" data-level="2.1.5" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#decomposi%C3%A7%C3%A3o-termocatal%C3%ADtica"><i class="fa fa-check"></i><b>2.1.5</b> Decomposição Termocatalítica</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-da-%C3%A1gua"><i class="fa fa-check"></i><b>2.2</b> Eletrólise da água</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-alcalina"><i class="fa fa-check"></i><b>2.2.1</b> Eletrólise alcalina</a></li>
+<li class="chapter" data-level="2.2.2" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-pem"><i class="fa fa-check"></i><b>2.2.2</b> Eletrólise PEM</a></li>
+<li class="chapter" data-level="2.2.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-membrana-de-troca-ani%C3%B4nica-aem"><i class="fa fa-check"></i><b>2.2.3</b> Eletrólise com membrana de troca aniônica (AEM)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-%C3%B3xido-s%C3%B3lido-soec"><i class="fa fa-check"></i><b>2.2.4</b> Eletrólise com óxido sólido (SOEC)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#comparativos-entre-as-tecnologias-de-eletr%C3%B3lise"><i class="fa fa-check"></i><b>2.3</b> Comparativos entre as tecnologias de eletrólise</a></li>
+<li class="chapter" data-level="2.4" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#secao24"><i class="fa fa-check"></i><b>2.4</b> Modelagem matemática de uma célula PEM</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="produção-de-hidrogênio.html"><a href="produção-de-hidrogênio.html#an%C3%A1lise-da-efici%C3%AAncia-da-eletr%C3%B3lise-e-consumo-de-energia-espec%C3%ADfico"><i class="fa fa-check"></i><b>2.4.1</b> Análise da eficiência da eletrólise e consumo de energia específico</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html"><i class="fa fa-check"></i><b>3</b> INTEGRAÇÃO COM AS ENERGIAS RENOVÁVEIS</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#benef%C3%ADcios-e-desafios-da-integra%C3%A7%C3%A3o-de-renov%C3%A1veis"><i class="fa fa-check"></i><b>3.1</b> Benefícios e desafios da integração de renováveis</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#vantagens-estrat%C3%A9gicas-de-integra%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>3.1.1</b> Vantagens estratégicas de integração</a></li>
+<li class="chapter" data-level="3.1.2" data-path="integração-com-as-energias-renováveis.html"><a href="integração-com-as-energias-renováveis.html#desafios-t%C3%A9cnicos-e-econ%C3%B4micos"><i class="fa fa-check"></i><b>3.1.2</b> Desafios Técnicos e Econômicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html"><i class="fa fa-check"></i><b>4</b> CÉLULAS A COMBUSTÍVEL DE HIDROGÊNIO</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#secao41"><i class="fa fa-check"></i><b>4.1</b> Tipos de células a combustível</a></li>
+<li class="chapter" data-level="4.2" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#a-estrutura-da-c%C3%A9lula-a-combust%C3%ADvel-e-seus-componentes"><i class="fa fa-check"></i><b>4.2</b> A estrutura da célula a combustível e seus componentes</a></li>
+<li class="chapter" data-level="4.3" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-baixa-temperatura"><i class="fa fa-check"></i><b>4.3</b> Células a combustível de baixa temperatura</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-de-eletr%C3%B3lito-de-membrana-polim%C3%A9rica-de-troca-de-pr%C3%B3tons-pemfc"><i class="fa fa-check"></i><b>4.3.1</b> Células a combustível de eletrólito de membrana polimérica de troca de prótons (PEMFC)</a></li>
+<li class="chapter" data-level="4.3.2" data-path="células-a-combustível-de-hidrogênio.html"><a href="células-a-combustível-de-hidrogênio.html#c%C3%A9lulas-a-combust%C3%ADvel-alcalinas-afc"><i class="fa fa-check"></i><b>4.3.2</b> Células a combustível alcalinas (AFC)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>REFERÊNCIAS</a></li>
+<li class="divider"></li>
+<li><a href="https://ch2v.unifei.edu.br/" target="blank">CH2V</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FUNDAMENTOS E TECNOLOGIAS DE ELETRÓLISE E CÉLULAS A COMBUSTÍVEL DE H₂</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="produção-de-hidrogênio" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">CAPÍTULO 2</span> PRODUÇÃO DE HIDROGÊNIO<a href="produção-de-hidrogênio.html#produ%C3%A7%C3%A3o-de-hidrog%C3%AAnio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Historicamente, a maior parte do hidrogênio produzido no mundo provém de fontes não renováveis, mas as tecnologias de eletrólise da água são cruciais para o desenvolvimento do hidrogênio verde, ou de baixo carbono, um vetor energético universal e livre de carbono [1]. A seguir são apresentadas as principais rotas para produção de hidrogênio.</p>
+<div id="produção-a-partir-de-combustíveis-fósseis-rotas-dominantes" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Produção a partir de combustíveis fósseis (rotas dominantes)<a href="produção-de-hidrogênio.html#produ%C3%A7%C3%A3o-a-partir-de-combust%C3%ADveis-f%C3%B3sseis-rotas-dominantes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Atualmente, a maior parte do hidrogênio global ainda é obtida a partir de combustíveis fósseis, como gás natural e carvão. Atualmente, cerca de 96% de todo o hidrogênio é obtido de combustíveis fósseis, com a maior parte proveniente da reforma a vapor de gás natural [2]. Essas rotas de produção são maduras e geralmente apresentam os menores custos específicos de produção de hidrogênio.</p>
+<div id="reforma-a-vapor-de-metano-smr-do-inglês-steam-methane-reforming" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Reforma a Vapor de Metano (SMR, do inglês Steam Methane Reforming)<a href="produção-de-hidrogênio.html#reforma-a-vapor-de-metano-smr-do-ingl%C3%AAs-steam-methane-reforming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>É o método de produção de hidrogênio mais amplamente utilizado no mundo, respondendo por mais de 48% da produção global. O processo tipicamente usa gás natural como insumo, sendo realizado em reatores sob elevadas pressões e temperaturas (cerca de 800 a 900 °C) e requer uma quantidade significativa de calor externo [3].</p>
+<p>A reforma a vapor se dá em reatores que normalmente operam sob elevadas pressões e temperaturas, sendo os hidrocarbonetos (gás natural) convertidos em gás de síntese (mistura contendo <span class="math inline">\(H_2\)</span>, <span class="math inline">\(CO\)</span>, <span class="math inline">\(CH_4\)</span>, etc.) em um leito catalítico, normalmente a base níquel, que tem a função de facilitar a cinética das reações e diminuir a temperatura do processo [4], [5].</p>
+<p>No caso específico da produção de hidrogênio a partir da reforma a vapor do gás natural, o processo industrial, de forma geral, ocorre como indicado esquematicamente na Figura <a href="produção-de-hidrogênio.html#fig:figura1">2.1</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura1"></span>
+<img src="figura1.png" alt="Representação esquemática do processo de produção de hidrogênio através da reforma a vapor. Fonte: [4]." width="80%" />
+<p class="caption">
+Figura 2.1: Representação esquemática do processo de produção de hidrogênio através da reforma a vapor. Fonte: [4].
+</p>
+</div>
+<p>Parte do gás natural que chega na planta de produção de hidrogênio é queimado em uma caldeira para a produção de vapor, que será usado no processo de reforma [4]. A composição do gás natural depende de sua origem, mas, em geral, nela predomina a presença de metano (<span class="math inline">\(CH_4\)</span>), com teores acima de 70%, seguido de outros compostos, alguns dos quais possuem enxofre em sua composição. Desta forma, após ser comprimido até a pressão de trabalho, o gás natural é direcionado para a unidade de dessulfurização, onde é efetuada a remoção do enxofre, antes de ser efetivamente reformado. A dessulfurização evita que o enxofre danifique os catalisadores dos reatores usados no processo [4].</p>
+<p>Em seguida, o gás natural é direcionado ao pré-reformador, no qual os hidrocarbonetos de cadeias mais longas são convertidos predominantemente em metano. Os produtos do pré-reformador são aquecidos (800-900°C), e direcionados ao reformador, onde o metano é então convertido em hidrogênio e monóxido de carbono. Em seguida, a mistura reagente (gás de síntese) entra nos reatores de shift (deslocamento gás-água). Nestes reatores, o monóxido de carbono produzido durante a reforma, que neste estágio do processo corresponde a 8,0-10,0% (vol.) da composição do gás de síntese, pode ser convertido em hidrogênio.</p>
+<p>A reação de deslocamento gás-água pode ser executada em duas etapas, sendo que a primeira ocorre a alta temperatura (350 a 450°C) e reduz o teor de monóxido de carbono para cerca de 4,0-4,5%. A segunda ocorre em temperaturas menores (180 a 340°C) produzindo um fluxo gasoso rico em hidrogênio e no qual a concentração volumétrica de monóxido de carbono é reduzida para 0,4-0,8%.</p>
+<p>Ao sair dos reatores shift, o fluxo gasoso rico em <span class="math inline">\(H_2\)</span> ainda contém alguns gases indesejados, como por exemplo, metano não reagido, frações residuais de <span class="math inline">\(CO\)</span>, <span class="math inline">\(CO_2\)</span> etc. Assim, estes gases devem ser removidos da mistura, o que se dá em unidades de purificação (por exemplo, PSA, do inglês Pressure Swing Adsorption), que são capazes de produzir um fluxo gasoso com concentração de hidrogênio superior a 99,99% (vol.) [4].</p>
+</div>
+<div id="gaseificação-do-carvão-gc" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Gaseificação do Carvão (GC)<a href="produção-de-hidrogênio.html#gaseifica%C3%A7%C3%A3o-do-carv%C3%A3o-gc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>É uma opção viável devido à abundância do carvão em termos de reservas. É um método amplamente utilizado, correspondendo a cerca de 18% da produção de hidrogênio [2], ficando atrás apenas da reforma a vapor e da reforma de óleo [3]. Devido à sua eficiência inferior (60-75%) em comparação com o método de SMR (70-85%), não é tão amplamente utilizado como este último [3]. No entanto, em países e regiões onde as reservas de carvão são relativamente abundantes ou os preços do gás natural não são favoráveis, como a China, a gaseificação de carvão é também o processo dominante de produção de hidrogênio.</p>
+<p>A gaseificação de carvão ocorre em um equipamento específico conhecido como gaseificador. Dependendo do modo de contato entre os reagentes e o gaseificador, os gaseificadores podem ser subdivididos em vários tipos, entre os quais o gaseificador de fluxo arrastado (entrained flow gasifier) é o tipo mais limpo e eficiente [3]. Entretanto, o seu mecanismo básico é o mesmo: o carvão é secado e moído e depois alimentado num gaseificador, onde reage sucessivamente com oxigênio e vapor sob condições de alta temperatura para produzir uma mistura gasosa contendo <span class="math inline">\(H_2\)</span>, <span class="math inline">\(CO\)</span> e <span class="math inline">\(CO_2\)</span>. A mistura gasosa gerada consome <span class="math inline">\(CO\)</span> e produz <span class="math inline">\(H_2\)</span> através da reação de shift (deslocamento de gás-água). Finalmente, o <span class="math inline">\(CO_2\)</span> é removido da mistura na unidade de PSA [3].</p>
+<p>Uma desvantagem óbvia da gaseificação do carvão para a produção de hidrogênio é o seu significativo impacto ambiental. De acordo com relatórios na literatura, a GC tem aproximadamente o dobro das emissões de carbono da SMR quando ambas as tecnologias dominantes de produção de hidrogênio a partir de combustíveis fósseis são avaliadas a partir de uma perspectiva de ciclo de vida completo [3]. Na verdade, a gaseificação de carvão tem o mais alto potencial de aquecimento global de todos os métodos de produção de hidrogênio existentes, e tem um potencial de acidificação considerável, provavelmente relacionado com o maior teor de enxofre no carvão.</p>
+</div>
+<div id="oxidação-parcial" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Oxidação Parcial<a href="produção-de-hidrogênio.html#oxida%C3%A7%C3%A3o-parcial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Neste processo, o gás de síntese é produzido a partir da oxidação parcial de um combustível usando ar, oxigênio ou vapor de água como oxidantes, em condições não-estequiométricas, e em um reator que normalmente opera sob elevadas temperaturas e pressões. O gás de síntese gerado, contendo <span class="math inline">\(H_2\)</span>, <span class="math inline">\(CO\)</span> e <span class="math inline">\(CO_2\)</span>, deve, em seguida, passar por etapas de purificação e separação de componentes indesejáveis, num processo semelhante ao utilizado para a purificação e limpeza dos gases produzidos por reforma a vapor de metano. A oxidação parcial é o método mais adequado para produzir hidrogênio a partir de matérias-primas com altas taxas de carbono para hidrogênio, como óleo pesado e nafta [3]. O reator de oxidação parcial tende a ser mais compacto do que o reator de reforma a vapor, pois neste último é necessário fornecer calor adicional através do uso de trocadores de calor. No caso da oxidação parcial, como o processo é exotérmico, não há necessidade de fornecimento de calor adicional [4].</p>
+</div>
+<div id="reforma-autotérmica" class="section level3 hasAnchor" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> Reforma Autotérmica<a href="produção-de-hidrogênio.html#reforma-autot%C3%A9rmica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A reforma autotérmica combina as reações de reforma a vapor e oxidação parcial em um único reator, onde parte do metano é queimado com oxigênio para fornecer a energia necessária, tornando-o autotérmico [3], [5].</p>
+</div>
+<div id="decomposição-termocatalítica" class="section level3 hasAnchor" number="2.1.5">
+<h3><span class="header-section-number">2.1.5</span> Decomposição Termocatalítica<a href="produção-de-hidrogênio.html#decomposi%C3%A7%C3%A3o-termocatal%C3%ADtica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A decomposição termocatalítica do metano, também conhecida como pirólise do metano ou craqueamento do metano, é um processo no qual o metano é basicamente decomposto em seus componentes elementares, isto é, hidrogênio (<span class="math inline">\(H_2\)</span>) e carbono sólido (<span class="math inline">\(C\)</span>). A reação pode ocorrer sem o uso de catalisadores, porém, como a reação é endotérmica, a energia requerida pela reação (calor) é significativa e elevadas temperaturas operacionais (1200 a 1300°C) são necessárias. Assim, para que as reações de decomposição ocorram a baixa temperatura torna-se imprescindível o uso de catalisadores, o que pode reduzir a temperatura operacional significativamente, a qual, dependendo do catalisador utilizado, pode variar de 600 a 800°C [4].</p>
+<p>Cabe ressaltar que todas as tecnologias de reforma apresentas emitem dióxido de carbono (<span class="math inline">\(CO_2\)</span>) em maior ou menor quantidade, dependendo do processo específico escolhido, das pressões e temperaturas de trabalho, bem como do tipo de catalisador utilizado.</p>
+<p>Assim, a utilização de técnicas de captura de CO2 é fundamental para que as instalações de produção de <span class="math inline">\(H_2\)</span> a partir da reforma de hidrocarbonetos (metano/gás natural) se alinhem com os objetivos mundiais de reduzir as emissões de gases causadores de efeito estufa nos próximos anos. O hidrogênio produzido a partir da reforma de hidrocarbonetos só poderá ser considerado como “<span class="math inline">\(H_2\)</span> Azul” se a planta de produção estiver integrada a um sistema de Captura e Armazenamento de Carbono, de outra forma, o hidrogênio será enquadrado na categoria de “<span class="math inline">\(H_2\)</span> Cinza”.</p>
+</div>
+</div>
+<div id="eletrólise-da-água" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Eletrólise da água<a href="produção-de-hidrogênio.html#eletr%C3%B3lise-da-%C3%A1gua" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A eletrólise da água é um processo eletroquímico que utiliza eletricidade para decompor a água em hidrogênio e oxigênio, conforme <a href="produção-de-hidrogênio.html#eq:equacao1">(2.1)</a>:</p>
+<p><span class="math display" id="eq:equacao1">\[\begin{equation}
+H_2O + \text{Eletricidade} + \text{Calor} \rightarrow H_2 + \frac{1}{2} O_2
+\tag{2.1}
+\end{equation}\]</span></p>
+<p>A reação apresentada em <a href="produção-de-hidrogênio.html#eq:equacao1">(2.1)</a> requer uma tensão de célula termodinâmica teórica de 1,23 V para decompor a água em hidrogênio e oxigênio à temperatura ambiente. No entanto, experimentalmente, a tensão de célula necessária para a decomposição eficiente da água é de 1,48 V [6]. A tensão adicional é necessária para superar a cinética e a resistência ôhmica do eletrólito e dos componentes da célula do eletrolisador, que serão mais bem explicadas na seção <a href="produção-de-hidrogênio.html#secao24">2.4</a>.</p>
+<p>Este método é fundamental para a produção de hidrogênio verde, ou de baixo carbono, quando a eletricidade utilizada é proveniente de fontes de energia renovável, apesar de ainda suprir apenas uma pequena parcela da demanda de produção hidrogênio [2]. As principais tecnologias de eletrólise são:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Eletrólise com Membranas Polimérica ou de Troca de Prótons (PEM, do inglês, polymer electrolyte membrane ou proton exchange membrane)</strong>: É uma tecnologia promissora e considerada a mais adequada para acoplamento com fontes renováveis intermitentes, como eólica e solar. As vantagens incluem alta eficiência, resposta rápida a flutuações de energia, alta densidade de corrente, design modular e produção de hidrogênio de alta pureza. No entanto, o regime ácido (pH) da membrana requer o uso de catalisadores de metais nobres, como irídio (ânodo) e platina (cátodo), elevando os custos. Eletrolisadores PEM usam a menor quantidade de água para produzir <span class="math inline">\(H_2\)</span> em comparação com outras tecnologias de eletrólise.</p></li>
+<li><p><strong>Eletrólise Alcalina</strong>: É uma tecnologia madura e bem estabelecida, utilizada pela indústria há quase um século. Utiliza um eletrólito líquido (solução aquosa de hidróxido de potássio, <span class="math inline">\(KOH\)</span>) e opera em temperaturas entre 70 °C e 90 °C. Caracteriza-se pelo custo de capital relativamente baixo, durabilidade comprovada e elevada eficiência nominal (65% a 80%). É avaliada como a tecnologia mais bem estabelecida para a produção de <span class="math inline">\(H_2\)</span> verde em larga escala.</p></li>
+<li><p><strong>Eletrólise de Óxido Sólido</strong>: Opera em altas temperaturas (600 °C a 1000 °C), utilizando vapor de água. Sua principal vantagem é a elevada eficiência, pois parte da energia necessária para a decomposição da água é fornecida na forma de calor, reduzindo o consumo de eletricidade. Embora promissora, ainda está em fase de desenvolvimento e não está comercialmente disponível para a produção de <span class="math inline">\(H_2\)</span> em larga escala.</p></li>
+<li><p><strong>Eletrólise de Membrana de Troca Aniônica (Anion Exchange Membrane - AEM)</strong>: É uma abordagem promissora que busca combinar as vantagens da eletrólise alcalina e PEM, permitindo o uso de catalisadores e componentes de baixo custo. No entanto, a tecnologia AEM ainda está em um estágio inicial de desenvolvimento, exigindo melhorias em estabilidade da membrana e desempenho da pilha, ou stack.</p></li>
+</ol>
+<div id="eletrólise-alcalina" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Eletrólise alcalina<a href="produção-de-hidrogênio.html#eletr%C3%B3lise-alcalina" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A eletrólise alcalina da água é uma tecnologia madura e bem estabelecida para a produção industrial de hidrogênio até a faixa de multi-megawatts em aplicações comerciais em todo o mundo. O fenômeno da eletrólise alcalina da água foi introduzido pela primeira vez por Troostwijk e Diemann no ano de 1789 [6]. Após diversos desenvolvimentos, no ano de 1939, entrou em operação a primeira planta industrial de eletrolisador alcalino de água em larga escala com capacidade de <span class="math inline">\(10.000\ \mathrm{Nm^3H_2/h}\)</span> [6]. Posteriormente, no início do século XX, mais de 400 unidades de eletrolisadores alcalinos industriais foram instaladas e operadas com sucesso para aplicações industriais. No entanto, o eletrolisador alcalino de água opera em temperaturas mais baixas (30–80 °C) com uma solução alcalina concentrada de 20% a 30% (<span class="math inline">\(KOH/NaOH\ 5,M\)</span>). Além disso, no eletrolisador alcalino, são utilizados eletrodos de aço inoxidável revestidos com níquel (<span class="math inline">\(Ni\)</span>) e diafragmas à base de amianto/<span class="math inline">\(ZrO_2\)</span> como separador. O portador de carga iônica é o íon hidroxila (<span class="math inline">\(OH^-\)</span>), com <span class="math inline">\(KOH/NaOH\)</span> e água permeando através da estrutura porosa do diafragma para fornecer a funcionalidade da reação eletroquímica.</p>
+<p>A eletrólise alcalina da água é um design de sistema favorável para aplicações em larga escala. Hoje, o custo de investimento da eletrólise alcalina é de 500–1000 <span class="math inline">\(USD/kW\)</span>, e a vida útil do sistema é de 90.000 h [6]. Contudo, o principal desafio associado à eletrólise alcalina da água é a densidade de corrente limitada (<span class="math inline">\(0{,}1\)</span>–<span class="math inline">\(0{,}5\ \mathrm{A/cm^2}\)</span>) devido à moderada mobilidade do <span class="math inline">\(OH^-\)</span> e ao uso de eletrólitos corrosivos (<span class="math inline">\(KOH\)</span>). Devido à alta sensibilidade do eletrólito <span class="math inline">\(KOH\)</span> ao <span class="math inline">\(CO_2\)</span> ambiente e à subsequente formação de sal de carbonato de potássio (<span class="math inline">\(K_2CO_3\)</span>), ocorre uma diminuição no número de íons hidroxila e na condutividade iônica. Além disso, o sal de <span class="math inline">\(K_2CO_3\)</span> fecha os poros da camada de difusão de gás do ânodo, o que subsequentemente diminui a transferibilidade de íons através do diafragma e acarreta a consequente redução da produção de hidrogênio. Além disso, a eletrólise alcalina da água produz gases de baixa pureza (99,9%) (Hidrogênio e Oxigênio) devido ao fato de o diafragma existente não impedir completamente o cruzamento (crossover) dos gases de uma meia-célula para a outra.</p>
+<p>A eletrólise alcalina da água é uma técnica de decomposição eletroquímica da água na presença de eletricidade. A decomposição eletroquímica da água consiste em duas reações de meia-célula individuais, como a reação de evolução de hidrogênio (HER) no cátodo, <a href="produção-de-hidrogênio.html#eq:catodo">(2.2)</a> e a reação de evolução de oxigênio (OER) no ânodo, <a href="produção-de-hidrogênio.html#eq:anodo">(2.3)</a>.</p>
+<p><span class="math display" id="eq:catodo">\[\begin{equation}
+H_2O + 2e^- \rightarrow H_2 + 2OH^-
+\quad \text{(cátodo)}
+\tag{2.2}
+\end{equation}\]</span>
+<span class="math display" id="eq:anodo">\[\begin{equation}
+OH^- \rightarrow \frac{1}{2} O_2 + H_2O + 2e^-
+\quad \text{(ânodo)}
+\tag{2.3}
+\end{equation}\]</span></p>
+<p>Durante o processo de eletrólise alcalina, inicialmente no lado do cátodo, dois mols de solução alcalina são reduzidos para produzir um mol de hidrogênio (<span class="math inline">\(H_2\)</span>) e dois mols de íons hidroxila (<span class="math inline">\(OH^-\)</span>); o <span class="math inline">\(H_2\)</span> produzido pode ser eliminado da superfície catódica e os íons hidroxila restantes (<span class="math inline">\(OH^-\)</span>) são transferidos, sob a influência do circuito elétrico entre o ânodo e o cátodo, através do separador poroso para o lado do ânodo. No ânodo, os íons hidroxila (<span class="math inline">\(OH^-\)</span>) são descarregados para produzir meia molécula de oxigênio (<span class="math inline">\(O_2\)</span>) e uma molécula de água (<span class="math inline">\(H_2O\)</span>), mostrado na Figura <a href="produção-de-hidrogênio.html#fig:figura2">2.2</a>.</p>
+<p>Os principais componentes da célula de eletrólise alcalina da água são, respectivamente: diafragmas/separadores, coletores de corrente (camada de difusão de gás), placas separadoras (placas bipolares) e placas terminais, também mostrados na Figura <a href="produção-de-hidrogênio.html#fig:figura2">2.2</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura2"></span>
+<img src="figura2.png" alt="Diagrama esquemático de um eletrolisador alcalino. Fonte: [6]." width="70%" />
+<p class="caption">
+Figura 2.2: Diagrama esquemático de um eletrolisador alcalino. Fonte: [6].
+</p>
+</div>
+<p>Em geral, diafragmas de amianto/Zirfon/aço inoxidável perfurado revestido com níquel são usados como separadores na eletrólise alcalina. A malha/espuma de níquel é usada como camadas de difusão de gás, e placas separadoras de aço inoxidável ou aço inoxidável revestido com níquel são usadas como placas bipolares e placas terminais, respectivamente.</p>
+<p>As bolhas dos gases hidrogênio e oxigênio, produzidas no cátodo e no ânodo, respectivamente, aumentam a resistência da célula, reduzindo o contato entre os eletrodos e o eletrólito. Consequentemente, a eficiência é reduzida. Deve-se, então, dar atenção especial ao projeto da célula para maximizar o contato entre o eletrodo e o eletrólito líquido. Células alcalinas avançadas usam uma “configuração de zero gap” (espaço zero) para diminuir o impacto das bolhas de gás e as perdas ôhmicas, reduzindo o espaço entre os eletrodos [1], como mostrado na Figura <a href="produção-de-hidrogênio.html#fig:figura3">2.3</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura3"></span>
+<img src="figura3.png" alt="(a) Projeto convencional; (b) projeto de espaço zero de uma célula de eletrolisador alcalina. Fonte: [7]." width="70%" />
+<p class="caption">
+Figura 2.3: (a) Projeto convencional; (b) projeto de espaço zero de uma célula de eletrolisador alcalina. Fonte: [7].
+</p>
+</div>
+<p>As principais desvantagens relacionadas à tecnologia alcalina são:</p>
+<ul>
+<li>O ambiente corrosivo.</li>
+<li>A baixa densidade de corrente.</li>
+<li>A taxa de produção limitada de 25% a 100% devido à difusão de gases através do diafragma em carga parcial.</li>
+</ul>
+<p>A pressão operacional típica desta tecnologia é de 25–30 bar, mas eletrolisadores de até 60 bar estão disponíveis [1].</p>
+<p>Existem duas estruturas de células para eletrólise alcalina no mercado: bipolar e monopolar, conforme apresentado na Figura <a href="produção-de-hidrogênio.html#fig:figura4">2.4</a>. Na configuração bipolar, Figura <a href="produção-de-hidrogênio.html#fig:figura4">2.4</a> (a), cada eletrodo possui duas polaridades e as células são conectadas em série. A tensão aplicada à pilha é a soma da tensão das células individuais. A corrente que flui através da pilha é a mesma para todas as células.</p>
+<ul>
+<li>Vantagens: Apresenta densidades de corrente mais altas, o que permite produzir gás sob pressão mais elevada, e resulta em uma pilha mais compacta do que o design unipolar.</li>
+<li>Desvantagens: Não pode ser reparada sem a necessidade de manutenção de toda a pilha.</li>
+</ul>
+<p>Na configuração monopolar, Figura <a href="produção-de-hidrogênio.html#fig:figura4">2.4</a> (b), as células são conectadas em paralelo e os eletrodos são ligados à fonte de alimentação CC correspondente. A tensão total aplicada à pilha (stack) é a mesma aplicada a uma célula individual, e os eletrodos possuem uma polaridade única.</p>
+<ul>
+<li>Vantagens: É mais simples do ponto de vista da fabricação e permite uma manutenção e reparo mais fáceis sem a necessidade de desligar toda a pilha.</li>
+<li>Desvantagens: Geralmente opera em baixas densidades de corrente e temperaturas mais baixas.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura4"></span>
+<img src="figura4.png" alt="Diagramas esquemáticos de eletrolisadores alcalinos com estrutura (a) bipolar e (b) monopolar. Fonte: [8]." width="70%" />
+<p class="caption">
+Figura 2.4: Diagramas esquemáticos de eletrolisadores alcalinos com estrutura (a) bipolar e (b) monopolar. Fonte: [8].
+</p>
+</div>
+</div>
+<div id="eletrólise-pem" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Eletrólise PEM<a href="produção-de-hidrogênio.html#eletr%C3%B3lise-pem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Os eletrolisadores de água PEM utilizam um eletrólito sólido, composto por uma membrana polimérica (ou membrana de troca de prótons) como condutor iônico. O esquema de operação de um eletrolisador de água PEM é mostrado na Figura <a href="produção-de-hidrogênio.html#fig:figura5">2.5</a>. A água é oxidada no ânodo, de acordo com <a href="produção-de-hidrogênio.html#eq:anodo2">(2.4)</a>, para produzir oxigênio, que é eliminado na superfície do ânodo, os prótons remanescentes atravessam a membrana condutora e os elétrons viajam pelo circuito externo. No lado do cátodo, os prótons e elétrons são recombinados para produzir o hidrogênio gasoso que é liberado no cátodo, de acordo com <a href="produção-de-hidrogênio.html#eq:catodo2">(2.5)</a>.</p>
+<p><span class="math display" id="eq:anodo2">\[\begin{equation}
+H_2 \rightarrow \frac{1}{2} O_2 + 2H^+ + 2e^-
+\quad \text{(ânodo)}
+\tag{2.4}
+\end{equation}\]</span>
+<span class="math display" id="eq:catodo2">\[\begin{equation}
+2H^+ + 2e^- \rightarrow H_2
+\quad \text{(cátodo)}
+\tag{2.5}
+\end{equation}\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura5"></span>
+<img src="figura5.png" alt="Esquema de uma célula de um eletrolisador PEM. Fonte: Adaptado de [6]." width="70%" />
+<p class="caption">
+Figura 2.5: Esquema de uma célula de um eletrolisador PEM. Fonte: Adaptado de [6].
+</p>
+</div>
+<p>Os principais componentes da célula de eletrólise da água PEM são o conjunto membrana-eletrodo (que consiste na membrana e nos materiais dos eletrodos anódico e catódico), a camada de difusão de gás, as placas separadoras (placas bipolares) e as placas terminais, respectivamente. As membranas de troca de prótons típicas são Nafion®, Fumapem®, Flemion® e Aciplex®, respectivamente. No entanto, a membrana mais amplamente utilizada é a Nafion® (Nafion® 115, 117 e 212), pois a membrana Nafion® oferece diversas vantagens, como alta condutividade de prótons, capacidade de alta densidade de corrente, alta resistência mecânica e estabilidade química. Os materiais de eletrodo de ânodo e cátodo de última geração são eletrocatalisadores à base de metais nobres, especialmente <span class="math inline">\(IrO_2\)</span> para a Reação de Evolução de Oxigênio (OER) e Platina (<span class="math inline">\(Pt\)</span>) suportada em carbono para a Reação de Evolução de Hidrogênio (HER), respectivamente [6]. Esses metais nobres são muito caros, e o irídio é mais escasso que a platina [1]. O titânio poroso/malha de titânio e o tecido de carbono são utilizados como camadas de difusão de gás no ânodo e no cátodo. Placas bipolares com diferentes designs de campo de fluxo, feitas de material de titânio revestido com platina/ouro, são usadas como separadores e placas terminais, respectivamente. No entanto, essas placas separadoras são caras e responsáveis por 48% do custo total da célula [9]. Portanto, os custos de alguns são as principais desvantagens dos eletralisadores PEM e utilização de materiais não-nobres representam um desafio e são grandes áreas de estudos [1].</p>
+</div>
+<div id="eletrólise-com-membrana-de-troca-aniônica-aem" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Eletrólise com membrana de troca aniônica (AEM)<a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-membrana-de-troca-ani%C3%B4nica-aem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A eletrólise da água com AEM (do inglês, Anion Exchange Membrane ou Membrana de Troca Aniônica) é uma tecnologia em desenvolvimento para a produção de hidrogênio verde. Nos últimos anos, muitas organizações e instituições de pesquisa têm trabalhado ativamente no desenvolvimento da eletrólise com AEM devido ao seu baixo custo e alto desempenho em comparação com outras tecnologias convencionais de eletrólise. Os primeiros estudos sobre eletrólise AEM datam de 2011 e posteriormente, muitos pesquisadores vêm contribuindo para o desenvolvimento da AEM [6]. A tecnologia de eletrólise da água com AEM é semelhante à eletrólise alcalina da água convencional, a principal diferença é a substituição dos diafragmas convencionais (amianto) por uma membrana de troca aniônica (membranas de troca iônica de amônio quaternário). A eletrólise da água com AEM oferece diversas vantagens, tais como: uso de catalisadores de metais de transição de baixo custo, em vez de catalisadores de metais nobres; uso de água destilada ou solução alcalina (<span class="math inline">\(KOH\)</span>) de baixa concentração como eletrólito, em vez de alta concentração. Apesar das vantagens significativas, a AEM ainda requer mais investigações e melhorias em relação à estabilidade da MEA (Membrane Electrode Assembly - Conjunto Membrana-Eletrodo) e à eficiência da célula, que são essenciais para aplicações comerciais ou em larga escala. Atualmente, a estabilidade relatada é de 2000h com Sustanion e 1000h para Fumatech (A 201 e FAA3-50), e &gt;35.000 h para o eletrolisador AEM multicore da Enapter [6].</p>
+<p>A reação eletroquímica consiste em duas reações de meia-célula: a reação de evolução de hidrogênio (HER) e a reação de evolução de oxigênio (OER). Inicialmente, no lado do cátodo, a molécula de água é reduzida para gerar hidrogênio (H2) e íons hidroxila (OH-) pela adição de dois elétrons. O hidrogênio é liberado da superfície do cátodo e os íons hidroxila (OH-) difundem-se através da membrana de troca iônica para o lado do ânodo pela atração positiva do mesmo, enquanto os elétrons são transportados através do circuito externo para o ânodo. No lado do ânodo, os íons hidroxila recombinam-se como moléculas de água e oxigênio ao perder elétrons. O oxigênio produzido é liberado do ânodo. O princípio básico de funcionamento de um eletrolisador AEM está apresentado na Figura <a href="produção-de-hidrogênio.html#fig:figura6">2.6</a> e reações de meia-célula da eletrólise da água com AEM são descritas em <a href="produção-de-hidrogênio.html#eq:anodo3">(2.6)</a> e <a href="produção-de-hidrogênio.html#eq:catodo3">(2.7)</a>.</p>
+<p><span class="math display" id="eq:anodo3">\[\begin{equation}
+OH^- \rightarrow \frac{1}{2} O_2 + H_2O + 2e^-
+\quad \text{(ânodo)}
+\tag{2.6}
+\end{equation}\]</span>
+<span class="math display" id="eq:catodo3">\[\begin{equation}
+H_2O + 2e^- \rightarrow H_2 + 2OH^-
+\quad \text{(cátodo)}
+\tag{2.7}
+\end{equation}\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura6"></span>
+<img src="figura6.png" alt="Esquema de uma célula de um eletrolisador AEM. Fonte: Adaptado de  [6]." width="70%" />
+<p class="caption">
+Figura 2.6: Esquema de uma célula de um eletrolisador AEM. Fonte: Adaptado de [6].
+</p>
+</div>
+<p>Geralmente, os componentes da célula de eletrólise da água com AEM são, respectivamente:</p>
+<ul>
+<li>Membrana (separador).</li>
+<li>Materiais de eletrodo.</li>
+<li>Coletores de corrente (camada de difusão de gás).</li>
+<li>Placas separadoras (placas bipolares).</li>
+<li>Placas terminais.</li>
+</ul>
+<p>As membranas de troca aniônica típicas são membranas de troca iônica de amônio quaternário, como as membranas comerciais Sustanion®, Fumasep e Fumatech. Os materiais de eletrodo comumente usados para ânodo e cátodo são eletrocatalisadores à base de metais de transição, especialmente Níquel e materiais de liga <span class="math inline">\(NiFeCo\)</span>, respectivamente. A espuma de níquel/malha de níquel porosa e o tecido de carbono são usados como camadas de difusão de gás do ânodo e do cátodo. Aço inoxidável e placas separadoras de aço inoxidável revestidas de níquel são usadas como placas bipolares e placas terminais, respectivamente [6].</p>
+<p>A tecnologia de eletrólise com AEM encontra-se em fase de desenvolvimento até a escala de kW. Globalmente, várias organizações e instituições de pesquisa estão trabalhando ativamente no desenvolvimento de eletrolisadores de água com AEM, no entanto, diversas inovações e melhorias ainda são necessárias para escalar essa tecnologia para aplicações comerciais [6]. Os principais desafios são a estabilidade limitada (atualmente 35000 h, com uma meta de estabilidade de 100000 h) e o alto custo de produção de hidrogênio [6].</p>
+</div>
+<div id="eletrólise-com-óxido-sólido-soec" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Eletrólise com óxido sólido (SOEC)<a href="produção-de-hidrogênio.html#eletr%C3%B3lise-com-%C3%B3xido-s%C3%B3lido-soec" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A célula de eletrólise da água de óxido sólido (SOEC - Solid Oxide Electrolysis Cell) é uma das células de conversão eletroquímica; ela converte energia elétrica em energia química. O desenvolvimento da eletrólise da água de óxido sólido começou nos EUA na década de 1970 pela General Electric e pelo Brookhaven National Laboratory, seguido pela Dornier na Alemanha [6].</p>
+<p>Tipicamente, o eletrolisador de água de óxido sólido opera com água na forma de vapor a altas temperaturas (500–850 °C), o que pode reduzir drasticamente o consumo de energia para separar a água em hidrogênio e oxigênio e, consequentemente, aumentar a eficiência energética. Essa melhoria na eficiência energética pode levar a uma forte redução no custo do hidrogênio, visto que o consumo de energia é o principal contribuinte para o custo de produção de hidrogênio na eletrólise.</p>
+<p>Além disso, a eletrólise da água de óxido sólido oferece duas grandes vantagens em comparação com as tecnologias de eletrólise existentes: A primeira é a alta temperatura de operação, que resulta em termodinâmica e cinética de reação favoráveis, permitindo eficiências de conversão inigualáveis. A segunda é que a eletrólise da água de óxido sólido pode ser facilmente integrada termicamente com síntese química a jusante (subsequente), isto é, a produção de metanol, éter dimetílico e amônia [6].</p>
+<p>Ademais, a eletrólise de óxido sólido não requer o uso de eletrocatalisadores de metais nobres e oferece alta eficiência de conversão. Apesar dessas vantagens, a estabilidade insuficiente a longo prazo impediu a comercialização da eletrólise da água de óxido sólido. Até o momento, a estabilidade relatada é de apenas 20.000 h com eletrólito fino de zircônia estabilizada com ítria [6].</p>
+<p>Tipicamente, a eletrólise da água de óxido sólido opera em temperaturas mais altas com o consumo de água na forma de vapor e gera hidrogênio verde e oxigênio. Durante o processo de eletrólise de óxido sólido, inicialmente no lado do cátodo, a molécula de água é reduzida em hidrogênio (<span class="math inline">\(H_2\)</span>) e íon óxido (<span class="math inline">\(O^{2-}\)</span>) pela adição de dois elétrons.</p>
+<p>O hidrogênio liberado da superfície catódica e os íons óxido restantes (<span class="math inline">\(O^{2-}\)</span>) viajam através da membrana de troca iônica para o lado do ânodo. No lado do ânodo, os íons óxido (<span class="math inline">\(O^{2-}\)</span>) são posteriormente oxidados para gerar oxigênio e elétrons; em seguida, o oxigênio produzido é liberado da superfície anódica e os elétrons viajam através do circuito externo para o lado do cátodo pela atração positiva do mesmo.</p>
+<p>As reações de ânodo e cátodo na SOEC são descritas em <a href="produção-de-hidrogênio.html#eq:anodo4">(2.8)</a> e <a href="produção-de-hidrogênio.html#eq:catodo4">(2.9)</a>.</p>
+<p><span class="math display" id="eq:anodo4">\[\begin{equation}
+O^{2-} \rightarrow \frac{1}{2} O_2 + H_2O + 2e^-
+\quad \text{(ânodo)}
+\tag{2.8}
+\end{equation}\]</span>
+<span class="math display" id="eq:catodo4">\[\begin{equation}
+H_2O + 2e^- \rightarrow H_2 + O^{2-}
+\quad \text{(cátodo)}
+\tag{2.9}
+\end{equation}\]</span></p>
+<p>O princípio básico de funcionamento da eletrólise da água de óxido sólido é mostrado na Figura <a href="produção-de-hidrogênio.html#fig:figura7">2.7</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura7"></span>
+<img src="figura7.png" alt="Esquema de uma célula de um eletrolisador SOEC. Fonte: Adaptado de [6]." width="70%" />
+<p class="caption">
+Figura 2.7: Esquema de uma célula de um eletrolisador SOEC. Fonte: Adaptado de [6].
+</p>
+</div>
+<p>A célula de eletrólise de água de óxido sólido (SOEC) é composta por três componentes principais: dois eletrodos porosos (ânodo e cátodo) e um eletrólito cerâmico denso capaz de conduzir íons óxido (<span class="math inline">\(O^{2-}\)</span>). O eletrólito mais utilizado é a zircônia estabilizada com ítria (YSZ), que é especificamente um material cerâmico denso à base de óxido de zircônio dopado com 8 mol% de ítria (estrutura cristalina cúbica estabilizada pela adição de ítria) [6]. Isso ocorre porque o eletrólito de zircônia estabilizada com ítria apresenta um desempenho estável e excelente em temperaturas mais altas (700–850 °C). Além disso, o eletrólito YSZ possui alta condutividade iônica (10-2–10-1 S/cm) associada a uma boa estabilidade química e térmica. O material do eletrodo de hidrogênio (cátodo) de última geração é um compósito cerâmico-metal composto por YSZ e níquel (<span class="math inline">\(Ni\)</span>-YSZ), que é um catalisador de metal não nobre com alta condutividade eletrônica [6]. Os eletrodos de oxigênio (ânodo) mais amplamente utilizados são materiais de perovskita, como LSCF (Ferrita de Cobalto, Estrôncio e Lantânio) e LSM (Manganita de Estrôncio e Lantânio). O LSCF é o material com condutividade iônica-eletrônica mista, que possui alta condutividade elétrica e iônica (102 e 10-2 S/cm), juntamente com altas propriedades de difusão de oxigênio. Tipicamente, o LSM é considerado material “tradicional” de referência porque apresenta bom desempenho [6].</p>
+<p>Devido às elevadas temperaturas de operação inerentes à tecnologia SOEC, este sistema é particularmente interessante para práticas de cogeração e integração térmica com processos industriais [6]. Ao aproveitar o calor residual de fontes externas (como indústrias siderúrgicas, de cimento, reatores nucleares ou usinas solares térmicas) para a geração do vapor de entrada, a demanda por energia elétrica no processo de eletrólise é minimizada. Esta sinergia permite que a eficiência global da planta, frequentemente referida como eficiência térmica de sistema, possa se aproximar ou até superar 90%, uma vez que parte da energia necessária para a quebra da molécula de água é fornecida na forma de calor térmico de baixo custo em vez de eletricidade de alto valor. Assim, a SOEC deixa de ser apenas um componente isolado para se tornar um elemento central em ecossistemas de simbiose industrial e economia circular.</p>
+</div>
+</div>
+<div id="comparativos-entre-as-tecnologias-de-eletrólise" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Comparativos entre as tecnologias de eletrólise<a href="produção-de-hidrogênio.html#comparativos-entre-as-tecnologias-de-eletr%C3%B3lise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As principais características técnicas das quatro tecnologias de eletrólise apresentadas estão resumidas na Tabela <a href="produção-de-hidrogênio.html#tab:tabela1">2.1</a>.</p>
+<div id="ocjgjfwxif" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ocjgjfwxif table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ocjgjfwxif thead, #ocjgjfwxif tbody, #ocjgjfwxif tfoot, #ocjgjfwxif tr, #ocjgjfwxif td, #ocjgjfwxif th {
+  border-style: none;
+}
+
+#ocjgjfwxif p {
+  margin: 0;
+  padding: 0;
+}
+
+#ocjgjfwxif .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ocjgjfwxif .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ocjgjfwxif .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ocjgjfwxif .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ocjgjfwxif .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ocjgjfwxif .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ocjgjfwxif .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ocjgjfwxif .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ocjgjfwxif .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ocjgjfwxif .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ocjgjfwxif .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ocjgjfwxif .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ocjgjfwxif .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ocjgjfwxif .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ocjgjfwxif .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ocjgjfwxif .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ocjgjfwxif .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ocjgjfwxif .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ocjgjfwxif .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ocjgjfwxif .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ocjgjfwxif .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ocjgjfwxif .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ocjgjfwxif .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ocjgjfwxif .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ocjgjfwxif .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ocjgjfwxif .gt_left {
+  text-align: left;
+}
+
+#ocjgjfwxif .gt_center {
+  text-align: center;
+}
+
+#ocjgjfwxif .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ocjgjfwxif .gt_font_normal {
+  font-weight: normal;
+}
+
+#ocjgjfwxif .gt_font_bold {
+  font-weight: bold;
+}
+
+#ocjgjfwxif .gt_font_italic {
+  font-style: italic;
+}
+
+#ocjgjfwxif .gt_super {
+  font-size: 65%;
+}
+
+#ocjgjfwxif .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ocjgjfwxif .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ocjgjfwxif .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ocjgjfwxif .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ocjgjfwxif .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ocjgjfwxif .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ocjgjfwxif .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#ocjgjfwxif .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ocjgjfwxif div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <caption><span id="tab:tabela1">Tabela 2.1: </span>Características técnicas de tecnologias de típicas de eletrólise de água. Fonte: [6]</caption>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Característica">Característica</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="Alcalina">Alcalina</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="AEM">AEM</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="PEM">PEM</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="SOEC">SOEC</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Característica" class="gt_row gt_center">Eletrólito</td>
+<td headers="Alcalina" class="gt_row gt_center">KOH/NaOH (5M)</td>
+<td headers="AEM" class="gt_row gt_center">Suporte polimérico DVB com 1M KOH/NaOH</td>
+<td headers="PEM" class="gt_row gt_center">Eletrólito polimérico sólido (PFSA)</td>
+<td headers="SOEC" class="gt_row gt_center">Zircônia estabilizada com Ítria (YSZ)</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Separador</td>
+<td headers="Alcalina" class="gt_row gt_center">Asbesto / Zirfon</td>
+<td headers="AEM" class="gt_row gt_center">Fumatech</td>
+<td headers="PEM" class="gt_row gt_center">Nafion®</td>
+<td headers="SOEC" class="gt_row gt_center">Eletrólito sólido YSZ</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Eletrodo/Catalisador (Lado do Hidrogênio)</td>
+<td headers="Alcalina" class="gt_row gt_center">Aço inoxidável perfurado revestido com Níquel</td>
+<td headers="AEM" class="gt_row gt_center">Níquel</td>
+<td headers="PEM" class="gt_row gt_center">Carbono com Platina</td>
+<td headers="SOEC" class="gt_row gt_center">Ni/YSZ</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Eletrodo/Catalisador (Lado do Oxigênio)</td>
+<td headers="Alcalina" class="gt_row gt_center">Aço inoxidável perfurado revestido com Níquel</td>
+<td headers="AEM" class="gt_row gt_center">Níquel ou ligas NiFeCo</td>
+<td headers="PEM" class="gt_row gt_center">Óxido de Irídio</td>
+<td headers="SOEC" class="gt_row gt_center">Perovskitas (LSCF, LSM) (La,Sr,Co,Fe) (La,Sr,Mn)</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Camada de Difusão de Gás (GDL)</td>
+<td headers="Alcalina" class="gt_row gt_center">Malha de Níquel</td>
+<td headers="AEM" class="gt_row gt_center">Espuma de Níquel / tecido de carbono</td>
+<td headers="PEM" class="gt_row gt_center">Malha de Titânio / tecido de carbono</td>
+<td headers="SOEC" class="gt_row gt_center">Malha/espuma de Níquel</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Placas Bipolares</td>
+<td headers="Alcalina" class="gt_row gt_center">Aço inoxidável / Aço inox revestido com Níquel</td>
+<td headers="AEM" class="gt_row gt_center">Aço inoxidável / Aço inox revestido com Níquel</td>
+<td headers="PEM" class="gt_row gt_center">Titânio revestido com Platina/Ouro ou Titânio</td>
+<td headers="SOEC" class="gt_row gt_center">Aço inoxidável revestido com Cobalto</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Densidade de corrente nominal</td>
+<td headers="Alcalina" class="gt_row gt_center">0,2–0,8 A/cm2</td>
+<td headers="AEM" class="gt_row gt_center">0,2–2 A/cm2</td>
+<td headers="PEM" class="gt_row gt_center">1–2 A/cm2</td>
+<td headers="SOEC" class="gt_row gt_center">0,3–1 A/cm2</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Faixa de tensão (limites)</td>
+<td headers="Alcalina" class="gt_row gt_center">1,4–3 V</td>
+<td headers="AEM" class="gt_row gt_center">1,4–2,0 V</td>
+<td headers="PEM" class="gt_row gt_center">1,4–2,5 V</td>
+<td headers="SOEC" class="gt_row gt_center">1,0–1,5 V</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Temperatura de operação</td>
+<td headers="Alcalina" class="gt_row gt_center">70–90∘C</td>
+<td headers="AEM" class="gt_row gt_center">40–60∘C</td>
+<td headers="PEM" class="gt_row gt_center">50–80∘C</td>
+<td headers="SOEC" class="gt_row gt_center">700–850∘C</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Pressão da célula</td>
+<td headers="Alcalina" class="gt_row gt_center">&lt; 30 bar</td>
+<td headers="AEM" class="gt_row gt_center">&lt; 35 bar</td>
+<td headers="PEM" class="gt_row gt_center">&lt; 70 bar</td>
+<td headers="SOEC" class="gt_row gt_center">1 bar</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Pureza do H2​</td>
+<td headers="Alcalina" class="gt_row gt_center">99,5–99,9998%</td>
+<td headers="AEM" class="gt_row gt_center">99,9–99,9999%</td>
+<td headers="PEM" class="gt_row gt_center">99,9–99,9999%</td>
+<td headers="SOEC" class="gt_row gt_center">0.999</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Eficiência</td>
+<td headers="Alcalina" class="gt_row gt_center">50%–78%</td>
+<td headers="AEM" class="gt_row gt_center">57%–59%</td>
+<td headers="PEM" class="gt_row gt_center">50%–83%</td>
+<td headers="SOEC" class="gt_row gt_center">89% (laboratório)</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Vida útil (stack)</td>
+<td headers="Alcalina" class="gt_row gt_center">60.000 h</td>
+<td headers="AEM" class="gt_row gt_center">&gt;30.000 h</td>
+<td headers="PEM" class="gt_row gt_center">50.000–80.000 h</td>
+<td headers="SOEC" class="gt_row gt_center">20.000 h</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Estágio de desenvolvimento</td>
+<td headers="Alcalina" class="gt_row gt_center">Madura</td>
+<td headers="AEM" class="gt_row gt_center">P&amp;D</td>
+<td headers="PEM" class="gt_row gt_center">Comercializada</td>
+<td headers="SOEC" class="gt_row gt_center">P&amp;D</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Área do eletrodo</td>
+<td headers="Alcalina" class="gt_row gt_center">10.000–30.000 cm2</td>
+<td headers="AEM" class="gt_row gt_center">&lt; 300 cm2</td>
+<td headers="PEM" class="gt_row gt_center">1.500 cm2</td>
+<td headers="SOEC" class="gt_row gt_center">200 cm2</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Custos de capital (stack) mín. 1 MW</td>
+<td headers="Alcalina" class="gt_row gt_center">270 USD/kW</td>
+<td headers="AEM" class="gt_row gt_center">Desconhecido</td>
+<td headers="PEM" class="gt_row gt_center">400 USD/kW</td>
+<td headers="SOEC" class="gt_row gt_center">&gt;2.000 USD/kW</td></tr>
+    <tr><td headers="Característica" class="gt_row gt_center">Custos de capital (stack) mín. 10 MW</td>
+<td headers="Alcalina" class="gt_row gt_center">500–1.000 USD/kW</td>
+<td headers="AEM" class="gt_row gt_center">Desconhecido</td>
+<td headers="PEM" class="gt_row gt_center">700–1.400 USD/kW</td>
+<td headers="SOEC" class="gt_row gt_center">Desconhecido</td></tr>
+  </tbody>
+  
+</table>
+</div>
+<p>Um resumo com as principais vantagens e desvantagens de cada uma está na Tabela <a href="produção-de-hidrogênio.html#tab:tabela2">2.2</a>.</p>
+<div id="mhbvxtcqjm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mhbvxtcqjm table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mhbvxtcqjm thead, #mhbvxtcqjm tbody, #mhbvxtcqjm tfoot, #mhbvxtcqjm tr, #mhbvxtcqjm td, #mhbvxtcqjm th {
+  border-style: none;
+}
+
+#mhbvxtcqjm p {
+  margin: 0;
+  padding: 0;
+}
+
+#mhbvxtcqjm .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mhbvxtcqjm .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mhbvxtcqjm .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mhbvxtcqjm .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mhbvxtcqjm .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mhbvxtcqjm .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mhbvxtcqjm .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mhbvxtcqjm .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mhbvxtcqjm .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mhbvxtcqjm .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mhbvxtcqjm .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mhbvxtcqjm .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mhbvxtcqjm .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mhbvxtcqjm .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mhbvxtcqjm .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mhbvxtcqjm .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mhbvxtcqjm .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mhbvxtcqjm .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mhbvxtcqjm .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mhbvxtcqjm .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mhbvxtcqjm .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mhbvxtcqjm .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mhbvxtcqjm .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mhbvxtcqjm .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mhbvxtcqjm .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mhbvxtcqjm .gt_left {
+  text-align: left;
+}
+
+#mhbvxtcqjm .gt_center {
+  text-align: center;
+}
+
+#mhbvxtcqjm .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mhbvxtcqjm .gt_font_normal {
+  font-weight: normal;
+}
+
+#mhbvxtcqjm .gt_font_bold {
+  font-weight: bold;
+}
+
+#mhbvxtcqjm .gt_font_italic {
+  font-style: italic;
+}
+
+#mhbvxtcqjm .gt_super {
+  font-size: 65%;
+}
+
+#mhbvxtcqjm .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mhbvxtcqjm .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mhbvxtcqjm .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mhbvxtcqjm .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mhbvxtcqjm .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mhbvxtcqjm .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mhbvxtcqjm .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#mhbvxtcqjm .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mhbvxtcqjm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <caption><span id="tab:tabela2">Tabela 2.2: </span>Vantagens e desvantagens de tecnologias de típicas de eletrólise de água. Fonte: [6]</caption>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="vantagens">Vantagens</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="desvantagens">Desvantagens</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_row_group_first"><td headers="Eletrólise alcalina (AEC) stub_2_1 stub_1" rowspan="5" class="gt_row gt_left gt_stub_row_group">Eletrólise alcalina (AEC)</td>
+<td headers="Eletrólise alcalina (AEC) stub_2_1 vantagens" class="gt_row gt_center">Tecnologia bem estabelecida</td>
+<td headers="Eletrólise alcalina (AEC) stub_2_1 desvantagens" class="gt_row gt_center">Densidades de corrente limitadas</td></tr>
+    <tr><td headers="Eletrólise alcalina (AEC) stub_2_2 vantagens" class="gt_row gt_center">Comercializada para aplicações industriais</td>
+<td headers="Eletrólise alcalina (AEC) stub_2_2 desvantagens" class="gt_row gt_center">Cruzamento (crossover) de gases</td></tr>
+    <tr><td headers="Eletrólise alcalina (AEC) stub_2_3 vantagens" class="gt_row gt_center">Eletrocatalisadores livres de metais nobres</td>
+<td headers="Eletrólise alcalina (AEC) stub_2_3 desvantagens" class="gt_row gt_center">Eletrólito líquido altamente concentrado (KOH 5M)</td></tr>
+    <tr><td headers="Eletrólise alcalina (AEC) stub_2_4 vantagens" class="gt_row gt_center">Custo relativamente baixo</td>
+<td headers="Eletrólise alcalina (AEC) stub_2_4 desvantagens" class="gt_row gt_center">-</td></tr>
+    <tr><td headers="Eletrólise alcalina (AEC) stub_2_5 vantagens" class="gt_row gt_center">Estabilidade de longo prazo</td>
+<td headers="Eletrólise alcalina (AEC) stub_2_5 desvantagens" class="gt_row gt_center">-</td></tr>
+    <tr class="gt_row_group_first"><td headers="Eletrólise AEM (Membrana de Troca Aniônica) stub_2_6 stub_1" rowspan="2" class="gt_row gt_left gt_stub_row_group">Eletrólise AEM (Membrana de Troca Aniônica)</td>
+<td headers="Eletrólise AEM (Membrana de Troca Aniônica) stub_2_6 vantagens" class="gt_row gt_center">Eletrocatalisadores livres de metais nobres</td>
+<td headers="Eletrólise AEM (Membrana de Troca Aniônica) stub_2_6 desvantagens" class="gt_row gt_center">Estabilidade limitada</td></tr>
+    <tr><td headers="Eletrólise AEM (Membrana de Troca Aniônica) stub_2_7 vantagens" class="gt_row gt_center">Eletrólito líquido de baixa concentração (KOH 1M)</td>
+<td headers="Eletrólise AEM (Membrana de Troca Aniônica) stub_2_7 desvantagens" class="gt_row gt_center">Em desenvolvimento</td></tr>
+    <tr class="gt_row_group_first"><td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_8 stub_1" rowspan="5" class="gt_row gt_left gt_stub_row_group">Eletrólise PEM (Membrana de Troca de Prótons)</td>
+<td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_8 vantagens" class="gt_row gt_center">Tecnologia comercializada</td>
+<td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_8 desvantagens" class="gt_row gt_center">Custo dos componentes da célula</td></tr>
+    <tr><td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_9 vantagens" class="gt_row gt_center">Opera com maiores densidades de corrente</td>
+<td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_9 desvantagens" class="gt_row gt_center">Eletrocatalisadores de metais nobres</td></tr>
+    <tr><td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_10 vantagens" class="gt_row gt_center">Alta pureza dos gases</td>
+<td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_10 desvantagens" class="gt_row gt_center">Eletrólito ácido</td></tr>
+    <tr><td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_11 vantagens" class="gt_row gt_center">Design de sistema compacto</td>
+<td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_11 desvantagens" class="gt_row gt_center">-</td></tr>
+    <tr><td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_12 vantagens" class="gt_row gt_center">Resposta rápida</td>
+<td headers="Eletrólise PEM (Membrana de Troca de Prótons) stub_2_12 desvantagens" class="gt_row gt_center">-</td></tr>
+    <tr class="gt_row_group_first"><td headers="Eletrólise de Óxido Sólido (SOEC) stub_2_13 stub_1" rowspan="2" class="gt_row gt_left gt_stub_row_group">Eletrólise de Óxido Sólido (SOEC)</td>
+<td headers="Eletrólise de Óxido Sólido (SOEC) stub_2_13 vantagens" class="gt_row gt_center">Alta temperatura de operação</td>
+<td headers="Eletrólise de Óxido Sólido (SOEC) stub_2_13 desvantagens" class="gt_row gt_center">Estabilidade limitada</td></tr>
+    <tr><td headers="Eletrólise de Óxido Sólido (SOEC) stub_2_14 vantagens" class="gt_row gt_center">Alta eficiência</td>
+<td headers="Eletrólise de Óxido Sólido (SOEC) stub_2_14 desvantagens" class="gt_row gt_center">Em desenvolvimento</td></tr>
+  </tbody>
+  
+</table>
+</div>
+<p>Por fim, a Tabela <a href="produção-de-hidrogênio.html#tab:tabela3">2.3</a> apresenta um apanhado dos principais fabricantes de eletrolisadores e as especificações de alguns modelos de eletrolisadores comerciais.</p>
+<div id="hjfpvbpnoa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hjfpvbpnoa table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hjfpvbpnoa thead, #hjfpvbpnoa tbody, #hjfpvbpnoa tfoot, #hjfpvbpnoa tr, #hjfpvbpnoa td, #hjfpvbpnoa th {
+  border-style: none;
+}
+
+#hjfpvbpnoa p {
+  margin: 0;
+  padding: 0;
+}
+
+#hjfpvbpnoa .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hjfpvbpnoa .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hjfpvbpnoa .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hjfpvbpnoa .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hjfpvbpnoa .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hjfpvbpnoa .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hjfpvbpnoa .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hjfpvbpnoa .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hjfpvbpnoa .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hjfpvbpnoa .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hjfpvbpnoa .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hjfpvbpnoa .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hjfpvbpnoa .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hjfpvbpnoa .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hjfpvbpnoa .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjfpvbpnoa .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hjfpvbpnoa .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hjfpvbpnoa .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hjfpvbpnoa .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjfpvbpnoa .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hjfpvbpnoa .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjfpvbpnoa .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hjfpvbpnoa .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjfpvbpnoa .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hjfpvbpnoa .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjfpvbpnoa .gt_left {
+  text-align: left;
+}
+
+#hjfpvbpnoa .gt_center {
+  text-align: center;
+}
+
+#hjfpvbpnoa .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hjfpvbpnoa .gt_font_normal {
+  font-weight: normal;
+}
+
+#hjfpvbpnoa .gt_font_bold {
+  font-weight: bold;
+}
+
+#hjfpvbpnoa .gt_font_italic {
+  font-style: italic;
+}
+
+#hjfpvbpnoa .gt_super {
+  font-size: 65%;
+}
+
+#hjfpvbpnoa .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hjfpvbpnoa .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hjfpvbpnoa .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hjfpvbpnoa .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hjfpvbpnoa .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hjfpvbpnoa .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hjfpvbpnoa .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#hjfpvbpnoa .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#hjfpvbpnoa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <caption><span id="tab:tabela3">Tabela 2.3: </span>Principais fabricantes globais de eletrolisadores e suas especificações. Fonte: [6]</caption>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="tecnologia_fabricante">Tecnologia/Fabricante</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="pais_de_origem">País de Origem</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="nome_generico_modelo">Nome (Modelo)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="capacidade_de_h2_nm3_h">Capacidade de H₂ (Nm³/h)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="pressao_bar">Pressão (bar)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #2E7D32; color: #E8F5E9; font-weight: bold;" scope="col" id="consumo_de_energia_k_wh_nm3">Consumo de Energia (kWh/Nm³)</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_row_group_first"><td headers="Alcalina stub_2_1 stub_1" rowspan="8" class="gt_row gt_left gt_stub_row_group">Alcalina</td>
+<td headers="Alcalina stub_2_1 tecnologia_fabricante" class="gt_row gt_center">Nel</td>
+<td headers="Alcalina stub_2_1 pais_de_origem" class="gt_row gt_center">Noruega</td>
+<td headers="Alcalina stub_2_1 nome_generico_modelo" class="gt_row gt_center">A3880</td>
+<td headers="Alcalina stub_2_1 capacidade_de_h2_nm3_h" class="gt_row gt_center">2400–3880</td>
+<td headers="Alcalina stub_2_1 pressao_bar" class="gt_row gt_center">200</td>
+<td headers="Alcalina stub_2_1 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">3,8–4,4</td></tr>
+    <tr><td headers="Alcalina stub_2_2 tecnologia_fabricante" class="gt_row gt_center">Cummins</td>
+<td headers="Alcalina stub_2_2 pais_de_origem" class="gt_row gt_center">Canadá</td>
+<td headers="Alcalina stub_2_2 nome_generico_modelo" class="gt_row gt_center">HySTAT®-100–10</td>
+<td headers="Alcalina stub_2_2 capacidade_de_h2_nm3_h" class="gt_row gt_center">100</td>
+<td headers="Alcalina stub_2_2 pressao_bar" class="gt_row gt_center">10</td>
+<td headers="Alcalina stub_2_2 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">5,0–5,4</td></tr>
+    <tr><td headers="Alcalina stub_2_3 tecnologia_fabricante" class="gt_row gt_center">John Cockerill</td>
+<td headers="Alcalina stub_2_3 pais_de_origem" class="gt_row gt_center">Bélgica</td>
+<td headers="Alcalina stub_2_3 nome_generico_modelo" class="gt_row gt_center">DQ-500</td>
+<td headers="Alcalina stub_2_3 capacidade_de_h2_nm3_h" class="gt_row gt_center">500</td>
+<td headers="Alcalina stub_2_3 pressao_bar" class="gt_row gt_center">30</td>
+<td headers="Alcalina stub_2_3 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,0–4,3</td></tr>
+    <tr><td headers="Alcalina stub_2_4 tecnologia_fabricante" class="gt_row gt_center">McPhy</td>
+<td headers="Alcalina stub_2_4 pais_de_origem" class="gt_row gt_center">França</td>
+<td headers="Alcalina stub_2_4 nome_generico_modelo" class="gt_row gt_center">MeLyzer 800–30</td>
+<td headers="Alcalina stub_2_4 capacidade_de_h2_nm3_h" class="gt_row gt_center">800</td>
+<td headers="Alcalina stub_2_4 pressao_bar" class="gt_row gt_center">30</td>
+<td headers="Alcalina stub_2_4 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,5</td></tr>
+    <tr><td headers="Alcalina stub_2_5 tecnologia_fabricante" class="gt_row gt_center">Sunfire</td>
+<td headers="Alcalina stub_2_5 pais_de_origem" class="gt_row gt_center">Alemanha</td>
+<td headers="Alcalina stub_2_5 nome_generico_modelo" class="gt_row gt_center">HyLink Alkaline</td>
+<td headers="Alcalina stub_2_5 capacidade_de_h2_nm3_h" class="gt_row gt_center">2230</td>
+<td headers="Alcalina stub_2_5 pressao_bar" class="gt_row gt_center">30</td>
+<td headers="Alcalina stub_2_5 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,7</td></tr>
+    <tr><td headers="Alcalina stub_2_6 tecnologia_fabricante" class="gt_row gt_center">Nuberg PERIC</td>
+<td headers="Alcalina stub_2_6 pais_de_origem" class="gt_row gt_center">China–Índia</td>
+<td headers="Alcalina stub_2_6 nome_generico_modelo" class="gt_row gt_center">ZDQ-600</td>
+<td headers="Alcalina stub_2_6 capacidade_de_h2_nm3_h" class="gt_row gt_center">600</td>
+<td headers="Alcalina stub_2_6 pressao_bar" class="gt_row gt_center">20</td>
+<td headers="Alcalina stub_2_6 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,6</td></tr>
+    <tr><td headers="Alcalina stub_2_7 tecnologia_fabricante" class="gt_row gt_center">TIANJIN</td>
+<td headers="Alcalina stub_2_7 pais_de_origem" class="gt_row gt_center">China</td>
+<td headers="Alcalina stub_2_7 nome_generico_modelo" class="gt_row gt_center">FDQ800</td>
+<td headers="Alcalina stub_2_7 capacidade_de_h2_nm3_h" class="gt_row gt_center">1000</td>
+<td headers="Alcalina stub_2_7 pressao_bar" class="gt_row gt_center">5</td>
+<td headers="Alcalina stub_2_7 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,4</td></tr>
+    <tr><td headers="Alcalina stub_2_8 tecnologia_fabricante" class="gt_row gt_center">GreenHydrogen</td>
+<td headers="Alcalina stub_2_8 pais_de_origem" class="gt_row gt_center">Dinamarca</td>
+<td headers="Alcalina stub_2_8 nome_generico_modelo" class="gt_row gt_center">HyProvide A-90</td>
+<td headers="Alcalina stub_2_8 capacidade_de_h2_nm3_h" class="gt_row gt_center">90</td>
+<td headers="Alcalina stub_2_8 pressao_bar" class="gt_row gt_center">35</td>
+<td headers="Alcalina stub_2_8 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,3</td></tr>
+    <tr class="gt_row_group_first"><td headers="AEM stub_2_9 stub_1" rowspan="1" class="gt_row gt_left gt_stub_row_group">AEM</td>
+<td headers="AEM stub_2_9 tecnologia_fabricante" class="gt_row gt_center">Enapter</td>
+<td headers="AEM stub_2_9 pais_de_origem" class="gt_row gt_center">Alemanha</td>
+<td headers="AEM stub_2_9 nome_generico_modelo" class="gt_row gt_center">AEM Multicore</td>
+<td headers="AEM stub_2_9 capacidade_de_h2_nm3_h" class="gt_row gt_center">210</td>
+<td headers="AEM stub_2_9 pressao_bar" class="gt_row gt_center">35</td>
+<td headers="AEM stub_2_9 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,8</td></tr>
+    <tr class="gt_row_group_first"><td headers="PEM stub_2_10 stub_1" rowspan="7" class="gt_row gt_left gt_stub_row_group">PEM</td>
+<td headers="PEM stub_2_10 tecnologia_fabricante" class="gt_row gt_center">Nel</td>
+<td headers="PEM stub_2_10 pais_de_origem" class="gt_row gt_center">Noruega</td>
+<td headers="PEM stub_2_10 nome_generico_modelo" class="gt_row gt_center">M5000</td>
+<td headers="PEM stub_2_10 capacidade_de_h2_nm3_h" class="gt_row gt_center">5000</td>
+<td headers="PEM stub_2_10 pressao_bar" class="gt_row gt_center">30</td>
+<td headers="PEM stub_2_10 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,5</td></tr>
+    <tr><td headers="PEM stub_2_11 tecnologia_fabricante" class="gt_row gt_center">Cummins</td>
+<td headers="PEM stub_2_11 pais_de_origem" class="gt_row gt_center">Canadá</td>
+<td headers="PEM stub_2_11 nome_generico_modelo" class="gt_row gt_center">HyLYZER®-4.000-30</td>
+<td headers="PEM stub_2_11 capacidade_de_h2_nm3_h" class="gt_row gt_center">4000</td>
+<td headers="PEM stub_2_11 pressao_bar" class="gt_row gt_center">30</td>
+<td headers="PEM stub_2_11 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,3</td></tr>
+    <tr><td headers="PEM stub_2_12 tecnologia_fabricante" class="gt_row gt_center">Siemens</td>
+<td headers="PEM stub_2_12 pais_de_origem" class="gt_row gt_center">Alemanha</td>
+<td headers="PEM stub_2_12 nome_generico_modelo" class="gt_row gt_center">Silyzer 300</td>
+<td headers="PEM stub_2_12 capacidade_de_h2_nm3_h" class="gt_row gt_center">100–2000</td>
+<td headers="PEM stub_2_12 pressao_bar" class="gt_row gt_center">35</td>
+<td headers="PEM stub_2_12 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">N/D</td></tr>
+    <tr><td headers="PEM stub_2_13 tecnologia_fabricante" class="gt_row gt_center">Proton Onsite</td>
+<td headers="PEM stub_2_13 pais_de_origem" class="gt_row gt_center">EUA</td>
+<td headers="PEM stub_2_13 nome_generico_modelo" class="gt_row gt_center">M400</td>
+<td headers="PEM stub_2_13 capacidade_de_h2_nm3_h" class="gt_row gt_center">417</td>
+<td headers="PEM stub_2_13 pressao_bar" class="gt_row gt_center">30</td>
+<td headers="PEM stub_2_13 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">N/D</td></tr>
+    <tr><td headers="PEM stub_2_14 tecnologia_fabricante" class="gt_row gt_center">ITM Power</td>
+<td headers="PEM stub_2_14 pais_de_origem" class="gt_row gt_center">Reino Unido</td>
+<td headers="PEM stub_2_14 nome_generico_modelo" class="gt_row gt_center">HGASXMW</td>
+<td headers="PEM stub_2_14 capacidade_de_h2_nm3_h" class="gt_row gt_center">110–1900</td>
+<td headers="PEM stub_2_14 pressao_bar" class="gt_row gt_center">20</td>
+<td headers="PEM stub_2_14 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">N/D</td></tr>
+    <tr><td headers="PEM stub_2_15 tecnologia_fabricante" class="gt_row gt_center">Plug Power</td>
+<td headers="PEM stub_2_15 pais_de_origem" class="gt_row gt_center">EUA</td>
+<td headers="PEM stub_2_15 nome_generico_modelo" class="gt_row gt_center">GenFuel 5MW</td>
+<td headers="PEM stub_2_15 capacidade_de_h2_nm3_h" class="gt_row gt_center">1000</td>
+<td headers="PEM stub_2_15 pressao_bar" class="gt_row gt_center">40</td>
+<td headers="PEM stub_2_15 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">5,2</td></tr>
+    <tr><td headers="PEM stub_2_16 tecnologia_fabricante" class="gt_row gt_center">Elogen</td>
+<td headers="PEM stub_2_16 pais_de_origem" class="gt_row gt_center">França</td>
+<td headers="PEM stub_2_16 nome_generico_modelo" class="gt_row gt_center">ELYTE 260</td>
+<td headers="PEM stub_2_16 capacidade_de_h2_nm3_h" class="gt_row gt_center">260</td>
+<td headers="PEM stub_2_16 pressao_bar" class="gt_row gt_center">30</td>
+<td headers="PEM stub_2_16 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">4,9</td></tr>
+    <tr class="gt_row_group_first"><td headers="SOEC stub_2_17 stub_1" rowspan="1" class="gt_row gt_left gt_stub_row_group">SOEC</td>
+<td headers="SOEC stub_2_17 tecnologia_fabricante" class="gt_row gt_center">Sunfire</td>
+<td headers="SOEC stub_2_17 pais_de_origem" class="gt_row gt_center">Alemanha</td>
+<td headers="SOEC stub_2_17 nome_generico_modelo" class="gt_row gt_center">HyLink SOEC</td>
+<td headers="SOEC stub_2_17 capacidade_de_h2_nm3_h" class="gt_row gt_center">750</td>
+<td headers="SOEC stub_2_17 pressao_bar" class="gt_row gt_center">40</td>
+<td headers="SOEC stub_2_17 consumo_de_energia_k_wh_nm3" class="gt_row gt_center">3,6</td></tr>
+  </tbody>
+  
+</table>
+</div>
+</div>
+<div id="secao24" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Modelagem matemática de uma célula PEM<a href="produção-de-hidrogênio.html#secao24" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A eletrólise da água consiste na conversão de energia elétrica em energia química, com a separação das moléculas de água em hidrogênio e oxigênio. O processo é fundamentado na variação de energia livre de Gibbs (<span class="math inline">\(\Delta G\)</span>) da reação global <a href="produção-de-hidrogênio.html#eq:eletrglobal">(2.10)</a> [10].</p>
+<p><span class="math display" id="eq:eletrglobal">\[\begin{equation}
+2H_2O(l) \rightarrow 2H_2(g) + O_2(g)
+\tag{2.10}
+\end{equation}\]</span></p>
+<p>Na equação, <span class="math inline">\(H_2O(l)\)</span> representa a água em estado líquido que serve como reagente e é decomposta pela passagem de corrente elétrica. O termo <span class="math inline">\(H_2(g)\)</span> representa o hidrogênio molecular produzido ao final do processo, liberado na forma gasosa no cátodo. Por sua vez, <span class="math inline">\(O_2(g)\)</span> corresponde ao oxigênio molecular gerado na reação, também liberado como gás no ânodo.</p>
+<p>A tensão mínima teórica necessária para que essa reação ocorra é a tensão reversível, definida pela equação de Nernst <a href="produção-de-hidrogênio.html#eq:nernst">(2.11)</a>, que indica o limite mínimo de energia requerido para a decomposição da água [1].</p>
+<p><span class="math display" id="eq:nernst">\[\begin{equation}
+E_{rev} = E_{rev}^{0}(T) + \frac{RT}{2F} \ln \left( \frac{P_{H_2} \, P_{O_2}^{1/2}}{P_{H_2O}} \right)
+\tag{2.11}
+\end{equation}\]</span></p>
+<p>Na expressão, <span class="math inline">\(E_{rev}^{0}(T)\)</span> corresponde ao potencial padrão dependente da temperatura, que indica o potencial eletroquímico da reação em condições padrão, ajustado para a temperatura de operação. O termo R representa a constante universal dos gases (R = 8,3145 J/mol.K), enquanto <span class="math inline">\(T\)</span> é a temperatura absoluta (em K) e F é a constante de Faraday (F = 96.485,3321 C/mol), associada à carga elétrica por mol de elétrons. O termo <span class="math inline">\(P_{H_2}\)</span> representa a pressão parcial de hidrogênio, enquanto <span class="math inline">\(P_{O_2}\)</span> indica a pressão parcial de oxigênio, elevada à potência <span class="math inline">\(^{1/2}\)</span> por conta da estequiometria da reação. Por fim, <span class="math inline">\(P_{H_2O}\)</span> corresponde à pressão parcial da água, que aparece no denominador da expressão.</p>
+<p>No estado padrão (P = 1 atm e T = 298.15 K), a energia livre de Gibbs da reação global (10) é 236.483 kJ/mol (este valor positivo indica que a reação de separação da água é um processo não espontâneo, exigindo energia de uma fonte externa). Conhecendo os valores da energia livre de Gibbs da reação <span class="math inline">\(\Delta G_{R}^{0}\)</span>, a constante de Faraday (F) e o número de mols de elétrons transferidos durante a reação (n = 2) permite a estimativa de <span class="math inline">\(E_{rev}^{0}\)</span>.</p>
+<p><span class="math display" id="eq:erev0">\[\begin{equation}
+E_{rev}^{0} = \frac{\Delta G_{R}^{0}}{nF} = 1{,}229\ \mathrm{V}
+\tag{2.12}
+\end{equation}\]</span></p>
+<p>O potencial padrão dependente da temperatura pode ser descrito pela relação empírica <a href="produção-de-hidrogênio.html#eq:erevT">(2.13)</a> [11].</p>
+<p><span class="math display" id="eq:erevT">\[\begin{equation}
+E_{rev}^{0}(T) = 1{,}229\ \mathrm{V} - 0{,}0008456\ \mathrm{V}\,(T - 298{,}15\ \mathrm{K})
+\tag{2.13}
+\end{equation}\]</span></p>
+<p>Além do mais, a expressão <a href="produção-de-hidrogênio.html#eq:nernst">(2.11)</a> mostra que a operação pressurizada eleva <span class="math inline">\(E_rev\)</span>, pois o aumento das pressões parciais dos produtos desloca o equilíbrio, exigindo maior energia de entrada.</p>
+<p>A tensão termoneutra, <span class="math inline">\(E_{th}^{0}\)</span>, que representa o potencial necessário para que a eletrólise se processe em regime adiabático (isto é, sem transferência líquida de calor com o meio externo), pode ser calculada por <a href="produção-de-hidrogênio.html#eq:eth0">(2.14)</a> [1].</p>
+<p><span class="math display" id="eq:eth0">\[\begin{equation}
+E_{th}^{0} = \frac{\Delta H_{R}^{0}}{nF} = 1{,}481\ \mathrm{V}
+\tag{2.14}
+\end{equation}\]</span></p>
+<p>O símbolo H_{R}^{0} corresponde à variação de entalpia da reação, que expressa o calor total envolvido no processo de decomposição da água (-285,83 kJ/mol em situações padrão). E o fator <span class="math inline">\(nF\)</span>, com n = 2, no denominador indica a quantidade de carga necessária para a transferência dos dois mols de elétrons envolvidos na reação global da eletrólise.</p>
+<p>Essas relações são fundamentais, pois formam a base para o cálculo de eficiência e para a modelagem da tensão aplicada, que sempre supera os valores termodinâmicos teóricos devido a perdas internas.</p>
+<p>A tensão operacional da célula é composta pela soma da tensão reversível e das sobretensões:</p>
+<p><span class="math display" id="eq:ecell">\[\begin{equation}
+E_{cell} = E_{rev} + \eta_{ativ} + \eta_{ohm} + \eta_{conc}
+\tag{2.15}
+\end{equation}\]</span></p>
+<p>O termo <span class="math inline">\(E_{rev}\)</span> corresponde à tensão reversível, que é o valor teórico mínimo exigido pela termodinâmica para que a eletrólise ocorra. O termo <span class="math inline">\(\eta_{ativ}\)</span> representa a sobretensão de ativação, originada da energia extra necessária para iniciar as reações eletroquímicas nos eletrodos. Já <span class="math inline">\(\eta_{ohm}\)</span> corresponde à sobretensão ôhmica, associada às resistências internas do sistema, incluindo membrana, eletrodos e contatos elétricos. Por fim, <span class="math inline">\(\eta_{conc}\)</span> representa a sobretensão de concentração, causada pelas limitações no transporte de massa e pela diferença entre a concentração de reagentes na superfície do eletrodo e no volume da solução.</p>
+<p><strong>Sobretensão de Ativação:</strong></p>
+<hr />
+<p>Resultado da cinética das reações eletroquímicas, especialmente da evolução de oxigênio (OER) no ânodo, a sobretensão é baseada na equação de Butler-Volmer que pode ser representada de forma simplificada em <a href="produção-de-hidrogênio.html#eq:etaativ">(2.16)</a> [11].</p>
+<p><span class="math display" id="eq:etaativ">\[\begin{equation}
+\eta_{ativ} = \frac{RT}{\alpha F}\,\operatorname{arcsinh}\!\left(\frac{i}{2i_0}\right)
+\tag{2.16}
+\end{equation}\]</span></p>
+<p>Onde <span class="math inline">\(R\)</span> é a constante universal dos gases, <span class="math inline">\(T\)</span> a temperatura absoluta, refletindo o efeito térmico sobre a cinética da reação. O parâmetro α é o coeficiente de transferência de carga, que mede a sensibilidade da velocidade da reação à variação de potencial. Já <span class="math inline">\(F\)</span> corresponde à constante de Faraday, <span class="math inline">\(i\)</span> é a densidade de corrente e <span class="math inline">\(i_0\)</span> o parâmetro de troca, valor que expressa a atividade eletroquímica intrínseca do eletrodo e geralmente baixo para a OER.</p>
+<p><strong>Sobretensão Ôhmica</strong></p>
+<hr />
+<p>A sobretensão ôhmica está relacionada principalmente à resistência da membrana, pela lei de Ohm <a href="produção-de-hidrogênio.html#eq:etaohm">(2.17)</a> [11].</p>
+<p><span class="math display" id="eq:etaohm">\[\begin{equation}
+\eta_{ohm} = i\,R_{mem}
+\tag{2.17}
+\end{equation}\]</span></p>
+<p>Com</p>
+<p><span class="math display" id="eq:rmem">\[\begin{equation}
+R_{mem} = \frac{\delta_{mem}}{\sigma_{mem}}
+\tag{2.18}
+\end{equation}\]</span></p>
+<p>onde <span class="math inline">\(i\)</span> representa a densidade de corrente aplicada, <span class="math inline">\(R_{mem}\)</span> é a resistência ôhmica da membrana, <span class="math inline">\(\delta_{mem}\)</span> indica a espessura da membrana e <span class="math inline">\(\sigma_{mem}\)</span> sua condutividade iônica, mostrando que membranas mais espessas ou menos condutivas aumentam a perda ôhmica no sistema.</p>
+<p>A condutividade depende fortemente da hidratação da membrana e também da temperatura [11], conforme apresentado em <a href="produção-de-hidrogênio.html#eq:sigmamem">(2.19)</a>:</p>
+<p><span class="math display" id="eq:sigmamem">\[\begin{equation}
+\sigma_{mem} = \left(0.005139\,\lambda - 0.00326\right)\exp\!\left[1268\left(\frac{1}{303} - \frac{1}{T}\right)\right]
+\tag{2.19}
+\end{equation}\]</span></p>
+<p>onde <span class="math inline">\(T\)</span> é a temperatura absoluta, expressa em Kelvin (<span class="math inline">\(K\)</span>) e <span class="math inline">\(\lambda\)</span> é o teor de água na membrana. O teor de água na membrana (<span class="math inline">\(\lambda\)</span>) é um parâmetro determinante para a condutividade e para a estabilidade operacional dela.</p>
+<p><strong>Sobretensão de Concentração</strong></p>
+<hr />
+<p>A sobretensão de concentração torna-se relevante somente em densidades de corrente muito elevadas, quando o transporte de reagentes e produtos se torna limitante [11]. Ela pode ser calculada como apresentado em <a href="produção-de-hidrogênio.html#eq:etaconc">(2.20)</a>.</p>
+<p><span class="math display" id="eq:etaconc">\[\begin{equation}
+\eta_{conc} = -\frac{RT}{nF}\,\ln\!\left(1 - \frac{i}{i_{lim}}\right)
+\tag{2.20}
+\end{equation}\]</span></p>
+<p>Onde <span class="math inline">\(R\)</span> é a constante universal dos gases, <span class="math inline">\(T\)</span> a temperatura absoluta, refletindo o efeito térmico sobre o processo difusivo. O parâmetro <span class="math inline">\(n\)</span> corresponde ao número de elétrons envolvidos na reação eletroquímica, enquanto <span class="math inline">\(F\)</span> é a constante de Faraday, que relaciona carga elétrica e quantidade de matéria. O termo dentro do logaritmo, <span class="math inline">\(\left(1 - \frac{i}{i_{lim}}\right)\)</span>, expressa a razão entre a corrente aplicada <span class="math inline">\(i\)</span> e a corrente limite de difusão <span class="math inline">\(i_{lim}\)</span>, que define o ponto em que o transporte de massa se torna o fator limitante. À medida que <span class="math inline">\(i\)</span> se aproxima de <span class="math inline">\(i_{lim}\)</span>, o logaritmo cresce e a sobretensão de concentração aumenta significativamente.</p>
+<p>Em eletrolisadores PEM comerciais, trabalha-se geralmente abaixo do regime limitante, o que permite desconsiderar esse termo na maior parte das simulações. A Figura <a href="produção-de-hidrogênio.html#fig:figura8">2.8</a> exemplifica a sensibilidade das contribuições das sobretensões ôhmica e de ativação em função da densidade de corrente.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura8"></span>
+<img src="figura8.png" alt="Contribuições das sobretensões (ôhmica e ativação) em função da densidade de corrente. Fonte: [12]." width="70%" />
+<p class="caption">
+Figura 2.8: Contribuições das sobretensões (ôhmica e ativação) em função da densidade de corrente. Fonte: [12].
+</p>
+</div>
+<p>O desempenho de uma célula de eletrólise é tradicionalmente caracterizado pela sua curva de polarização, um gráfico da tensão da célula versus a densidade de corrente (corrente por unidade de área ativa). A Figura <a href="produção-de-hidrogênio.html#fig:figura9">2.9</a> mostra a curva de polarização de uma célula de eletrólise PEM em diferentes temperaturas.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figura9"></span>
+<img src="figura9.png" alt="Curva de polarização de um eletrolisador PEM em função da densidade de corrente e da temperatura. Fonte: [12]." width="70%" />
+<p class="caption">
+Figura 2.9: Curva de polarização de um eletrolisador PEM em função da densidade de corrente e da temperatura. Fonte: [12].
+</p>
+</div>
+<div id="análise-da-eficiência-da-eletrólise-e-consumo-de-energia-específico" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Análise da eficiência da eletrólise e consumo de energia específico<a href="produção-de-hidrogênio.html#an%C3%A1lise-da-efici%C3%AAncia-da-eletr%C3%B3lise-e-consumo-de-energia-espec%C3%ADfico" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A eficiência em um eletrolisador indica o desempenho do dispositivo, se ele tem um consumo adequado de energia e tensão para a produção de hidrogênio do dispositivo. As principais eficiências são a de Faraday (<span class="math inline">\(\eta_F\)</span>), de tensão (<span class="math inline">\(\eta_V\)</span>) e do eletrolisador (<span class="math inline">\(\eta_{ele}\)</span>).</p>
+<p>Em um eletrolisador, como um eletrolisador PEM, estas eficiências são definidas da seguinte forma:</p>
+<ul>
+<li><p><strong>Eficiência de Faraday (<span class="math inline">\(\eta_F\)</span>)</strong>: Relaciona a quantidade real de produto (hidrogênio) obtida com a quantidade teoricamente máxima que poderia ser produzida pela corrente elétrica aplicada. Mede as perdas causadas por reações laterais ou cruzamento de gás através da membrana. A eficiência de Faraday normalmente é calculada utilizando modelos empíricos ou semi-empíricos em função das condições operativas como corrente, temperatura e pressão e é reduzida significativamente em baixas densidades de corrente [13].</p></li>
+<li><p><strong>Eficiência de Tensão (<span class="math inline">\(\eta_V\)</span>)</strong>: Relaciona a tensão termicamente neutra reversível (<span class="math inline">\(E_{th}^{0}\)</span>), que é a tensão mínima necessária para a reação ocorrer, com a tensão de operação real da célula (<span class="math inline">\(E_{cell}\)</span>), incluindo perdas por polarização, como em <a href="produção-de-hidrogênio.html#eq:etav">(2.21)</a>.</p></li>
+</ul>
+<p><span class="math display" id="eq:etav">\[\begin{equation}
+\eta_{V} = \frac{E_{th}^{0}}{E_{cell}}
+\tag{2.21}
+\end{equation}\]</span></p>
+<ul>
+<li><strong>Eficiência Global do Eletrolisador (<span class="math inline">\(\eta_{ele}\)</span>)</strong>: É o produto das eficiências de Faraday e de Tensão, <a href="produção-de-hidrogênio.html#eq:etaele">(2.22)</a>, representando a eficiência total do sistema na conversão de energia elétrica em energia química (hidrogênio). A eficiência do eletrolisador pode também ser calculada pela razão entre o Valor de Aquecimento Superior do Hidrogênio (<span class="math inline">\(HHV_{H_2}\)</span>), que tem um valor de 3,54 kWh/Nm3, e o consumo de energia (<span class="math inline">\(C_E)\)</span>, como em <a href="produção-de-hidrogênio.html#eq:etaelehhv">(2.23)</a>. Assim, a taxa de fluxo de produção de hidrogênio e oxigênio podem ser calculadas diretamente pela lei de Faraday através das equações <a href="produção-de-hidrogênio.html#eq:producaoh2">(2.24)</a> e <a href="produção-de-hidrogênio.html#eq:producaoo2">(2.25)</a>, respectivamente [13]. Onde <span class="math inline">\(N\)</span> é o número de células em série, o termo <span class="math inline">\(iA\)</span> é a corrente total aplicada, sendo <span class="math inline">\(i\)</span> a densidade de corrente e <span class="math inline">\(A\)</span> a área ativa, <span class="math inline">\(F\)</span> é a constante de Faraday, usada para relacionar carga elétrica ao fluxo molar, e <span class="math inline">\(\eta_F\)</span> a eficiência de Faraday.</li>
+</ul>
+<p><span class="math display" id="eq:etaele">\[\begin{equation}
+\eta_{ele} = \eta_{F}\,\eta_{V}
+\tag{2.22}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:etaelehhv">\[\begin{equation}
+\eta_{ele} = \frac{HHV_{H_2}}{C_E}\cdot 100
+\tag{2.23}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:producaoh2">\[\begin{equation}
+\dot{N}_{H_2} = \frac{N\,iA}{2F}\,\eta_{F}
+\tag{2.24}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:producaoo2">\[\begin{equation}
+\dot{N}_{O_2} = \frac{N\,iA}{4F}\,\eta_{F}
+\tag{2.25}
+\end{equation}\]</span></p>
+<p>Outros aspectos devem ser levados em conta para a modelagem da resposta dinâmica de um eletrolisador, no entanto, fogem do escopo deste material.</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="integração-com-as-energias-renováveis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
